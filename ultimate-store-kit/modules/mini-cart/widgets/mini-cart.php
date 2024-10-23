@@ -51,6 +51,10 @@ class Mini_Cart extends Module_Base {
 		}
 	}
 
+	protected function is_dynamic_content(): bool {
+		return true;
+	}
+
 	protected function render_layout_controls_offcanvas() {
 		$this->start_controls_section(
 			'section_content_layout',
@@ -216,8 +220,10 @@ class Mini_Cart extends Module_Base {
 		$this->add_control(
 			'show_price_amount',
 			[ 
-				'label' => esc_html__( 'Show Price Amount', 'ultimate-store-kit' ),
-				'type'  => Controls_Manager::SWITCHER,
+				'label'   => esc_html__( 'Show Price Amount', 'ultimate-store-kit' ),
+				'type'    => Controls_Manager::SWITCHER,
+				'default' => 'yes',
+				'prefix_class' => 'wc-cart-price--',
 			]
 		);
 
@@ -268,7 +274,7 @@ class Mini_Cart extends Module_Base {
 					],
 				],
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner' => 'grid-gap: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner' => 'grid-gap: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [ 
 					'show_cart_icon'    => 'yes',
@@ -295,7 +301,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Amount Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .bdt-mini-cart-price-amount *' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-mini-cart-price-amount *' => 'color: {{VALUE}};',
 				],
 				'condition' => [ 
 					'show_price_amount' => 'yes'
@@ -309,7 +315,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Icon Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-icon i' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-icon i' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -320,7 +326,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Background Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner' => 'background: {{VALUE}};',
 				],
 			]
 		);
@@ -330,7 +336,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'mini_cart_border',
 				'label'    => esc_html__( 'Border', 'ultimate-store-kit' ),
-				'selector' => '{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner',
+				'selector' => '{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner',
 			]
 		);
 
@@ -341,7 +347,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -353,7 +359,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -362,7 +368,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Typography::get_type(),
 			[ 
 				'name'     => 'price_amount_typography',
-				'selector' => '{{WRAPPER}} .bdt-mini-cart-inner .woocommerce-Price-amount.amount, {{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-icon i',
+				'selector' => '{{WRAPPER}} .usk-mini-cart-inner .woocommerce-Price-amount.amount, {{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-icon i',
 			]
 		);
 
@@ -381,7 +387,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-badge' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-badge' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -392,7 +398,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Background', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-badge' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-badge' => 'background: {{VALUE}};',
 				],
 			]
 		);
@@ -403,7 +409,7 @@ class Mini_Cart extends Module_Base {
 		// 		'type'       => Controls_Manager::DIMENSIONS,
 		// 		'size_units' => [ 'px', '%', 'em' ],
 		// 		'selectors'  => [ 
-		// 			'{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-badge' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		// 			'{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-badge' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		// 		],
 		// 	]
 		// );
@@ -414,7 +420,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em', 'rem' ],
 				'selectors'  => [ 
-					'{{WRAPPER}} .bdt-mini-cart-inner .usk-cart-badge' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .usk-mini-cart-inner .usk-cart-badge' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -423,7 +429,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Typography::get_type(),
 			[ 
 				'name'     => 'cart_badge_typography',
-				'selector' => '{{WRAPPER}} .usk-mini-cart-toggle-btn .bdt-mini-cart-inner .usk-cart-badge',
+				'selector' => '{{WRAPPER}} .usk-mini-cart-toggle-btn .usk-mini-cart-inner .usk-cart-badge',
 			]
 		);
 
@@ -465,7 +471,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
 					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-widget-title'           => 'border-color: {{VALUE}}',
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-product-item' => 'border-bottom-color: {{VALUE}}'
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-product-item' => 'border-bottom-color: {{VALUE}}'
 				],
 			]
 		);
@@ -493,7 +499,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Title Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-name a' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-name a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -504,7 +510,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Title Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-name a:hover' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-name a:hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -513,7 +519,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Typography::get_type(),
 			[ 
 				'name'     => 'product_cart_title_typography',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-name a',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-name a',
 			]
 		);
 
@@ -523,7 +529,7 @@ class Mini_Cart extends Module_Base {
 		// 		'label'     => esc_html__('Item Border Color', 'ultimate-store-kit'),
 		// 		'type'      => Controls_Manager::COLOR,
 		// 		'selectors' => [
-		// 			'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item' => 'border-color: {{VALUE}};',
+		// 			'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item' => 'border-color: {{VALUE}};',
 		// 		],
 		// 		'separator'   => 'before',
 		// 	]
@@ -544,7 +550,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Quantity Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-price' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-price' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -555,7 +561,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Amount Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .woocommerce-Price-amount .amount *' => 'color: {{VALUE}} !important;',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .woocommerce-Price-amount .amount *' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -564,7 +570,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Typography::get_type(),
 			[ 
 				'name'     => 'product_cart_price_typography',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-price',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-price',
 			]
 		);
 
@@ -582,7 +588,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'product_cart_image_border',
 				'label'    => esc_html__( 'Image Border', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-thumbnail img',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-thumbnail img',
 			]
 		);
 
@@ -593,7 +599,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;',
 				],
 			]
 		);
@@ -613,7 +619,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Subtotal Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-subtotal strong' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-subtotal strong' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -624,7 +630,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Tax Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-subtotal .woocommerce-Price-amount.amount' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-subtotal .woocommerce-Price-amount.amount' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -633,7 +639,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Typography::get_type(),
 			[ 
 				'name'     => 'product_cart_subtotal_typography',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-subtotal',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-subtotal',
 			]
 		);
 
@@ -653,7 +659,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons a.bdt-button-view-cart ' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons a.bdt-button-view-cart ' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -664,7 +670,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons a.bdt-button-view-cart :hover' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons a.bdt-button-view-cart :hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -682,7 +688,7 @@ class Mini_Cart extends Module_Base {
 				'name'     => 'pc_viewcart_background_color',
 				'label'    => __( 'Background', 'ultimate-store-kit' ),
 				'types'    => [ 'classic', 'gradient' ],
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-view-cart'
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-view-cart'
 			]
 		);
 
@@ -692,7 +698,7 @@ class Mini_Cart extends Module_Base {
 				'name'     => 'pc_viewcart_background_hover_color',
 				'label'    => __( 'Background', 'ultimate-store-kit' ),
 				'types'    => [ 'classic', 'gradient' ],
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-view-cart:hover'
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-view-cart:hover'
 			]
 		);
 
@@ -702,7 +708,7 @@ class Mini_Cart extends Module_Base {
 		// 		'label'     => esc_html__('Hover Background Color', 'ultimate-store-kit'),
 		// 		'type'      => Controls_Manager::COLOR,
 		// 		'selectors' => [
-		// 			'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart:hover' => 'background-color: {{VALUE}};',
+		// 			'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart:hover' => 'background-color: {{VALUE}};',
 		// 		],
 		// 	]
 		// );
@@ -712,7 +718,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'pc_viewcart_border',
 				'label'    => esc_html__( 'Border', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart',
 			]
 		);
 
@@ -725,7 +731,7 @@ class Mini_Cart extends Module_Base {
 					'pc_viewcart_border_border!' => '',
 				],
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart:hover' => 'border-color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart:hover' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -737,7 +743,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -749,7 +755,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -758,7 +764,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[ 
 				'name'     => 'pc_viewcart_shadow',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart',
 			]
 		);
 
@@ -767,7 +773,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'pc_viewcart_typography',
 				'label'    => esc_html__( 'Typography', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-view-cart .bdt-button-text',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-view-cart .bdt-button-text',
 			]
 		);
 
@@ -787,7 +793,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-checkout' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -798,7 +804,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-checkout:hover' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout:hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -809,7 +815,7 @@ class Mini_Cart extends Module_Base {
 				'name'     => 'pc_checkout_background_color',
 				'label'    => __( 'Background', 'ultimate-store-kit' ),
 				'types'    => [ 'classic', 'gradient' ],
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-checkout',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout',
 			]
 		);
 
@@ -819,8 +825,8 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Background Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout:hover::before' => 'background-color: {{VALUE}};',
-					// '.usk-mini-cart .bdt-mini-cart-footer-buttons .bdt-button-checkout::before'
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout:hover::before' => 'background-color: {{VALUE}};',
+					// '.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout::before'
 				],
 			]
 		);
@@ -830,7 +836,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'pc_checkout_border',
 				'label'    => esc_html__( 'Border', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout',
 			]
 		);
 
@@ -843,7 +849,7 @@ class Mini_Cart extends Module_Base {
 					'pc_checkout_border_border!' => '',
 				],
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout:hover' => 'border-color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout:hover' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -855,7 +861,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -867,7 +873,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -876,7 +882,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[ 
 				'name'     => 'pc_checkout_shadow',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout',
 			]
 		);
 
@@ -885,7 +891,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'pc_checkout_typography',
 				'label'    => esc_html__( 'Typography', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-footer-buttons .bdt-button-checkout .bdt-button-text',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-footer-buttons .bdt-button-checkout .bdt-button-text',
 			]
 		);
 
@@ -905,7 +911,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a svg *' => 'stroke: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a svg *' => 'stroke: {{VALUE}};',
 				],
 			]
 		);
@@ -916,7 +922,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a:hover svg *' => 'stroke: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a:hover svg *' => 'stroke: {{VALUE}};',
 				],
 			]
 		);
@@ -927,7 +933,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Background Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a' => 'background-color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -938,7 +944,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Background Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a:hover' => 'background-color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a:hover' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -948,7 +954,7 @@ class Mini_Cart extends Module_Base {
 			[ 
 				'name'     => 'pc_remove_border',
 				'label'    => esc_html__( 'Border', 'ultimate-store-kit' ),
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a',
 			]
 		);
 
@@ -961,7 +967,7 @@ class Mini_Cart extends Module_Base {
 					'pc_remove_border_border!' => '',
 				],
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a:hover' => 'border-color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a:hover' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -973,7 +979,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -985,7 +991,7 @@ class Mini_Cart extends Module_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -994,7 +1000,7 @@ class Mini_Cart extends Module_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[ 
 				'name'     => 'pc_remove_shadow',
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item .bdt-mini-cart-product-remove a',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a',
 			]
 		);
 
@@ -1038,7 +1044,7 @@ class Mini_Cart extends Module_Base {
 				'name'     => 'offcanvas_item_background_color',
 				'label'    => __( 'Background', 'ultimate-store-kit' ),
 				'types'    => [ 'classic', 'gradient' ],
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item',
 			]
 		);
 
@@ -1056,7 +1062,7 @@ class Mini_Cart extends Module_Base {
 				'name'     => 'offcanvas_item_hover_background_color',
 				'label'    => __( 'Background', 'ultimate-store-kit' ),
 				'types'    => [ 'classic', 'gradient' ],
-				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .bdt-mini-cart-product-item:hover',
+				'selector' => '#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item:hover',
 			]
 		);
 		$this->add_group_control(
@@ -1159,28 +1165,27 @@ class Mini_Cart extends Module_Base {
 		?>
 		<div class="ultimate-store-kit">
 			<div <?php $this->print_render_attribute_string( 'mini-cart' ); ?>>
-				<span class="bdt-mini-cart-inner">
+				<span class="usk-mini-cart-inner">
 					<?php if ( $settings['show_price_amount'] === 'yes' ) : ?>
-						<span class="bdt-cart-button-text">
-							<span class="bdt-mini-cart-price-amount">
+						<span class="usk-cart-button-text">
+							<span class="usk-mini-cart-price-amount">
 								<?php echo WC()->cart->get_cart_subtotal(); ?>
 							</span>
 						</span>
 					<?php endif; ?>
 
 					<?php if ( $settings['show_cart_icon'] === 'yes' ) : ?>
-						<span class="bdt-mini-cart-button-icon">
-							<?php //if (($product_count != 0)) :
-										?>
-							<span class="usk-cart-badge"><?php echo esc_html( $product_count ); ?></span>
-							<?php //endif;
-										?>
+						<span class="usk-mini-cart-button-icon">
+							<?php if ( ( $product_count != 0 ) ) : ?>
+								<span class="usk-cart-badge">
+									<?php echo esc_html( $product_count ); ?>
+								</span>
+							<?php endif; ?>
 							<span class="usk-cart-icon">
 								<i class="usk-icon-cart" aria-hidden="true"></i>
 							</span>
 						</span>
-						<?php
-					endif; ?>
+					<?php endif; ?>
 				</span>
 			</div>
 
@@ -1201,7 +1206,7 @@ class Mini_Cart extends Module_Base {
 										<?php esc_attr_e( 'No products in the cart.', 'ultimate-store-kit' ); ?>
 									</div>
 								<?php } else { ?>
-									<div class="bdt-mini-cart-products woocommerce-mini-cart cart woocommerce-cart-form__contents">
+									<div class="usk-mini-cart-products woocommerce-mini-cart cart woocommerce-cart-form__contents">
 										<?php
 										do_action( 'woocommerce_before_mini_cart_contents' );
 										foreach ( $cart_items as $cart_item_key => $cart_item ) {
@@ -1211,7 +1216,7 @@ class Mini_Cart extends Module_Base {
 										?>
 									</div>
 									<div class="usk-mini-cart-content-footer">
-										<div class="bdt-mini-cart-subtotal bdt-flex bdt-flex-between">
+										<div class="usk-mini-cart-subtotal bdt-flex bdt-flex-between">
 											<div>
 												<strong><?php echo esc_html__( 'Subtotal', 'bdthemes-element-pack' ); ?>:</strong>
 											</div>
@@ -1219,16 +1224,14 @@ class Mini_Cart extends Module_Base {
 												<?php echo WC()->cart->get_cart_subtotal(); ?>
 											</div>
 										</div>
-										<div class="bdt-mini-cart-footer-buttons">
+										<div class="usk-mini-cart-footer-buttons">
 											<a href="<?php echo esc_url( wc_get_cart_url() ); ?>"
 												class="bdt-button bdt-button-view-cart bdt-size-md">
-												<span
-													class="bdt-button-text"><?php echo esc_html__( 'View cart', 'bdthemes-element-pack' ); ?></span>
+												<span class="bdt-button-text"><?php echo esc_html__( 'View cart', 'bdthemes-element-pack' ); ?></span>
 											</a>
 											<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>"
 												class="bdt-button bdt-button-checkout bdt-size-md">
-												<span
-													class="bdt-button-text"><?php echo esc_html__( 'Checkout', 'bdthemes-element-pack' ); ?></span>
+												<span class="bdt-button-text"><?php echo esc_html__( 'Checkout', 'bdthemes-element-pack' ); ?></span>
 											</a>
 										</div>
 									</div>
@@ -1256,9 +1259,10 @@ class Mini_Cart extends Module_Base {
 		$product_price  = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 		$item_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 		?>
-		<div class="bdt-mini-cart-product-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+		<div
+			class="usk-mini-cart-product-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-			<div class="bdt-mini-cart-product-thumbnail">
+			<div class="usk-mini-cart-product-thumbnail">
 				<?php
 				$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -1271,7 +1275,7 @@ class Mini_Cart extends Module_Base {
 			</div>
 
 			<div class="usk-mini-cart-content-wrap">
-				<div class="bdt-mini-cart-product-name">
+				<div class="usk-mini-cart-product-name">
 					<?php
 					if ( ! $item_permalink ) {
 						echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -1286,11 +1290,11 @@ class Mini_Cart extends Module_Base {
 					?>
 				</div>
 
-				<div class="bdt-mini-cart-product-price" data-title="<?php esc_attr_e( 'Price', 'ultimate-store-kit' ); ?>">
+				<div class="usk-mini-cart-product-price" data-title="<?php esc_attr_e( 'Price', 'ultimate-store-kit' ); ?>">
 					<?php echo wp_kses_post( apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ) ); ?>
 				</div>
 			</div>
-			<div class="bdt-mini-cart-product-remove">
+			<div class="usk-mini-cart-product-remove">
 				<?php
 				echo wp_kses_post( apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 					'<a href="%s" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"><span><i class="usk-icon-close"></i></span></a>',
