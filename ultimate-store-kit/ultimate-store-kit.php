@@ -4,18 +4,18 @@
  * Plugin Name: Ultimate Store Kit
  * Plugin URI: https://bdthemes.com/ultimate-store-kit/
  * Description: Build online stores in WordPress with the powerful store builder addon for Elementor. Enjoy a wide range of customizations and easily build product grids, carousels, single product/page elements, checkouts and more.
- * Version: 2.2.2
+ * Version: 2.2.3
  * Author: BdThemes
  * Author URI: https://bdthemes.com/
  * Text Domain: ultimate-store-kit
  * Domain Path: /languages
  * License: GPL3
  * Elementor requires at least: 3.22
- * Elementor tested up to: 3.25.6
+ * Elementor tested up to: 3.25.9
  */
 
 // Some pre define value for easy use
-define( 'BDTUSK_VER', '2.2.2' );
+define( 'BDTUSK_VER', '2.2.3' );
 define( 'BDTUSK__FILE__', __FILE__ );
 define( 'BDTUSK_PNAME', basename( dirname( BDTUSK__FILE__ ) ) );
 define( 'BDTUSK_PBNAME', plugin_basename( BDTUSK__FILE__ ) );
@@ -34,15 +34,17 @@ define( 'BDTUSK_ADM_ASSETS_URL', BDTUSK_URL . 'admin/assets/' );
 define( 'BDTUSK_TITLE', 'Ultimate Store Kit' );
 
 /**
- * The code that runs during plugin activation.
+ * Loads translations
+ *
+ * @return void
  */
-// function bdthemes_ultimate_store_kit_activate_plugin() {
-// 	require_once plugin_dir_path(__FILE__) . 'includes/ultimate-store-kit-activator.php';
-// 	Ultimate_Store_Kit_Activator::activate();
-// }
-// register_activation_hook(__FILE__, 'bdthemes_ultimate_store_kit_activate_plugin');
 
-
+if ( ! function_exists( 'bdthemes_ultimate_store_kit_load_textdomain' ) ) {
+	function bdthemes_ultimate_store_kit_load_textdomain() {
+		load_plugin_textdomain( 'ultimate-store-kit', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	}
+	add_action( 'init', 'bdthemes_ultimate_store_kit_load_textdomain' );
+}
 
 if ( ! function_exists( '_is_usk_pro_installed' ) ) {
 
@@ -97,7 +99,6 @@ require ( dirname( __FILE__ ) . '/includes/utils.php' );
  * Also loaded the language file from here
  */
 function bdthemes_ultimate_store_kit_load_plugin() {
-	load_plugin_textdomain( 'ultimate-store-kit', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 	if ( ! did_action( 'elementor/loaded' ) ) {
 		add_action( 'admin_notices', 'bdthemes_ultimate_store_kit_fail_load' );
@@ -253,9 +254,6 @@ if ( ! function_exists( 'dci_plugin_ultimate_store_kit' ) ) {
 			'is_premium'          => true,
 			'popup_notice'        => false,
 			'deactivate_feedback' => true,
-			'delay_time'          => [ 
-				'time' => 3 * DAY_IN_SECONDS,
-			],
 			'plugin_msg'          => '<p>Be Top-contributor by sharing non-sensitive plugin data and create an impact to the global WordPress community today! You can receive valuable emails periodically.</p>',
 		) );
 
