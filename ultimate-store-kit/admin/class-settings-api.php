@@ -86,10 +86,10 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
             }
 
             foreach ((array) $wp_settings_sections[$page] as $section) {
-                if ($section['id'] == 'ultimate_store_kit_api_settings') {
-                    $section_class = ' bdt-child-width-1-3@xl';
+                if ($section['id'] == 'ultimate_store_kit_other_settings') {
+                    $section_class = ' bdt-grid-small bdt-child-width-2-3@l bdt-child-width-1-3@xl';
                 } else {
-                    $section_class = ' bdt-grid-small bdt-child-width-1-4@xl';
+                    $section_class = ' bdt-grid-small bdt-child-width-1-3@l bdt-child-width-1-4@xl';
                 }
 
                 if ($section['callback']) {
@@ -99,7 +99,7 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
                 if (!isset($wp_settings_fields) || !isset($wp_settings_fields[$page]) || !isset($wp_settings_fields[$page][$section['id']])) {
                     continue;
                 }
-                echo '<div class="bdt-options bdt-grid bdt-child-width-1-1 bdt-child-width-1-2@m bdt-child-width-1-3@l' . esc_attr($section_class) . '" role="presentation" bdt-grid="masonry: true">';
+                echo '<div class="bdt-options bdt-grid bdt-child-width-1-1 bdt-child-width-1-2@m' . esc_attr($section_class) . '" role="presentation" bdt-grid="masonry: true">';
                 $this->do_settings_fields($page, $section['id']);
                 echo '</div>';
             }
@@ -220,6 +220,7 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
                         'content_type'      => !empty($option['content_type']) ? $option['content_type'] : null,
                         'demo_url'          => !empty($option['demo_url']) ? $option['demo_url'] : null,
                         'video_url'         => !empty($option['video_url']) ? $option['video_url'] : null,
+                        'parent'         => !empty($option['parent']) ? $option['parent'] : null,
                     );
 
                     add_settings_field("{$section}[{$name}]", $label, $callback, $section, $section, $args);
@@ -340,9 +341,21 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
             $max         = ($args['max'] == '') ? '' : ' max="' . $args['max'] . '"';
             $step        = ($args['step'] == '') ? '' : ' step="' . $args['step'] . '"';
 
-            $html        = sprintf('<input type="%1$s" class="%2$s-number" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"%6$s%7$s%8$s%9$s/>', $type, $size, $args['section'], $args['id'], $value, $placeholder, $min, $max, $step);
-            $html       .= $this->get_field_description($args);
 
+            $html = '';
+            $html .= '<div class="bdt-grid bdt-grid-collapse bdt-flex bdt-flex-middle">';
+
+                $html .= '<div class="bdt-width-1-2 bdt-flex-inline bdt-flex-left">';
+                    $html .= sprintf('<label for="bdt_%1$s[%2$s]">%3$s</label>', $args['section'], $args['id'], $args['name']);
+                $html .= '</div>';
+
+                $html .= '<div class="bdt-width-1-2 bdt-flex-inline bdt-flex-right">';                    
+                    $html        .= sprintf('<input type="%1$s" class="bdt-width-1-2 %2$s-number" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"%6$s%7$s%8$s%9$s/>', $type, $size, $args['section'], $args['id'], $value, $placeholder, $min, $max, $step);
+                $html .= '</div>';
+
+            $html .= '</div>';
+
+            $html .= $this->get_field_description($args);
             $this->get_control_output($html);
         }
 
@@ -389,6 +402,8 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
             $plugin_name = isset($args['plugin_name']) ? $args['plugin_name'] : '';
             $plugin_path = isset($args['plugin_path']) ? $args['plugin_path'] : '';
             $paid        = isset($args['paid']) ? $args['paid'] : '';
+
+            $parent_class        = isset($args['parent']) ? ' bdt-feature-option-parent' : '';
 
 
             $used_widgets = self::get_used_widgets_obj();
@@ -461,7 +476,7 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
                     $html  .= '<fieldset>';
                     $html  .= sprintf('<label for="bdt_%1$s[%2$s]">', $args['section'], $args['id']);
                     $html  .= sprintf('<input type="hidden" name="%1$s[%2$s]" value="off" />', $args['section'], $args['id']);
-                    $html  .= sprintf('<input type="checkbox" class="checkbox" id="bdt_%1$s[%2$s]" name="%1$s[%2$s]" value="on" %3$s />', $args['section'], $args['id'], checked($value, 'on', false));
+                    $html  .= sprintf('<input type="checkbox" class="checkbox'. $parent_class .'" id="bdt_%1$s[%2$s]" name="%1$s[%2$s]" value="on" %3$s />', $args['section'], $args['id'], checked($value, 'on', false));
                     $html    .= '<span class="switch"></span>';
                     $html  .= '</label>';
                     $html  .= '</fieldset>';
@@ -544,15 +559,23 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
 
             $value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
             $size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-            $html  = sprintf('<select class="%1$s" name="%2$s[%3$s]" id="%2$s[%3$s]">', $size, $args['section'], $args['id']);
 
-            foreach ($args['options'] as $key => $label) {
-                $html .= sprintf('<option value="%s"%s>%s</option>', $key, selected($value, $key, false), $label);
-            }
+            $html = '';
+            $html .= '<div class="bdt-grid bdt-grid-collapse bdt-flex bdt-flex-middle">';
+                $html .= '<div class="bdt-width-1-2 bdt-flex-inline bdt-flex-left">';
+                    $html .= sprintf('<label for="bdt_%1$s[%2$s]">%3$s</label>', $args['section'], $args['id'], $args['name']);
+                $html .= '</div>';
 
-            $html .= sprintf('</select>');
+                $html .= '<div class="bdt-width-1-2 bdt-flex-inline bdt-flex-right">';
+                    $html  .= sprintf('<select class="bdt-width-1-2 %1$s" name="%2$s[%3$s]" id="%2$s[%3$s]">', $size, $args['section'], $args['id']);
+                        foreach ($args['options'] as $key => $label) {
+                            $html .= sprintf('<option value="%s"%s>%s</option>', $key, selected($value, $key, false), $label);
+                        }
+                    $html .= sprintf('</select>');
+                $html .= '</div>';
+            $html .= '</div>';
+
             $html .= $this->get_field_description($args);
-
             $this->get_control_output($html);
         }
 
@@ -749,15 +772,11 @@ if (!class_exists('UltimateStoreKit_Settings_API')) :
             }
 
             if (true !== _is_usk_pro_activated()) {
-                $html .= sprintf('<li><a href="#%1$s" class="bdt-tab-item" id="bdt-%1$s" data-tab-index="5">%2$s</a></li>', 'pixel_gallery_get_pro', esc_html__('Get Pro', 'ultimate-store-kit'));
+                $html .= sprintf('<li><a href="#%1$s" class="bdt-tab-item" id="bdt-%1$s" data-tab-index="5"><span></span><span></span><span></span><span></span>%2$s</a></li>', 'ultimate_store_kit_get_pro', esc_html__('Get Pro', 'ultimate-store-kit'));
             }
 
-            // if ( !defined('BDTUSK_LO') ) {
-            //     $html .= sprintf('<li><a href="#%1$s" class="bdt-tab-item" id="bdt-%1$s" data-tab-index="%2$s">%3$s</a></li>', 'pixel_gallery_license_settings', $count, 'License');
-            // }
-
             if ((true == _is_usk_pro_activated()) && !defined('BDTUSK_LO')) {
-                $html .= sprintf('<li><a href="#%1$s" class="bdt-tab-item" id="bdt-%1$s" data-tab-index="5">%2$s</a></li>', 'pixel_gallery_license_settings', esc_html__('License', 'ultimate-store-kit'));
+                $html .= sprintf('<li><a href="#%1$s" class="bdt-tab-item" id="bdt-%1$s" data-tab-index="5">%2$s</a></li>', 'ultimate_store_kit_license_settings', esc_html__('License', 'ultimate-store-kit'));
             }
 
             $html .= '</ul>';
