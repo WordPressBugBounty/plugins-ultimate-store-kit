@@ -60,7 +60,7 @@ class UltimateStoreKit_Admin_Settings
     public function usk_redirect_to_get_pro()
     {
         if (isset($_GET['page']) && $_GET['page'] === self::PAGE_ID . '_get_pro') {
-            wp_redirect('https://storekit.pro/pricing/');
+            wp_redirect('https://storekit.pro/pricing/?utm_source=UltimateStoreKit&utm_medium=PluginPage&utm_campaign=30%OffOnUSK&coupon=FREETOPRO');
             exit;
         }
     }
@@ -120,7 +120,7 @@ class UltimateStoreKit_Admin_Settings
             add_submenu_page(
                 self::PAGE_ID,
                 BDTUSK_TITLE,
-                esc_html__('Get Pro', 'ultimate-store-kit'),
+                esc_html__('Upgrade For 30% Off!', 'ultimate-store-kit'),
                 'manage_options',
                 self::PAGE_ID . '_get_pro',
                 [$this, 'display_page']
@@ -1065,10 +1065,20 @@ class UltimateStoreKit_Admin_Settings
             });
 
 
-            jQuery('.bdt-widget-filter-nav li a').on('click', function(e) {
-                jQuery(this).closest('.bdt-widget-filter-wrapper').find('.bdt-search-input').val('');
-                jQuery(this).closest('.bdt-widget-filter-wrapper').find('.bdt-search-input').val('').attr('bdt-filter-control', '');
-            });
+            function clearSearchInputs(context) {
+				context.find('.bdt-search-input').val('').attr('bdt-filter-control', '');
+			}
+
+			jQuery('.bdt-widget-filter-nav li a').on('click', function () {
+				const wrapper = jQuery(this).closest('.bdt-widget-filter-wrapper');
+				clearSearchInputs(wrapper);
+			});
+
+			jQuery('.bdt-dashboard-navigation li a').on('click', function () {
+				const tabContainer = jQuery(this).closest('.bdt-dashboard-navigation').siblings('.bdt-tab-container');
+				clearSearchInputs(tabContainer);
+					tabContainer.find('.bdt-search-input').trigger('keyup');
+			});
 
 
             jQuery(document).ready(function($) {
@@ -1136,6 +1146,15 @@ class UltimateStoreKit_Admin_Settings
                 /**
                  * Others Widget
                  */
+                jQuery('#ultimate_store_kit_general_modules_page a.bdt-active-all-widget').click(function() {
+
+                    jQuery('#ultimate_store_kit_general_modules_page .checkbox:visible').not("[disabled]").each(function() {
+                        jQuery(this).attr('checked', 'checked').prop("checked", true);
+                    });
+
+                    jQuery(this).addClass('bdt-active');
+                    jQuery('a.bdt-deactive-all-widget').removeClass('bdt-active');
+                });
                 jQuery('#ultimate_store_kit_general_modules_page a.bdt-deactive-all-widget').click(function() {
 
                     jQuery('#ultimate_store_kit_general_modules_page .checkbox:visible').not("[disabled]").each(function() {
@@ -1191,8 +1210,6 @@ class UltimateStoreKit_Admin_Settings
                     jQuery(this).removeAttr('checked');
                     jQuery(this).attr("disabled", true);
                 });
-
-
             });
 
             jQuery(document).ready(function ($) {

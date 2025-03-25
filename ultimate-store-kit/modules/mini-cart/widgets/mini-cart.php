@@ -796,7 +796,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout .bdt-button-text' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -807,7 +807,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout:hover' => 'color: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .usk-mini-cart-footer-buttons .bdt-button-checkout:hover .bdt-button-text' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -914,7 +914,7 @@ class Mini_Cart extends Module_Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a svg *' => 'stroke: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -925,7 +925,7 @@ class Mini_Cart extends Module_Base {
 				'label'     => esc_html__( 'Hover Color', 'ultimate-store-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [ 
-					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a:hover svg *' => 'stroke: {{VALUE}};',
+					'#usk-mini-cart-{{ID}}.usk-mini-cart .ts-content-container .usk-mini-cart-product-item .usk-mini-cart-product-remove a:hover' => 'color: {{VALUE}};',
 				],
 			]
 		);

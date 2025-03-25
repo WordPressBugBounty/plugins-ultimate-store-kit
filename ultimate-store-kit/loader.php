@@ -299,13 +299,49 @@ class Ultimate_Store_Kit_Loader {
 
 		$elementor = Plugin::$instance;
 
-		// Add element category in panel
-		$elementor->elements_manager->add_category( 'ultimate-store-kit-single', [ 'title' => 'Ultimate Store Kit (Single)', 'icon' => 'font' ] );
+		$new_category = [
+            'ultimate-store-kit-single' => [
+                'title' => 'Ultimate Store Kit (Single)',
+                'icon'  => 'font',
+            ],
+			'ultimate-store-kit-my-account' => [
+                'title' => 'Ultimate Store Kit (Account)',
+                'icon'  => 'font',
+            ],
+			'ultimate-store-kit-checkout' => [
+				'title' => 'Ultimate Store Kit (Checkout)',
+				'icon'  => 'font',
+				'active' => false,
+			],
+			'ultimate-store-kit-order-thankyou' => [
+				'title' => 'Ultimate Store Kit (ThankYou)',
+				'icon'  => 'font',
+				'active' => false,
+			],
+        ];
+    
+        $existing_categories = $elementor->elements_manager->get_categories();
+        $merged_categories = $new_category + $existing_categories;
+    
+        /**
+		 * Override categories using reflection (since it's private)
+		 */
+        $reflection = new \ReflectionClass($elementor->elements_manager);
+        $property   = $reflection->getProperty('categories');
+        $property->setAccessible(true);
+        $property->setValue($elementor->elements_manager, $merged_categories);
+
+
 		$elementor->elements_manager->add_category( BDTUSK_SLUG, [ 'title' => BDTUSK_TITLE, 'icon' => 'font' ] );
+
 	}
 
+	/**
+	 * Setup all hooks here
+	 * @return [type] [description]
+	 */
 	private function setup_hooks() {
-		add_action( 'elementor/elements/categories_registered', [ $this, 'ultimate_store_kit_category_register' ] );
+		add_action( 'elementor/elements/categories_registered', [ $this, 'ultimate_store_kit_category_register' ], 1, 1 );
 		add_action( 'elementor/init', [ $this, 'ultimate_store_kit_init' ] );
 		add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'enqueue_editor_styles' ] );
 

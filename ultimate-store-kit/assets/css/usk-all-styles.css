@@ -1423,6 +1423,10 @@
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 40px;
 }
+.usk-page-checkout .form-row-first,
+.usk-page-checkout .form-row-last {
+  width: 100% !important;
+}
 .usk-page-checkout .usk-checkout-billing-address .usk-checkout-billing-address-header {
   font-size: 25px;
   margin: 0 0 20px;
@@ -1858,46 +1862,6 @@
     font-size: 14px;
   }
 }
-.woocommerce-MyAccount-navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.woocommerce-MyAccount-navigation ul li a {
-  color: #3c3c47;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: capitalize;
-  display: block;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease;
-}
-.woocommerce-MyAccount-navigation ul li.is-active a {
-  background-color: #f1f1f1;
-}
-.woocommerce-MyAccount-navigation ul li:hover a {
-  background-color: #f7f7f7;
-}
-
-.woocommerce-MyAccount-content p {
-  margin: 0 0 20px;
-  font-size: 14px;
-  color: #797d85;
-  font-weight: 400;
-}
-.woocommerce-MyAccount-content a {
-  color: #000;
-}
-
-@media (min-width: 768px) {
-  .usk-page-my-account .woocommerce {
-    flex-direction: row;
-  }
-  .usk-page-my-account .woocommerce-MyAccount-navigation {
-    padding-right: 30px;
-    border-right: 1px solid #ddd;
-  }
-}
 .usk-page-single .woocommerce-product-gallery {
   opacity: 1 !important;
 }
@@ -1910,6 +1874,13 @@
 .usk-page-single form.cart * {
   text-align: left;
 }
+.usk-page-single .variations td.value {
+  position: relative;
+}
+.usk-page-single a.reset_variations {
+  position: absolute;
+  left: 0;
+}
 .usk-page-single .woocommerce ul.products {
   display: grid;
   margin: 0;
@@ -1921,6 +1892,10 @@
   padding: 30px !important;
   display: inline-block;
   border-radius: 5px;
+  width: auto;
+}
+.usk-page-single .woocommerce ul.products::before, .usk-page-single .woocommerce ul.products::after {
+  display: none;
 }
 .usk-page-single .product_meta {
   display: flex;
@@ -2012,9 +1987,6 @@
 .usk-florence-grid .usk-badge-label-wrapper {
   left: 0;
   top: 0;
-}
-.usk-florence-grid .usk-content {
-  background: #fff;
 }
 .usk-florence-grid .usk-grid-layout .usk-price {
   margin: 0;
@@ -3243,7 +3215,7 @@
     display: flex;
   }
   .usk-product-image-accordion .usk-content-box {
-    width: 300px;
+    max-width: 300px;
   }
 }
 .usk-product-list .usk-list-wrap {

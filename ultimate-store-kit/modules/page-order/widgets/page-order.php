@@ -34,8 +34,11 @@ class Page_Order extends Module_Base {
     }
 
     public function get_categories() {
-        return ['ultimate-store-kit'];
+        return ['ultimate-store-kit-order-thankyou'];
     }
+    public function show_in_panel() {
+        return get_post_type() === 'usk-template-builder' || get_post_type() === 'elementor_library' || get_post_type() === 'product';
+	}
 
     public function get_keywords() {
         return ['add', 'to', 'cart', 'woocommerce', 'wc', 'additional', 'info'];
@@ -49,9 +52,9 @@ class Page_Order extends Module_Base {
         }
     }
     public function has_widget_inner_wrapper(): bool {
-			return ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'e_optimized_markup' );
-		}
-		protected function register_controls() {
+        return ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'e_optimized_markup' );
+    }
+    protected function register_controls() {
         $this->start_controls_section(
             'section_layout_thankyou_orders',
             [

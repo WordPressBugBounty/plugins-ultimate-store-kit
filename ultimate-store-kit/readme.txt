@@ -1,66 +1,55 @@
-=== Ultimate Store Kit Elementor Addons, Woocommerce Builder, EDD Builder, Elementor Store Builder, Product Grid, Product Table, Woocommerce Slider ===
-Contributors: bdthemes, selimmw, mohammaadfarid, bdkoder, abutalib, maudud, sohanurrahman, muhammadasik, suzauddowla
+=== Ultimate Store Kit - Elementor powered WooCommerce Builder, 80+ Widgets and Template Builder ===
+Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, sohanurrahman, muhammadasik, shaikatazim, mohan00
 Donate link: http://bdthemes.com/
-Tags: elementor, woocommerce, easy digital download, elementor addon, download monitor
-Stable tag: 2.3.2
+Tags: elementor, woocommerce, woocommerce builder, woocommerce elementor, easy digital downloads
+Stable tag: 2.4.0
 Requires PHP: 7.0.0
 Requires at least: 5.0.0
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Elementor requires at least: 3.22
-Elementor tested up to: 3.26.0
+Elementor tested up to: 3.28.1
 
 Best addon for Elementor WordPress plugin with 80+ most popular eCommerce, EDD and Static elements that need your everyday website page building.
 
 
 == Description ==
 
-Tired of your slow eCommerce website with an unexpectedly large number of plugins? NOT ANYMORE!
+**Ultimate Store Kit – The Complete WooCommerce & EDD Builder for Elementor**
 
-Grab the Ultimate Store Kit plugin for eCommerce [Elementor](https://wordpress.org/plugins/elementor/) and build unique online shop websites in minutes. Using this plugin, you can create personalized store product pages, landing pages, featured product pages and several other features, including tags, badges, wishlists, buttons and so forth.
+Ultimate Store Kit is the best WooCommerce and Easy Digital Downloads (EDD) builder for Elementor. It gives you complete control over your online store design.
+With 80+ advanced widgets and a powerful template builder, you can create stunning product pages, cart pages, checkout pages and account pages. No coding is needed!
 
-[Ultimate Store Kit](https://storekit.pro/) for Elementor plugin has been developed to give web developers and designers an effortless way of creating amazing eCommerce websites. With the Ultimate Store Kit for Elementor, there is no need to have a long list of plugins slowing your website down.
+### Key Features 👇 ###
 
-The plugin comes with all the necessary elements that you may require while building an eCommerce website on WordPress - Product Grid/List, Product Carousel, Product Category Grid, Product Accordion, Product Image Accordion, Product Table, Product Slider, Product Review Grid and so on. The Ultimate Store Kit for Elementor also allows you to change colors and font sizes as per your needs!
+✅ **WooCommerce & EDD Integration** – Build stunning stores for both physical and digital products.
 
-https://youtu.be/uX7TaFJgs9w
+✅ **80+ Custom Widgets** – Includes product grids, carousels, sliders, accordions, review grids, pricing tables and more.
 
-== Get Ultimate Store Kit Plugin to 💫 ==
+✅ **Template Builder**  – Fully customize all store pages, including shop, product, cart, checkout and account pages inside WordPress.
 
-* Build efficient and faster eCommerce websites with no extra loads on the site
-* Flexible, responsive and creative web interfaces to display products with engaging product layouts
-* Save up to 80% of web development time
-* Built with green codes to boost your site performance further
-* Smartly combines Elementor and WooCommerce plugin features to power up the next-gen eCommerce business
+✅ **Personalized User Accounts** – Create a better shopping experience with custom account page designs.
 
-With the Ultimate Store Kit plugin, you can create and customize eCommerce websites with product grids, carousels, sliders, accordions, lists and tables. The widgets will deliver your product info with swiftness and style while packed with cool animations, mirror images on hover, attractive product badges, stock status and a mini cart.
+✅ **More Checkout Customization** – Optimize the checkout process to improve conversions. 
 
-== What makes Ultimate Store Kit ahead of its competitors 💡 ==
+✅ **SEO & Speed Optimized** – Ensures fast performance and higher search rankings.
 
-* Super fast and super responsive layout
-* Lots of grid, carousel and slider widgets
-* NEW product badge equipped automatically
-* Double image per product on display
-* Smooth transitions unlike any other
-* 24/7 expert support team baking the plugin
+✅ **Fully Integrates with WordPress, Elementor & WooCommerce** – Ensures seamless compatibility with your existing store setup.
 
-Make your online business go higher using just one tool, the Ultimate Store Kit for Elementor.
+Take full control of your WooCommerce store or EDD store with Ultimate Store Kit and design the perfect shopping experience!
 
-== Who should benefit from Ultimate Store Kit addons plugin 🎇 ==
-
-All eCommerce web developers can use the Ultimate Store Kit addon to bring more mobility to your business. Especially, web designers and developers can harvest the full potential of the plugin for creating eCommerce websites, business websites, product portfolio websites, startups, large-scale business sites and more.
-
-== Why pick the Ultimate Store Kit? 💎 ==
-
-The tool is highly compatible with WordPress Elementor and WooCommerce, having no adverse impact. It does not collide with any core and optional functionalities of WordPress, Elementor and WooCommerce instead combines with them to produce maximum efficiency.
-
-Ultimate Store Kit is the perfect tool for web designers who want customized storefronts instead of plain-looking online shops. There are more than a million and one reasons to choose Ultimate Store Kit for your website, including the dynamic features, faster loading speed, minimal data consumption and ultra responsiveness.
-
-There is no reason to install multiple WooCommerce plugins, just Ultimate Store Kit is enough.
 
 ###USEFUL LINKS 👇###
 **[Live Demo](https://storekit.pro/)** | **[Documentation](https://bdthemes.com/all-knowledge-base-of-ultimate-store-kit/)** | **[Video Tutorial](https://www.youtube.com/watch?v=uX7TaFJgs9w&list=PLP0S85GEw7DPkLjMkYt4qNkJy3ywuakLd)** | **[Need Support?](https://bdthemes.com/support/)**
+
+https://youtu.be/EI21j-CU9t4?si=1eFri9BweVmQfnbN
+
+= Template Builder 💎 =
+
+Enjoy the full length of Online Store Page customizations with Template Builder. This option can render all pages inside WordPress and lets you choose unique designs at your preferences.
+
+Build, customize and manage single pages, cart pages and every pages belonging to your store.
 
 == Free Widgets for Lifetime: 🔥 ==
 
@@ -93,7 +82,7 @@ There is no reason to install multiple WooCommerce plugins, just Ultimate Store 
 * [Page Single](https://storekit.pro/demo/page-single/) - Customize single product pages to boost conversions.  
 * [Up Sells](https://storekit.pro/demo/up-sells/) - Promote related or complementary products to increase sales.  
 * [Image Hotspot](https://storekit.pro/demo/image-hotspot/) - Add interactive hotspots to images for enhanced user engagement and information display.
-* **Variation Swatches** - Enhance WooCommerce product variations with customizable color, image and label swatches.
+* [Variation Swatches](https://storekit.pro/demo/variation-swatches/) - Enhance WooCommerce product variations with customizable color, image and label swatches.
 
 = Easy Digital Downloads 💲 =
 
@@ -169,12 +158,6 @@ There is no reason to install multiple WooCommerce plugins, just Ultimate Store 
 
 More widgets & extensions are coming soon...
 
-= Template Builder 💎 =
-
-Enjoy the full length of Online Store Page customizations with Template Builder. This option can render all pages inside WordPress and lets you choose unique designs at your preferences.
-
-Build, customize and manage single pages, cart pages and every pages belonging to your store.
-
 == Common Issues and Solutions: 🐣 ==
 
 1. **Elementor editor fails to load**
@@ -222,6 +205,42 @@ https://youtu.be/9J4zCaDcPnk
 
 
 == Changelog ==
+
+= 2.4.0 [25th March 2025] =
+
+* Added: [My Account Page](https://storekit.pro/demo/page-my-account/) widget added (Pro)
+* Added: Item background style added in florence grid widget
+* Fixed: Validate: null checking for post
+* Fixed: Dashboard other widgets all active issue fixed
+* Fixed: List layout single column issue fixed in florence grid
+* Fixed: Input field issue fixed in page checkout & page order widget
+* Fixed: Wishlist widgets not working issue fixed
+* Fixed: Variation swatches issue fixed
+* Fixed: Warning error for result count issue fixed
+* Fixed: Page checkout & page cart controls fixed
+* Fixed: Color issue fixed in mini cart widget
+* Fixed: Remove button color issue fixed in mini cart widget
+* Updated: System improved
+
+= 2.3.7 [13th March 2025] =
+
+* Fixed: Security issue fixed ( Thanks to Peter Thaleikis )
+
+= 2.3.6 [2nd March 2025] =
+
+* Updated: Dashboard system improved
+
+= 2.3.5 [19th February 2025] =
+
+* Fixed: Width issue fixed in product image accordion widget
+
+= 2.3.4 [13th February 2025] =
+
+* Fixed: Dashboard notice dismiss icon conflict issue fixed
+
+= 2.3.3 [6th February 2025] =
+
+* Updated: Dashboard widgets searching system improved
 
 = 2.3.2 [19th December 2024] =
 
@@ -418,15 +437,15 @@ Details [changelog here](https://feedback.bdthemes.com/announcements?category=ca
 
 == Screenshots ==
 
-1. Florence Carousel
-2. Florence Grid
-3. Glossy Carousel
-4. Glossy Grid
-5. Product Accordion
-6. Product Category
-7. Product Image Accordion
-8. Product List
-9. Product Table
-1 Shiny Carousel
-11. Shiny Grid
-12. Showcase Slider
+1. Ultimate Store Kit Intro
+2. Best Features
+3. Template Builder
+4. Checkout Page
+5. My Account Page
+6. Shop Page
+7. Image Hotspot
+8. Shiny Carousel
+9. Image Accordion
+10. Product Accordion
+11. Mentor Slider
+12. Popular Addons
