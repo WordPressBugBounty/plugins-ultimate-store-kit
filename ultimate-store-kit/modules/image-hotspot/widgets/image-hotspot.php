@@ -67,9 +67,10 @@ class Image_Hotspot extends Module_Base {
         return ['swiper', 'micromodal', 'popper', 'tippyjs',];
     }
 
-    // public function get_custom_help_url() {
-    //     return 'https://youtu.be/3VkvEpVaNAM';
-    // }
+    public function get_custom_help_url() {
+        return 'https://youtu.be/7vrY1aY5mMw';
+    }
+    
     public function get_query() {
         return $this->_query;
     }
@@ -108,6 +109,13 @@ class Image_Hotspot extends Module_Base {
                 ],
             ]
         );
+        $this->add_group_control(
+			Group_Control_Image_Size::get_type(),
+			[
+				'name'      => 'image_resolution',
+				'default'   => 'full',
+			]
+		);
         $this->add_control(
             'hotspot_type',
             [
@@ -2365,16 +2373,20 @@ class Image_Hotspot extends Module_Base {
         global $product;
         $tooltip_position = 'left';
         $settings = $this->get_settings_for_display();
+
+        $thumbnail_size = $settings['thumbnail_size'];
+
         $gallery_thumbs = $product->get_gallery_image_ids();
-        $product_image = wp_get_attachment_image_url(get_post_thumbnail_id(), $settings['thumbnail_size']);
+        $product_image = wp_get_attachment_image_url(get_post_thumbnail_id(), $thumbnail_size);
+
         if ($gallery_thumbs) {
             foreach ($gallery_thumbs as $key => $gallery_thumb) {
                 if ($key == 0) :
-                    $gallery_image_link = wp_get_attachment_image_url($gallery_thumb, $settings['thumbnail_size']);
+                    $gallery_image_link = wp_get_attachment_image_url($gallery_thumb, $thumbnail_size);
                 endif;
             }
         } else {
-            $gallery_image_link = wp_get_attachment_image_url(get_post_thumbnail_id(), $settings['thumbnail_size']);
+            $gallery_image_link = wp_get_attachment_image_url(get_post_thumbnail_id(), $thumbnail_size);
         }
         ?>
         <div class="usk-image">
@@ -2446,14 +2458,15 @@ class Image_Hotspot extends Module_Base {
                 <!-- thumbsslider -->
                 <div thumbsSlider="" <?php $this->print_render_attribute_string('thumbs'); ?>>
                     <?php 
+                    $image_size = $settings['image_resolution_size'];
                     $placeholder_image_src = Utils::get_placeholder_image_src();
-                    $image_src             = wp_get_attachment_image_src( $settings['hotspot_image']['id'], 'full' );
+                    $image_src             = wp_get_attachment_image_src( $settings['hotspot_image']['id'], $image_size );
                     if ( ! $image_src ) {
                         printf( '<img src="%1$s" alt="%2$s">', esc_url( $placeholder_image_src ), esc_html( get_the_title() ) );
                     } else {
                         print( wp_get_attachment_image(
                             $settings['hotspot_image']['id'],
-                            'full',
+                            $image_size,
                             false,
                             [ 
             
