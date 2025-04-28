@@ -41,8 +41,17 @@ class Notices {
 		$time = isset($_POST['time']) ? sanitize_text_field($_POST['time']) : '';
 		$meta = isset($_POST['meta']) ? sanitize_text_field($_POST['meta']) : '';
 
-		// Valid inputs?
-		if (!empty($id)) {
+		// List of allowed notice IDs
+		$allowed_ids = [
+			'ultimate-store-kit-notice-id-welcome',
+			'ultimate-store-kit-notice-id-update',
+			'ultimate-store-kit-notice-id-review',
+			'ultimate-store-kit-notice-id-promo',
+			// Add any other valid notice IDs your plugin uses
+		];
+
+		// Valid inputs and allowed ID?
+		if (!empty($id) && in_array($id, $allowed_ids, true)) {
 
 			if ('user' === $meta) {
 				update_user_meta(get_current_user_id(), $id, true);

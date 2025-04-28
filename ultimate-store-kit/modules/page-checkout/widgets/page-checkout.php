@@ -30,7 +30,7 @@ class Page_Checkout extends Module_Base {
     }
     public function show_in_panel() {
         return get_post_type() === 'usk-template-builder' || get_post_type() === 'elementor_library' || get_post_type() === 'product';
-	}
+    }
 
     public function get_keywords() {
         return ['cart', 'order', 'wc', 'checkout', 'page'];
@@ -49,7 +49,7 @@ class Page_Checkout extends Module_Base {
     }
 
     public function has_widget_inner_wrapper(): bool {
-        return ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'e_optimized_markup' );
+        return ! \Elementor\Plugin::$instance->experiments->is_feature_active('e_optimized_markup');
     }
     protected function register_controls() {
 
@@ -1035,21 +1035,25 @@ class Page_Checkout extends Module_Base {
     <?php
     }
     public function render() {
+        // Initialize WC cart in editor
+        if (Plugin::instance()->editor->is_edit_mode() && function_exists('WC')) {
+            WC()->frontend_includes();
+            WC()->initialize_session();
+            WC()->initialize_cart();
+        }
+
     ?>
 
-        <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
-            <div class="usk-page-checkout">
-
-                <div class="usk-checkout-address-wrapper">
-                    <?php $this->checkout_billing_address(); ?>
-                    <?php $this->checkout_shipping_form(); ?>
-                </div>
-                <div class="usk-checkout-details-wrapper">
-                    <?php $this->checkout_order_review(); ?>
-                    <?php $this->checkout_payment_methods(); ?>
-                </div>
+        <div class="usk-page-checkout">
+            <div class="usk-checkout-address-wrapper">
+                <?php $this->checkout_billing_address(); ?>
+                <?php $this->checkout_shipping_form(); ?>
             </div>
-        </form>
+            <div class="usk-checkout-details-wrapper">
+                <?php $this->checkout_order_review(); ?>
+                <?php $this->checkout_payment_methods(); ?>
+            </div>
+        </div>
 
 <?php
     }

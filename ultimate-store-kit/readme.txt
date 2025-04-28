@@ -2,14 +2,14 @@
 Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, sohanurrahman, muhammadasik, shaikatazim, mohan00
 Donate link: http://bdthemes.com/
 Tags: elementor, woocommerce, woocommerce builder, woocommerce elementor, easy digital downloads
-Stable tag: 2.4.1
+Stable tag: 2.5.0
 Requires PHP: 7.0.0
 Requires at least: 5.0.0
-Tested up to: 6.7.2
+Tested up to: 6.8
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Elementor requires at least: 3.22
-Elementor tested up to: 3.28.3
+Elementor tested up to: 3.28.4
 
 Best addon for Elementor WordPress plugin with 80+ most popular eCommerce, EDD and Static elements that need your everyday website page building.
 
@@ -206,6 +206,20 @@ https://youtu.be/9J4zCaDcPnk
 
 == Changelog ==
 
+= 2.5.0 [28th April 2025] =
+
+* Added: Made Compatible with WordPress Version 6.8
+* Added: Product widgets badge display type option added
+* Added: Image position and text limit option added in product accordion widget
+* Added: Text Alignment option added in image hotspot widget
+* Added: Button offset added in featured box widget
+* Fixed: Offcanvas shows on page loading issue fixed in Mini Cart widget
+* Fixed: Security issue fixed
+* Updated: Only one plugin DCI notice will show at a time
+* Fixed: Product price color, view cart & checkout button background issue fixed in mini cart widget 
+* Added: [Mentor Slider](https://youtu.be/qO4BSo8OTkA) video tutorial added
+* Updated: Query updated
+
 = 2.4.1 [15th April 2025] =
 
 * Added: Image Resolution option added in image hotspot widget
@@ -229,6 +243,10 @@ https://youtu.be/9J4zCaDcPnk
 * Fixed: Page checkout & page cart controls fixed
 * Fixed: Color issue fixed in mini cart widget
 * Fixed: Remove button color issue fixed in mini cart widget
+* Updated: System improved
+
+= 2.3.X [XXth April 2025] =
+
 * Updated: System improved
 
 = 2.3.7 [13th March 2025] =

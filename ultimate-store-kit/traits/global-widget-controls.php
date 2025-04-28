@@ -199,7 +199,7 @@ trait Global_Widget_Controls {
         $this->start_controls_section(
             'section_woocommerce_additional',
             [
-                'label' => esc_html__('Additional Options', 'ultimate-store-kit'),
+                'label' => esc_html__('Settings', 'ultimate-store-kit'),
             ]
         );
         $this->start_controls_tabs(
@@ -2360,6 +2360,26 @@ trait Global_Widget_Controls {
                 'name'     => 'badge_typography',
                 'label'    => esc_html__('Typography', 'ultimate-store-kit'),
                 'selector' => '{{WRAPPER}} .' . $this->get_name() . ' .usk-badge-label-content > div .usk-badge',
+            ]
+        );
+        $this->add_responsive_control(
+            'badge_display_type',
+            [
+                'label' => esc_html__('Display Type', 'ultimate-store-kit') . BDTUSK_NC,
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'row' => [
+                        'title' => esc_html__('Inline', 'ultimate-store-kit'),
+                        'icon' => 'eicon-ellipsis-h',
+                    ],
+                    'column' => [
+                        'title' => esc_html__('Grid', 'ultimate-store-kit'),
+                        'icon' => 'eicon-ellipsis-v',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .' . $this->get_name() . ' .usk-badge-label-content' => 'flex-direction: {{VALUE}};',
+                ],
             ]
         );
         $this->start_controls_tabs(
