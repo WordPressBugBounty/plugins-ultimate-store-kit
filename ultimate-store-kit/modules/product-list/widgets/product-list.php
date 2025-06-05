@@ -177,8 +177,8 @@ class Product_List extends Module_Base {
             [
                 'label' => esc_html__('Hide Review Text', 'ultimate-store-kit'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'product-grid'),
-                'label_off' => esc_html__('No', 'product-grid'),
+                'label_on' => esc_html__('Yes', 'ultimate-store-kit'),
+                'label_off' => esc_html__('No', 'ultimate-store-kit'),
                 // 'return_value' => 'yes',
                 'default' => 'yes',
                 'condition' => [
@@ -388,7 +388,7 @@ class Product_List extends Module_Base {
         $this->register_global_controls_badge();
     }
 
-    public function render_header() { 
+    public function render_header() {
         ?>
         <div class="ultimate-store-kit">
             <div class="usk-product-list">
@@ -461,12 +461,12 @@ class Product_List extends Module_Base {
                     <?php if ( 'yes' == $settings['show_sale_badge'] || 'yes' == $settings['show_discount_badge'] || 'yes' == $settings['show_stock_status'] || 'yes' == $settings['show_trending_badge'] || 'yes' == $settings['show_new_badge'] ) : ?>
                     <div class="usk-badge-label-wrapper">
                         <div class="usk-badge-label-content usk-flex">
-                            <?php $this->register_global_template_badge_label(); ?>
+                            <?php $this->register_global_template_badge_label($settings); ?>
                         </div>
                     </div>
                     <?php endif; ?>
                 </div>
-                
+
             </div>
         </div>
         <?php endwhile; ?>

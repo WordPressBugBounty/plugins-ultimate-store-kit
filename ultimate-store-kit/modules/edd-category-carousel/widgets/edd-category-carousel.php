@@ -52,17 +52,21 @@ class EDD_Category_Carousel extends Module_Base {
 	}
 
 	public function get_script_depends() {
-        return ['swiper'];
-    }
+		if ($this->usk_is_edit_mode()) {
+			return ['swiper', 'usk-site'];
+		} else {
+			return ['swiper', 'usk-edd-category-carousel'];
+		}
+	}
 
 	public function get_custom_help_url() {
 		return 'https://youtu.be/z6MSJtvbxPQ';
 	}
 
 	public function has_widget_inner_wrapper(): bool {
-			return ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'e_optimized_markup' );
-		}
-		protected function register_controls() {
+		return ! \Elementor\Plugin::$instance->experiments->is_feature_active('e_optimized_markup');
+	}
+	protected function register_controls() {
 
 		$this->start_controls_section(
 			'section_content_layout',
@@ -260,7 +264,13 @@ class EDD_Category_Carousel extends Module_Base {
 			[
 				'label'       => esc_html__('Glassmorphism', 'ultimate-store-kit'),
 				'type'        => Controls_Manager::SWITCHER,
-				'description' => sprintf(__('This feature will not work in the Firefox browser untill you enable browser compatibility so please %1s look here %2s', 'ultimate-store-kit'), '<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility" target="_blank">', '</a>'),
+				// 'description' => sprintf(__('This feature will not work in the Firefox browser untill you enable browser compatibility so please %1s look here %2s', 'ultimate-store-kit'), '<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility" target="_blank">', '</a>'),
+				'description' => sprintf(
+					/* translators: 1: opening anchor tag, 2: closing anchor tag */
+					__('This feature will not work in the Firefox browser until you enable browser compatibility, so please %1$s look here %2$s.', 'ultimate-store-kit'),
+					'<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility" target="_blank">',
+					'</a>'
+				),
 				'default'     => 'yes',
 				'condition' => [
 					'skin_layout' => [
@@ -799,8 +809,8 @@ class EDD_Category_Carousel extends Module_Base {
 				if (!empty($categories)) {
 					foreach ($categories as $index => $category) :
 						$category_thumb_id = get_term_meta($category->term_id, 'download_term_image', true);
-                $img_url = wp_get_attachment_image_url($category_thumb_id, $settings['category_thumbnail_size']);
-                $category_image = $img_url ? $img_url : Utils::get_placeholder_image_src();
+						$img_url = wp_get_attachment_image_url($category_thumb_id, $settings['category_thumbnail_size']);
+						$category_image = $img_url ? $img_url : Utils::get_placeholder_image_src();
 
 						$this->add_render_attribute('edd-category-item', 'class', ['edd-item swiper-slide', 'category-link'], true);
 						$this->add_render_attribute('edd-category-item', 'href',  get_term_link($category->term_id, 'download_category'), true); ?>
@@ -808,10 +818,10 @@ class EDD_Category_Carousel extends Module_Base {
 					<?php if (!$category_thumb_id) {
 							$this->render_image();
 						} else { ?>
-							<div class="usk-edd-category-carousel-image">
-								<img src="<?php echo esc_url($category_image); ?>" alt="">
-							</div>
-						<?php } ?>
+						<div class="usk-edd-category-carousel-image">
+							<img src="<?php echo esc_url($category_image); ?>" alt="">
+						</div>
+					<?php } ?>
 					<div class="edd-content">
 						<?php printf('<h3 class="title">%s</h3>', esc_html($category->name)); ?>
 						<?php if ($settings['show_count']) :

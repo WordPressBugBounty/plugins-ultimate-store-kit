@@ -19,7 +19,7 @@ class ModuleService {
     public static function get_widget_settings($callable) {
         $settings_fields = [
             'ultimate_store_kit_active_modules' => [
-                
+
                 [
                     'name'         => 'add-to-cart',
                     'label'        => esc_html__('Add to Cart (Single)', 'ultimate-store-kit'),
@@ -176,18 +176,18 @@ class ModuleService {
                     'demo_url'     => 'https://storekit.pro/demo/breadcrumbs/',
                     'video_url'    => '',
                 ],
-				[ 
-					'name'         => 'call-for-price',
-					'label'        => esc_html__( 'Call for Price (Single)', 'ultimate-store-kit' ),
-					'type'         => 'checkbox',
-					'default'      => "off",
-					'plugin_name'  => 'woocommerce',
-					'plugin_path'  => 'woocommerce/woocommerce.php',
-					'widget_type'  => 'pro',
-					'content_type' => 'woocommerce single',
-					'demo_url'     => '#https://storekit.pro/demo/call-for-price/',
-					'video_url'    => '',
-				],
+                [
+                    'name'         => 'call-for-price',
+                    'label'        => esc_html__('Call for Price (Single)', 'ultimate-store-kit'),
+                    'type'         => 'checkbox',
+                    'default'      => "off",
+                    'plugin_name'  => 'woocommerce',
+                    'plugin_path'  => 'woocommerce/woocommerce.php',
+                    'widget_type'  => 'pro',
+                    'content_type' => 'woocommerce single',
+                    'demo_url'     => '#https://storekit.pro/demo/call-for-price/',
+                    'video_url'    => '',
+                ],
                 // CHECKOUT
                 [
                     'name'         => 'checkout-additional-info',
@@ -223,18 +223,6 @@ class ModuleService {
                     'plugin_path'  => 'woocommerce/woocommerce.php',
                     'content_type' => 'checkout',
                     'demo_url'     => 'https://storekit.pro/demo/checkout-coupon-form/',
-                    'video_url'    => '',
-                ],
-                [
-                    'name'         => 'checkout-login-form',
-                    'label'        => esc_html__('Checkout Login Form', 'ultimate-store-kit'),
-                    'type'         => 'checkbox',
-                    'default'      => "off",
-                    'widget_type'  => 'pro',
-                    'plugin_name'  => 'woocommerce',
-                    'plugin_path'  => 'woocommerce/woocommerce.php',
-                    'content_type' => 'checkout',
-                    'demo_url'     => 'https://storekit.pro/demo/checkout-login-form/',
                     'video_url'    => '',
                 ],
                 [
@@ -443,7 +431,7 @@ class ModuleService {
                     'demo_url'     => 'https://storekit.pro/demo/page-checkout/',
                     'video_url'    => '',
                 ],
-            
+
                 [
                     'name'         => 'page-my-account',
                     'label'        => esc_html__('My Account (Page)', 'ultimate-store-kit'),
@@ -528,18 +516,18 @@ class ModuleService {
                     'demo_url'     => 'https://storekit.pro/demo/product-description/',
                     'video_url'    => '',
                 ],
-                // [
-                //     'name'         => 'product-filter',
-                //     'label'        => esc_html__('Product Filter', 'ultimate-store-kit'),
-                //     'type'         => 'checkbox',
-                //     'default'      => "on",
-                //     'widget_type'  => 'free',
-                //     'plugin_name'  => 'woocommerce',
-                //     'plugin_path'  => 'woocommerce/woocommerce.php',
-                //     'content_type' => 'archive',
-                //     'demo_url'     => 'https://storekit.pro/demo/product-filter/',
-                //     'video_url'    => '',
-                // ],
+                [
+                    'name'         => 'product-filters',
+                    'label'        => esc_html__('Product Filters', 'ultimate-store-kit'),
+                    'type'         => 'checkbox',
+                    'default'      => "on",
+                    'widget_type'  => 'pro',
+                    'plugin_name'  => 'woocommerce',
+                    'plugin_path'  => 'woocommerce/woocommerce.php',
+                    'content_type' => 'woocommerce others new',
+                    'demo_url'     => 'https://storekit.pro/demo/product-filters/',
+                    'video_url'    => '',
+                ],
                 [
                     'name'         => 'product-image',
                     'label'        => esc_html__('Product Image (Single)', 'ultimate-store-kit'),
@@ -1034,12 +1022,12 @@ class ModuleService {
             'ultimate_store_kit_other_settings' => [
 
                 [
-					'name'      => 'swatches_group_start',
-					'label'     => esc_html__('Variation Swatches', 'ultimate-store-kit'),
-					//'desc'      => __('<a href="#" target="_blank">Doc Link</a>', 'ultimate-store-kit'),
-					'type'      => 'start_group',
-					'video_url' => '',
-				],
+                    'name'      => 'swatches_group_start',
+                    'label'     => esc_html__('Variation Swatches', 'ultimate-store-kit'),
+                    //'desc'      => __('<a href="#" target="_blank">Doc Link</a>', 'ultimate-store-kit'),
+                    'type'      => 'start_group',
+                    'video_url' => '',
+                ],
                 [
                     'name'         => 'variation-swatches',
                     'label'        => esc_html__('Enable', 'ultimate-store-kit'),
@@ -1054,50 +1042,39 @@ class ModuleService {
                     'parent'       => true,
                 ],
                 [
-					'name'              => 'usk_variation_swatches_shape',
-					'label'             => esc_html__('Shape', 'ultimate-store-kit'),
-					'type'              => 'select',
+                    'name'              => 'usk_variation_swatches_shape',
+                    'label'             => esc_html__('Shape', 'ultimate-store-kit'),
+                    'type'              => 'select',
                     'default'           => 'round',
                     'options'           => [
                         'round' => esc_html__('Default', 'ultimate-store-kit'),
                         'square' => esc_html__('Square', 'ultimate-store-kit'),
                         'rounded' => esc_html__('Rounded', 'ultimate-store-kit'),
                     ],
-				],
+                ],
 
                 [
-					'name'              => 'usk_variation_swatches_tooltip',
-					'label'             => esc_html__('Tooltip', 'ultimate-store-kit'),
-					'type'              => 'select',
+                    'name'              => 'usk_variation_swatches_tooltip',
+                    'label'             => esc_html__('Tooltip', 'ultimate-store-kit'),
+                    'type'              => 'select',
                     'default'           => 'yes',
                     'options'           => [
                         'yes' => esc_html__('Default', 'ultimate-store-kit'),
                         'no' => esc_html__('No', 'ultimate-store-kit'),
                     ],
-				],
+                ],
 
                 [
-					'name'              => 'usk_variation_swatches_size',
-					'label'             => esc_html__('Size', 'ultimate-store-kit'),
-					'type'              => 'number',
+                    'name'              => 'usk_variation_swatches_size',
+                    'label'             => esc_html__('Size', 'ultimate-store-kit'),
+                    'type'              => 'number',
                     'default'           => '26',
-				],
 
+                ],
                 [
-					'name'              => 'usk_variation_swatches_qty_btn',
-					'label'             => esc_html__('Convert Quantity Button', 'ultimate-store-kit'),
-					'type'              => 'select',
-                    'default'           => 'yes',
-                    'options'           => [
-                        'yes' => esc_html__('Default', 'ultimate-store-kit'),
-                        'no' => esc_html__('No', 'ultimate-store-kit'),
-                    ],
-				],
-
-                [
-					'name' => 'swatches_group_end',
-					'type' => 'end_group',
-				],
+                    'name' => 'swatches_group_end',
+                    'type' => 'end_group',
+                ],
             ]
         ];
 
