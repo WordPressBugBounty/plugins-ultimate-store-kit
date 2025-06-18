@@ -1153,7 +1153,7 @@ function ultimate_store_kit_wc_product_quick_view_content($product_id) {
 					// Initialize WooCommerce add to cart functionality
 					var wc_add_to_cart_variation_params = {
 						"ajax_url": "<?php echo admin_url('admin-ajax.php'); ?>",
-						"i18n_view_cart": "<?php echo esc_js(__('View cart', 'woocommerce')); ?>",
+						"i18n_view_cart": "<?php echo esc_js(__('View cart', 'ultimate-store-kit')); ?>",
 						"cart_url": "<?php echo esc_url(wc_get_cart_url()); ?>",
 						"is_cart": "<?php echo is_cart() ? '1' : '0'; ?>",
 						"cart_redirect_after_add": "<?php echo get_option('woocommerce_cart_redirect_after_add') ? '1' : '0'; ?>"
@@ -1318,3 +1318,127 @@ if (! function_exists('ultimate_store_kit_is_compare_product_page')) {
 		}
 	}
 }
+
+/**
+ * Helper function to check if variation swatches Pro is active
+ *
+ * @return bool
+ */
+function usk_has_variation_swatches_support() {
+	return class_exists('UltimateStoreKitPro\\VariationSwatches\\Swatches');
+}
+
+/**
+ * Helper function to load variation swatches scripts and styles
+ */
+function usk_load_variation_swatches_assets() {
+	// Always load the grid variations script for variation support
+	wp_register_script('usk-grid-variations', BDTUSK_ASSETS_URL . 'js/modules/usk-grid-variations.min.js', ['jquery'], BDTUSK_VER, true);
+	wp_localize_script('usk-grid-variations', 'usk_vars', array(
+		'ajax_url' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('usk_variations')
+	));
+}
+add_action('wp_enqueue_scripts', 'usk_load_variation_swatches_assets', 20);
+
+// Hook into AJAX variation selection to update product image
+function usk_ajax_variation_image_update() {
+	if (!isset($_POST['variation_id']) || !isset($_POST['product_id'])) {
+		wp_send_json_error('Missing required parameters');
+		return;
+	}
+
+	$variation_id = absint($_POST['variation_id']);
+	$product_id = absint($_POST['product_id']);
+
+	$variation = wc_get_product($variation_id);
+	if (!$variation) {
+		wp_send_json_error('Invalid variation');
+		return;
+	}
+
+	$image_id = $variation->get_image_id();
+	$image_url = '';
+
+	if ($image_id) {
+		$image_url = wp_get_attachment_image_url($image_id, 'woocommerce_thumbnail');
+	} else {
+		// If variation has no image, use the parent product image
+		$parent = wc_get_product($product_id);
+		$parent_image_id = $parent->get_image_id();
+		if ($parent_image_id) {
+			$image_url = wp_get_attachment_image_url($parent_image_id, 'woocommerce_thumbnail');
+		}
+	}
+
+	wp_send_json_success(array('image_url' => $image_url));
+}
+add_action('wp_ajax_usk_get_variation_image', 'usk_ajax_variation_image_update');
+add_action('wp_ajax_nopriv_usk_get_variation_image', 'usk_ajax_variation_image_update');
+
+// Start: Add to cart quantity buttons conversion
+if ( ! function_exists( 'usk_display_quantity_minus' ) ) {
+	function usk_display_quantity_minus() {
+		if ( ! is_product() ) return;
+		echo '<button type="button" class="bdt-add-to-cart-qty-minus" ><i class="usk-icon-minus3"></i></button>';
+	}
+}
+
+if ( ! function_exists( 'usk_display_quantity_plus' ) ) {	
+	function usk_display_quantity_plus() {
+		if ( ! is_product() ) return;
+		echo '<button type="button" class="bdt-add-to-cart-qty-plus" ><i class="usk-icon-plus3"></i></button>';
+	}
+}
+
+if ( ! function_exists( 'usk_add_cart_quantity_plus_minus' ) ) {
+	function usk_add_cart_quantity_plus_minus() {
+
+	echo '<style>
+		input[type="number"]::-webkit-outer-spin-button,
+		input[type="number"]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		input[type="number"] {
+			-moz-appearance: textfield; /* Firefox */
+		}		
+	</style>';
+
+	wc_enqueue_js( "
+		$(document).off('click.bdtQtyHandler'); // Remove previous handler
+		$(document).on('click.bdtQtyHandler', 'button.bdt-add-to-cart-qty-plus, button.bdt-add-to-cart-qty-minus', function(e) {
+			e.preventDefault();
+			var qty = $(this).closest('form.cart').find('.qty');
+			var val = parseFloat(qty.val()) || 0;
+			var max = parseFloat(qty.attr('max')) || Infinity;
+			var min = parseFloat(qty.attr('min')) || 0;
+			var step = parseFloat(qty.attr( 'step' ));
+
+			if ($(this).is('.bdt-add-to-cart-qty-plus')) {
+				qty.val(Math.min(val + step, max)).trigger('change');
+			} else {
+				qty.val(Math.max(val - step, min)).trigger('change');
+			}
+		});
+	");
+	}
+}
+
+if ( ! function_exists( 'usk_setup_quantity_buttons' ) ) {
+	function usk_setup_quantity_buttons() {
+		if ( function_exists( 'is_product' ) ) {
+			// Remove the default version
+			remove_all_actions( 'woocommerce_before_quantity_input_field' );
+			remove_all_actions( 'woocommerce_after_quantity_input_field' );
+			remove_all_actions( 'woocommerce_before_single_product' );
+		
+			// Add our version
+			add_action( 'woocommerce_before_quantity_input_field', 'usk_display_quantity_minus' );
+			add_action( 'woocommerce_after_quantity_input_field', 'usk_display_quantity_plus' );
+			add_action( 'woocommerce_after_single_product', 'usk_add_cart_quantity_plus_minus' );
+		}		
+	}
+}
+// End: Add to cart quantity buttons conversion

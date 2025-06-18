@@ -166,9 +166,20 @@ class Page_Single extends Module_Base {
         );
 
         $this->add_control(
+            'regular_price_color',
+            [
+                'label'     => esc_html__('Regular Color', 'ultimate-store-kit'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .woocommerce div.product p.price del, {{WRAPPER}} .woocommerce div.product span.price del' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
             'price_color',
             [
-                'label'     => esc_html__('Color', 'ultimate-store-kit'),
+                'label'     => esc_html__('Sale Color', 'ultimate-store-kit'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .woocommerce div.product p.price,{{WRAPPER}} .woocommerce div.product span.price' => 'color: {{VALUE}};',
@@ -1367,6 +1378,7 @@ class Page_Single extends Module_Base {
         }        
         ?>
         <div class="usk-page-single">
+            <?php usk_setup_quantity_buttons(); // this is for quantity plus minus button ?>
             <?php echo do_shortcode('[product_page id="' . $product_id . '"]'); ?>
         </div>
         <?php
