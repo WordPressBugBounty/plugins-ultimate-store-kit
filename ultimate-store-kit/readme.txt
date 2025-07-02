@@ -2,14 +2,14 @@
 Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, sohanurrahman, muhammadasik, shaikatazim, mohan00
 Donate link: http://bdthemes.com/
 Tags: elementor, woocommerce, woocommerce builder, woocommerce elementor, woocommerce product
-Stable tag: 2.6.3
+Stable tag: 2.7.0
 Requires PHP: 7.0.0
 Requires at least: 5.0.0
 Tested up to: 6.8.1
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Elementor requires at least: 3.22
-Elementor tested up to: 3.29.2
+Elementor tested up to: 3.30.0
 
 Best addon for Elementor WordPress plugin with 80+ most popular eCommerce, EDD and Static elements that need your everyday website page building.
 
@@ -206,6 +206,16 @@ https://youtu.be/9J4zCaDcPnk
 
 
 == Changelog ==
+
+= 2.7.0 [2nd July 2025] =
+
+* Added: Mobile Menu Widget Added
+* Added: Typography control added under Tabs Content section in the Single Product Page widget
+* Added: Order Again Button's style control added inside the Order details section in the Order Page widget
+* Fixed: Fatal error "Call to a member function get_id() on null" fixed in Builder Integration
+* Fixed: Fatal error "Call to undefined method get_settings_for_display()" fixed in Mini Cart Module
+* Fixed: Added proper null checking for product retrieval in template preview functionality
+* Fixed: Preserved show/hide functionality in mini cart widget while fixing AJAX fragment updates
 
 = 2.6.3 [25th June 2025] =
 
