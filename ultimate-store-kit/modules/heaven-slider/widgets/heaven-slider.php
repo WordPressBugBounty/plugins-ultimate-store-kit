@@ -15,6 +15,7 @@ use UltimateStoreKit\Base\Module_Base;
 use UltimateStoreKit\Includes\Controls\GroupQuery\Group_Control_Query;
 use UltimateStoreKit\traits\Global_Widget_Controls;
 use UltimateStoreKit\traits\Global_Widget_Template;
+use UltimateStoreKit\Classes\Utils;
 use WP_Query;
 
 if (!defined('ABSPATH')) {
@@ -1199,12 +1200,19 @@ class Heaven_Slider extends Module_Base
 
                             <div>
 
-                                <?php if ('yes' == $settings['show_category']): ?>
-                                    <?php printf('<div class="usk-category">%1$s</div>', wp_kses_post(wc_get_product_category_list($product->get_id(), ' '))); ?>
+                                <?php if ( 'yes' === $settings['show_category'] ) : ?>
+                                    <div class="usk-category">
+                                        <?php echo wp_kses_post( wc_get_product_category_list( $product->get_id(), ' ' ) ); ?>
+                                    </div>
                                 <?php endif; ?>
 
                                 <?php if ('yes' == $settings['show_title']):
-                                    printf('<%1$s class="usk-title"><a href="%2$s">%3$s</a></%1$s>', esc_attr($settings['title_tags']), esc_url($product->get_permalink()), esc_html($product->get_title()));
+                                    printf(
+                                        '<%1$s class="usk-title"><a href="%2$s">%3$s</a></%1$s>',
+                                        esc_attr(Utils::get_valid_html_tag($settings['title_tags'])),
+                                        esc_url($product->get_permalink()),
+                                        esc_html($product->get_title())
+                                    );
                                 endif; ?>
 
                                 <?php if ('yes' == $settings['show_excerpt']): ?>
@@ -1279,6 +1287,6 @@ class Heaven_Slider extends Module_Base
     public function query_product()
     {
         $default = $this->getGroupControlQueryArgs();
-        $this->_query = new WP_Query($default);
+        $this->_query = $this->build_query_from_args($default);
     }
 }

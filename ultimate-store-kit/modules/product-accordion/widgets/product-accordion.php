@@ -132,18 +132,18 @@ class Product_Accordion extends Module_Base
                 'default' => 'yes',
             ]
         );
-        $this->add_control(
-            'category_tags',
-            [
-                'label' => esc_html__('Category HTML Tag', 'ultimate-store-kit'),
-                'type' => Controls_Manager::SELECT,
-                'default' => 'h5',
-                'options' => ultimate_store_kit_title_tags(),
-                'condition' => [
-                    'show_category' => 'yes',
-                ],
-            ]
-        );
+        // $this->add_control(
+        //     'category_tags',
+        //     [
+        //         'label' => esc_html__('Category HTML Tag', 'ultimate-store-kit'),
+        //         'type' => Controls_Manager::SELECT,
+        //         'default' => 'h5',
+        //         'options' => ultimate_store_kit_title_tags(),
+        //         'condition' => [
+        //             'show_category' => 'yes',
+        //         ],
+        //     ]
+        // );
         $this->add_control(
             'show_description',
             [
@@ -155,7 +155,7 @@ class Product_Accordion extends Module_Base
         $this->add_control(
             'excerpt_limit',
             [
-                'label' => esc_html__('Text Limit', 'ultimate-store-kit') . BDTUSK_NC,
+                'label' => esc_html__('Text Limit', 'ultimate-store-kit'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 25,
                 'condition' => [
@@ -194,7 +194,7 @@ class Product_Accordion extends Module_Base
         $this->add_responsive_control(
             'image_position',
             [
-                'label' => esc_html__('Image Position', 'ultimate-store-kit') . BDTUSK_NC,
+                'label' => esc_html__('Image Position', 'ultimate-store-kit'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'row' => [
@@ -310,7 +310,7 @@ class Product_Accordion extends Module_Base
         $this->start_controls_tab(
             'show_action_btn_tab',
             [
-                'label' => esc_html__('Action btn', 'ultimate-store-kit'),
+                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
             ]
         );
         $this->add_control(
@@ -840,11 +840,29 @@ class Product_Accordion extends Module_Base
         $this->end_controls_section();
         $this->register_global_controls_rating();
         $this->register_global_controls_badge();
+
         $this->start_controls_section(
             'style_action_btn',
             [
-                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
-                'tab' => Controls_Manager::TAB_STYLE,
+                'label'      => esc_html__('Action Button', 'ultimate-store-kit'),
+                'tab'        => Controls_Manager::TAB_STYLE,
+                'conditions' => [
+                    'relation' => 'or',
+                    'terms' => [
+                        [
+                            'name'     => 'show_cart',
+                            'value'    => 'yes',
+                        ],
+                        [
+                            'name'     => 'show_wishlist',
+                            'value'    => 'yes',
+                        ],
+                        [
+                            'name'     => 'show_quick_view',
+                            'value'    => 'yes',
+                        ],
+                    ],
+                ],
             ]
         );
 
@@ -1304,6 +1322,6 @@ class Product_Accordion extends Module_Base
     public function query_product()
     {
         $default = $this->getGroupControlQueryArgs();
-        $this->_query = new WP_Query($default);
+        $this->_query = $this->build_query_from_args($default);
     }
 }

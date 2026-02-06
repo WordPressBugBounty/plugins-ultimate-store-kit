@@ -244,21 +244,23 @@ trait Global_Widget_Controls
                     'label' => esc_html__('Category', 'ultimate-store-kit'),
                     'type' => Controls_Manager::SWITCHER,
                     'default' => 'yes',
-                    'separator' => 'before'
+                    // 'separator' => 'before'
                 ]
             );
-            $this->add_control(
-                'category_tags',
-                [
-                    'label' => esc_html__('Category HTML Tag', 'ultimate-store-kit'),
-                    'type' => Controls_Manager::SELECT,
-                    'default' => 'h5',
-                    'options' => ultimate_store_kit_title_tags(),
-                    'condition' => [
-                        'show_category' => 'yes',
-                    ],
-                ]
-            );
+            // if ( !in_array( $this->get_name(), ['usk-heaven-slider', 'usk-product-image-accordion', 'usk-shiny-grid', 'usk-shiny-carousel'] ) ):
+            //     $this->add_control(
+            //         'category_tags',
+            //         [
+            //             'label' => esc_html__('Category HTML Tag', 'ultimate-store-kit'),
+            //             'type' => Controls_Manager::SELECT,
+            //             'default' => 'h5',
+            //             'options' => ultimate_store_kit_title_tags(),
+            //             'condition' => [
+            //                 'show_category' => 'yes',
+            //             ],
+            //         ]
+            //     );
+            // endif;
         endif;
         if ($this->get_name() !== 'usk-product-image-accordion' && $this->get_name() !== 'usk-heaven-slider' && $this->get_name() !== 'usk-glossy-grid' && $this->get_name() !== 'usk-florence-grid'):
             $this->add_control(
@@ -424,7 +426,7 @@ trait Global_Widget_Controls
         $this->start_controls_tab(
             'show_action_btn_tab',
             [
-                'label' => esc_html__('Action btn', 'ultimate-store-kit'),
+                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
             ]
         );
         $this->add_control(
@@ -1086,8 +1088,11 @@ trait Global_Widget_Controls
         $this->start_controls_section(
             'section_style_title',
             [
-                'label' => esc_html__('Title', 'ultimate-store-kit'),
-                'tab' => Controls_Manager::TAB_STYLE,
+                'label'     => esc_html__('Title', 'ultimate-store-kit'),
+                'tab'       => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'show_title' => 'yes',
+                ],
             ]
         );
 
@@ -1142,7 +1147,7 @@ trait Global_Widget_Controls
         $this->start_controls_section(
             'section_style_button',
             [
-                'label' => esc_html__('Add to Cart', 'ultimate-store-kit'),
+                'label' => esc_html__('Add To Cart', 'ultimate-store-kit'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_cart' => 'yes',
@@ -1236,6 +1241,18 @@ trait Global_Widget_Controls
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .' . $this->get_name() . ' .usk-button, {{WRAPPER}} .' . $this->get_name() . ' .added_to_cart' => 'height: {{SIZE}}px; line-height: {{SIZE}}px;',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'button_margin',
+            [
+                'label' => esc_html__('Margin', 'ultimate-store-kit') . BDTUSK_NC,
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .' . $this->get_name() . ' .usk-button, {{WRAPPER}} .' . $this->get_name() . ' .added_to_cart' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

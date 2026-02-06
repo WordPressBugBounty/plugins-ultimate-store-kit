@@ -15,6 +15,7 @@ use Elementor\Group_Control_Typography;
 use UltimateStoreKit\traits\Global_Widget_Controls;
 use UltimateStoreKit\traits\Global_Widget_Template;
 use UltimateStoreKit\Includes\Controls\GroupQuery\Group_Control_Query;
+use UltimateStoreKit\Classes\Utils;
 use WP_Query;
 
 if (!defined('ABSPATH')) {
@@ -123,7 +124,7 @@ class Mentor_Slider extends Module_Base {
         $this->add_control(
             'show_arrows',
             [
-                'label' => esc_html__('Show Arrows', 'ultimate-store-kit'),
+                'label' => esc_html__('Show Navigation', 'ultimate-store-kit'),
                 'type' => Controls_Manager::SWITCHER,
                 'default' => 'yes',
                 'separator' => 'before'
@@ -138,6 +139,61 @@ class Mentor_Slider extends Module_Base {
                 'default' => 'yes',
             ]
         );
+
+        $this->start_controls_tabs(
+            'navigation_tabs'
+        );
+
+        $this->start_controls_tab(
+            'previous_navigation_tab',
+            [
+                'label'     => esc_html__( 'Previous', 'ultimate-store-kit' ),
+                'condition' => [
+                    'show_arrows' => 'yes',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'previous_navigation_text',
+            [
+                'label'     => esc_html__( 'Text', 'ultimate-store-kit' ),
+                'type'      => Controls_Manager::TEXT,
+                'dynamic'   => [ 'active' => true ],
+                'default'   => esc_html__( 'prev', 'ultimate-store-kit' ),
+                'condition' => [
+                    'show_arrows' => 'yes',
+                ],
+            ]
+        );
+        
+        $this->end_controls_tab();
+        
+        $this->start_controls_tab(
+            'next_navigation_tab',
+            [
+                'label'     => esc_html__( 'Next', 'ultimate-store-kit' ),
+                'condition' => [
+                    'show_arrows' => 'yes',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'next_navigation_text',
+            [
+                'label'     => esc_html__( 'Text', 'ultimate-store-kit' ),
+                'type'      => Controls_Manager::TEXT,
+                'dynamic'   => [ 'active' => true ],
+                'default'   => esc_html__( 'next', 'ultimate-store-kit' ),
+                'condition' => [
+                    'show_arrows' => 'yes',
+                ],
+            ]
+        );
+        
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
 
         $this->end_controls_section();
 
@@ -156,7 +212,7 @@ class Mentor_Slider extends Module_Base {
         $this->start_controls_section(
             'section_woocommerce_additional',
             [
-                'label' => esc_html__('Additional', 'ultimate-store-kit'),
+                'label' => esc_html__('Additional Options', 'ultimate-store-kit'),
             ]
         );
         $this->start_controls_tabs(
@@ -322,7 +378,7 @@ class Mentor_Slider extends Module_Base {
         $this->start_controls_tab(
             'show_action_btn_tab',
             [
-                'label' => esc_html__('Action btn', 'ultimate-store-kit'),
+                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
             ]
         );
         $this->add_control(
@@ -808,8 +864,25 @@ class Mentor_Slider extends Module_Base {
         $this->start_controls_section(
             'style_action_btn',
             [
-                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
-                'tab'   => Controls_Manager::TAB_STYLE,
+                'label'      => esc_html__( 'Action Button', 'ultimate-store-kit' ),
+                'tab'        => Controls_Manager::TAB_STYLE,
+                'conditions' => [
+                    'relation' => 'or',
+                    'terms'    => [
+                        [
+                            'name'  => 'show_wishlist',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name'  => 'show_quick_view',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name'  => 'show_cart',
+                            'value' => 'yes',
+                        ],
+                    ],
+                ],
             ]
         );
 
@@ -1657,15 +1730,15 @@ class Mentor_Slider extends Module_Base {
                             <?php if ($settings['show_arrows']) : ?>
                                 <div class="usk-navigation-button">
                                     <div class="usk-button-next usk-nav-btn">
-                                        <div class="usk-nav-text" data-title="Next">
-                                            <span><?php echo esc_html_x('next', 'Fronend', 'ultimate-store-kit') ?></span>
+                                        <div class="usk-nav-text" data-title="<?php echo esc_attr( $settings['next_navigation_text'] ) ?>">
+                                            <span><?php echo esc_html( $settings['next_navigation_text'] ) ?></span>
                                         </div>
                                         <i class="usk-icon-arrow-right-<?php echo esc_html($settings['nav_arrows_icon']); ?>" aria-hidden="true"></i>
                                     </div>
                                     <div class="usk-button-prev usk-nav-btn">
                                         <i class="usk-icon-arrow-left-<?php echo esc_html($settings['nav_arrows_icon']); ?>" aria-hidden="true"></i>
-                                        <div class="usk-nav-text" data-title="Prev">
-                                            <span><?php echo esc_html_x('prev', 'Fronend', 'ultimate-store-kit') ?></span>
+                                        <div class="usk-nav-text" data-title="<?php echo esc_attr( $settings['previous_navigation_text'] ) ?>">
+                                            <span><?php echo esc_html( $settings['previous_navigation_text'] ) ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1727,11 +1800,18 @@ class Mentor_Slider extends Module_Base {
                         <div class="usk-inner-content">
 
                             <?php if ('yes' == $settings['show_category']) : ?>
-                                <?php printf('<div class="usk-category" data-swiper-parallax-X="-50">%1$s</div>', wp_kses_post(wc_get_product_category_list($product->get_id(), ' '))); ?>
+                                <?php printf(
+                                    '<div class="usk-category" data-swiper-parallax-X="-50">%1$s</div>', 
+                                    wp_kses_post(wc_get_product_category_list($product->get_id(), ' '))
+                                ); ?>
                             <?php endif; ?>
 
                             <?php if ('yes' == $settings['show_title']) :
-                                printf('<%1$s class="usk-title" data-swiper-parallax-X="-100"><a href="%2$s">%3$s</a></%1$s>', esc_attr($settings['title_tags']), esc_url($product->get_permalink()), esc_html($product->get_title()));
+                                printf(
+                                    '<%1$s class="usk-title" data-swiper-parallax-X="-100"><a href="%2$s">%3$s</a></%1$s>', 
+                                    esc_attr(Utils::get_valid_html_tag($settings['title_tags'])),
+                                    esc_url($product->get_permalink()), 
+                                    esc_html($product->get_title()));
                             endif; ?>
 
                             <?php if ('yes' == $settings['show_excerpt']) : ?>
@@ -1802,6 +1882,6 @@ class Mentor_Slider extends Module_Base {
                 }
                 public function query_product() {
                     $default = $this->getGroupControlQueryArgs();
-                    $this->_query = new WP_Query($default);
+                    $this->_query = $this->build_query_from_args($default);
                 }
             }

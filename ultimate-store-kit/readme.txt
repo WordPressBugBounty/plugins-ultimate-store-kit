@@ -1,15 +1,15 @@
-=== Ultimate Store Kit - Elementor powered WooCommerce Builder, 80+ Widgets and Template Builder ===
-Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, sohanurrahman, muhammadasik, shaikatazim, mohan00
+=== Ultimate Store Kit - Addon For WooCommerce, EDD and Elementor ===
+Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, sohanurrahman, muhammadasik, shaikatazim, mohan00, syedfarhanreza, shmusuf, arafatakashakku, shamim496
 Donate link: http://bdthemes.com/
 Tags: elementor, elementor addons, woocommerce builder, woocommerce elementor, woocommerce product, woocommerce design, woocommerce widgets, EDD, cart
-Stable tag: 2.8.4
+Stable tag: 2.9.8
 Requires PHP: 7.0.0
 Requires at least: 5.0.0
-Tested up to: 6.8.2
+Tested up to: 6.9
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Elementor requires at least: 3.22
-Elementor tested up to: 3.32.2
+Elementor requires at least: 3.28
+Elementor tested up to: 3.35.1
 
 WooCommerce and EDD Elementor addon with product grid, category, reviews, carousel, filters, cart, checkout, slider and more
 
@@ -18,8 +18,9 @@ WooCommerce and EDD Elementor addon with product grid, category, reviews, carous
 
 **Ultimate Store Kit – The Complete WooCommerce & EDD Builder for Elementor**
 
-Ultimate Store Kit is the best WooCommerce and Easy Digital Downloads (EDD) builder for Elementor. It gives you complete control over your online store design.
+Ultimate Store Kit is an all-in-one WooCommerce and Easy Digital Downloads (EDD) builder for Elementor. It gives you complete control over your online store design.
 With 80+ advanced widgets and a powerful template builder, you can create stunning product pages, cart pages, checkout pages and account pages. No coding is needed!
+
 
 ### Key Features 👇 ###
 
@@ -174,7 +175,7 @@ Feel free to [Contact us](https://bdthemes.com/support-new/) 💌 or check our w
 
 == Check out our other Addons 👑 ==
 
-Explore the best free addons for Elementor and Gutenberg to boost your site with advanced blocks, sliders and eCommerce tools.
+Explore the more free addons for Elementor and Gutenberg to boost your site with advanced blocks, sliders and eCommerce tools.
 
 * **[ZoloBlocks](https://wordpress.org/plugins/zoloblocks/)** 🆕☀️ - Mind-blowing dynamic block plugin for Gutenberg with powerful and advanced features offering greater web design experience.
 
@@ -206,6 +207,96 @@ https://youtu.be/9J4zCaDcPnk
 
 
 == Changelog ==
+
+= 2.9.8 [5th February 2026] =
+
+* Fixed: Action Button style section visibility fixed in mentor slider, product accordion & showcase slider
+* Fixed: Removed hard-coded (prev & next) text from mentor slider widget
+
+= 2.9.7 [21st January 2026] =
+
+* Added: Empty product message & offcanvas border radius controls added in the mini cart widget
+
+= 2.9.6 [12th January 2026] =
+
+* Fixed: Typography issue fixed in the page cart widget
+* Fixed: Border width and border radius issue fixed in the mini cart widget
+
+= 2.9.5 [1st January 2026] =
+
+* Fixed: Template builder security vulnerability patched - Added capability check and nonce verification to prevent unauthorized access to template data (CVSS 4.3)
+
+= 2.9.4 [1st January 2026] =
+
+* Updated: Modified the hover effect in the shiny grid widget
+
+= 2.9.3 [24th December 2025] =
+
+* Added: New control added to the add to cart button section in the showcase slider widget
+
+= 2.9.2 [17th December 2025] =
+
+* Fixed: Applied correct condition for changing the title tag in the showcase slider widget
+* Fixed: Image width issue fixed in showcase slider widget
+
+= 2.9.1 [10th December 2025] =
+
+* Added: Add to cart margin added in shiny grid widget
+
+= 2.9.0 [2nd December 2025] =
+
+* Added: Added current query in all woocommerce widget
+* Added: Added aria-label attribute to links for better accessibility
+* Fixed: Removed hard-coded title tag from shiny grid widget
+* Updated: Made compatible with WordPress version 6.9
+
+= 2.8.15 [26th November 2025] =
+
+* Fixed: Proper condition applied for title and image controls in the product list widget
+
+= 2.8.14 [20th November 2025] =
+
+* Fixed: Notice duplicate issue fixed
+
+= 2.8.13 [19th November 2025] =
+
+* Updated: System Improved
+
+= 2.8.12 [18th November 2025] =
+
+* Fixed: Category spacing issues fixed in the heaven slider and product image accordion widgets
+
+= 2.8.11 [13th November 2025] =
+
+* Updated: Notice design improved
+
+= 2.8.10 [12th November 2025] =
+
+* Fixed: API Banner duplicate issue fixed
+
+= 2.8.9 [10th November 2025] =
+
+* Updated: System Improved
+
+= 2.8.8 [4th November 2025] =
+
+* Fixed: Action button design issue fixed in edd classic carousel widget
+* Fixed: Corrected wrong control name and border type condition logic issue fixed 
+
+= 2.8.7 [16th October 2025] =
+
+* Fixed: HTML tag validation issue fixed
+* Fixed: Security issue fixed
+* Added: Added dynamic tag support for category markup
+
+= 2.8.6 [14th October 2025] =
+
+* Improved: Web accessibility enhanced for pagination Previous/Next links ( Thanks to Oktawia )
+* Fixed: Pagination Previous/Next links appearance issue fixed for grid-type widgets
+
+= 2.8.5 [5th October 2025] =
+
+* Fixed: PHP deprecation warning for implicitly nullable parameter in optional() function
 
 = 2.8.4 [28th September 2025] =
 
@@ -335,45 +426,49 @@ Details [changelog here](https://feedback.bdthemes.com/announcements?category=ca
 
 == Frequently Asked Questions ==
 
-### Is your plugin compatible with latest WordPress update?
+= Is your plugin compatible with latest WordPress update? =
 
-- Yes. Ultimate Store Kit is tested with the latest version update of WordPress and it is compatible with the platform.
+Yes. Ultimate Store Kit is tested with the latest version update of WordPress and it is compatible with the platform.
 
-### Do you provide documentation?
+= Do you provide documentation? =
 
-- We provide documentation for each of our products/plugins/widgets to help users to better utilize the tools.
+We provide documentation for each of our products/plugins/widgets to help users to better utilize the tools.
 
-### What are the benefits of your plugin?
+= What are the benefits of your plugin? =
 
-- Ultimate Store Kit is the perfect online store design tool that combines multiple web designing features into one plugin. Using this tool, you can utilize online store platforms like WooCommerce, EDD and Download Monitor to shape your business as you want.
+Ultimate Store Kit is the perfect online store design tool that combines multiple web designing features into one plugin. Using this tool, you can utilize online store platforms like WooCommerce, EDD and Download Monitor to shape your business as you want.
 
-### Does your plugin work with my theme?
+= Does your plugin work with my theme? =
 
-- Ultimate Store Kit is designed to work with major WordPress themes and is compatible with all themes made for WordPress Elementor.
+Ultimate Store Kit is designed to work with major WordPress themes and is compatible with all themes made for WordPress Elementor.
 
-### How can I import my products from the existing EDD/WooCommerce/Digital Downloads store?
+= How can I import my products from the existing EDD/WooCommerce/Digital Downloads store? =
 
-- You don't have to import anything. Ultimate Store Kit doesn't use a separate platform to store your shop data. Rather, it reads the store data from your existing store in WordPress automatically.
+You don't have to import anything. Ultimate Store Kit doesn't use a separate platform to store your shop data. Rather, it reads the store data from your existing store in WordPress automatically.
 
-### Is Ultimate Store Kit an eCommerce platform?
+= Is Ultimate Store Kit an eCommerce platform? =
 
-- No. Ultimate Store Kit is not a new eCommerce platform but a support plugin for existing platforms on WordPress and works for design purposes.
+No. Ultimate Store Kit is not a new eCommerce platform but a support plugin for existing platforms on WordPress and works for design purposes.
 
-### Where can I request new features?
+= Where can I request new features? =
 
-- Please contact our support team through email or LiveChat in case you need to request new features for our product. Our team will connect with you within 24 hours.
+Please contact our support team through email or LiveChat in case you need to request new features for our product. Our team will connect with you within 24 hours.
 
-### Do I need Elementor Pro to use Ultimate Store Kit?
+= Do I need Elementor Pro to use Ultimate Store Kit? =
 
-- There is no need for Elementor Pro because Ultimate Store Kit works with both the free and pro versions of Elementor page builder plugin.
+There is no need for Elementor Pro because Ultimate Store Kit works with both the free and pro versions of Elementor page builder plugin.
 
-### Where can I see the Wishlist after I click the Wishlist button?
+= Where can I see the Wishlist after I click the Wishlist button? =
 
-- After adding any product to the wishlist, you can find the wishlist when you log into the store and click on the My Account menu to reveal the user dashboard.
+After adding any product to the wishlist, you can find the wishlist when you log into the store and click on the My Account menu to reveal the user dashboard.
 
-### How can I shift to Pro plugin?
+= How can I shift to Pro plugin? =
 
-- Visit BdThemes.com to buy a plugin license or see the current page for the licensing option to buy and shift to Pro plugin of Ultimate Store Kit.
+Visit BdThemes.com to buy a plugin license or see the current page for the licensing option to buy and shift to Pro plugin of Ultimate Store Kit.
+
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/9e5fbf21-88b1-49a4-bc2e-929894a7e998)
 
 == Screenshots ==
 

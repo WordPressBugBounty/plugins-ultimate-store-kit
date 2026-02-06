@@ -13,6 +13,7 @@ use UltimateStoreKit\Base\Module_Base;
 use UltimateStoreKit\Includes\Controls\GroupQuery\Group_Control_Query;
 use UltimateStoreKit\traits\Global_Widget_Controls;
 use UltimateStoreKit\traits\Global_Widget_Template;
+use UltimateStoreKit\Classes\Utils;
 use WP_Query;
 
 if (!defined('ABSPATH')) {
@@ -124,6 +125,9 @@ class Showcase_Slider extends Module_Base
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => ultimate_store_kit_title_tags(),
+                'condition' => [
+                    'show_title' => 'yes',
+                ],
             ]
         );
 
@@ -139,7 +143,7 @@ class Showcase_Slider extends Module_Base
         $this->add_responsive_control(
             'items_height',
             [
-                'label' => esc_html__('Image Height', 'ultimate-store-kit') . BDTUSK_NC,
+                'label' => esc_html__('Image Height', 'ultimate-store-kit'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -172,7 +176,7 @@ class Showcase_Slider extends Module_Base
         $this->start_controls_section(
             'section_woocommerce_additional',
             [
-                'label' => esc_html__('Additional', 'ultimate-store-kit'),
+                'label' => esc_html__('Additional Options', 'ultimate-store-kit'),
             ]
         );
         $this->start_controls_tabs(
@@ -304,7 +308,7 @@ class Showcase_Slider extends Module_Base
         $this->start_controls_tab(
             'show_action_btn_tab',
             [
-                'label' => esc_html__('Action btn', 'ultimate-store-kit'),
+                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
             ]
         );
         $this->add_control(
@@ -485,12 +489,12 @@ class Showcase_Slider extends Module_Base
                 'tablet_default' => 1,
                 'mobile_default' => 1,
                 'options' => [
-                    1 => '1',
-                    2 => '2',
-                    3 => '3',
-                    4 => '4',
-                    5 => '5',
-                    6 => '6',
+                    1 => esc_html__('1', 'ultimate-store-kit'),
+                    2 => esc_html__('2', 'ultimate-store-kit'),
+                    3 => esc_html__('3', 'ultimate-store-kit'),
+                    4 => esc_html__('4', 'ultimate-store-kit'),
+                    5 => esc_html__('5', 'ultimate-store-kit'),
+                    6 => esc_html__('6', 'ultimate-store-kit'),
                 ],
             ]
         );
@@ -706,7 +710,7 @@ class Showcase_Slider extends Module_Base
         $this->start_controls_section(
             'section_style_button',
             [
-                'label' => esc_html__('Add to Cart', 'ultimate-store-kit'),
+                'label' => esc_html__('Add To Cart', 'ultimate-store-kit'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_cart' => 'yes',
@@ -763,6 +767,19 @@ class Showcase_Slider extends Module_Base
                 ],
             ]
         );
+
+        $this->add_responsive_control(
+            'button_padding',
+            [
+                'label'      => esc_html__( 'Padding', 'ultimate-store-kit' ) . BDTUSK_NC,
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors'  => [
+                    '{{WRAPPER}} .usk-showcase-slider .usk-button, {{WRAPPER}} .usk-showcase-slider .added_to_cart' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->add_responsive_control(
             'button_spacing',
             [
@@ -906,15 +923,39 @@ class Showcase_Slider extends Module_Base
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->end_controls_section();
+
         $this->register_global_controls_badge();
         $this->register_global_controls_rating();
+
         $this->start_controls_section(
             'style_action_btn',
             [
-                'label' => esc_html__('Action Button', 'ultimate-store-kit'),
-                'tab' => Controls_Manager::TAB_STYLE,
-            ]
+                'label'      => esc_html__( 'Action Button', 'ultimate-store-kit' ),
+                'tab'        => Controls_Manager::TAB_STYLE,
+                'conditions' => [
+                    'relation' => 'or',
+                    'terms'    => [
+                        [
+                            'name'  => 'show_wishlist',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name'  => 'show_quick_view',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name'  => 'show_cart',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name'  => 'show_compare',
+                            'value' => 'yes',
+                        ],
+                    ],
+                ],
+            ]         
         );
+
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -1463,7 +1504,12 @@ class Showcase_Slider extends Module_Base
                                     <?php printf('<div class="usk-category">%1$s</div>', wp_kses_post(wc_get_product_category_list($product->get_id(), ' '))); ?>
                                 <?php endif; ?>
                                 <?php if ('yes' == $settings['show_title']):
-                                    printf('<a href="%2$s" class="usk-title"><%1$s  class="title">%3$s</%1$s></a>', esc_attr($settings['title_tags']), esc_url($product->get_permalink()), esc_html($product->get_title()));
+                                    printf(
+                                        '<a href="%2$s" class="usk-title"><%1$s class="title">%3$s</%1$s></a>', 
+                                        esc_attr(Utils::get_valid_html_tag($settings['title_tags'])), 
+                                        esc_url($product->get_permalink()), 
+                                        esc_html($product->get_title())
+                                    );
                                 endif; ?>
 
                             </div>
@@ -1499,6 +1545,6 @@ class Showcase_Slider extends Module_Base
     public function query_product()
     {
         $default = $this->getGroupControlQueryArgs();
-        $this->_query = new WP_Query($default);
+        $this->_query = $this->build_query_from_args($default);
     }
 }

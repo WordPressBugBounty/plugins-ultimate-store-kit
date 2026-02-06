@@ -26,7 +26,7 @@ class Admin {
 
 
 	function notice_styles(){
-		wp_enqueue_style('usk-admin-notice', BDTUSK_ADMIN_URL . 'assets/css/usk-admin-notice.css', [], BDTUSK_VER);
+		wp_enqueue_style('usk-admin-biggopti', BDTUSK_ADMIN_URL . 'assets/css/usk-admin-biggopti.css', [], BDTUSK_VER);
 	}
 
 	/**
@@ -61,7 +61,7 @@ class Admin {
 		if (true !== _is_usk_pro_activated()) {
 			$row_meta = [
 				'settings' => '<a href="'.admin_url( 'admin.php?page=ultimate_store_kit_options' ) .'" aria-label="' . esc_attr(__('Go to settings', 'ultimate-store-kit')) . '" >' . __('Settings', 'ultimate-store-kit') . '</b></a>',
-				'gopro' => '<a href="https://store.bdthemes.com/ultimate-store-kit?utm_source=UltimateStoreKit&utm_medium=PluginPage&utm_campaign=UltimateStoreKit&coupon=SUMMER25" aria-label="' . esc_attr(__('Go get the pro version', 'ultimate-store-kit')) . '" target="_blank" title="When you purchase through this link you will get Up to 83% discount!" class="usk-go-pro">' . __('Upgrade For Up to 83% Off!', 'ultimate-store-kit') . '</a>',
+				'gopro' => '<a href="https://bdthemes.com/deals/?utm_source=WordPress_org&utm_medium=bfcm_cta&utm_campaign=ultimate_store_kit" aria-label="' . esc_attr(__('Go get the pro version', 'ultimate-store-kit')) . '" target="_blank" title="When you purchase through this link you will get Up to 87% discount!" class="usk-go-pro">' . __('Black Friday Limited Offer Up To 87% Off!', 'ultimate-store-kit') . '</a>',
 			];
 		} else {
 			$row_meta = [
@@ -103,14 +103,14 @@ class Admin {
 		if (is_admin()) { // for Admin Dashboard Only
 			wp_enqueue_script('jquery');
 			wp_enqueue_script('jquery-form');
-			wp_enqueue_script('usk-notice', BDTUSK_ADMIN_URL  . 'assets/js/usk-notice.min.js', ['jquery'], BDTUSK_VER, true);
+			wp_enqueue_script('usk-biggopti', BDTUSK_ADMIN_URL  . 'assets/js/usk-biggopti.min.js', ['jquery'], BDTUSK_VER, true);
 
 			$script_config = [
 				'ajaxurl'	=> admin_url('admin-ajax.php'),
 				'nonce'		=> wp_create_nonce('ultimate-store-kit'),
 			];
 			
-			wp_localize_script('usk-notice', 'UltimateStoreKitNoticeConfig', $script_config);
+			wp_localize_script('usk-biggopti', 'UltimateStoreKitBiggoptiConfig', $script_config);
 
 			if (isset($_GET['page']) && ($_GET['page'] == 'ultimate_store_kit_options')) {
 				wp_enqueue_script('chart', BDTUSK_ADMIN_URL . 'assets/js/chart.min.js', ['jquery'], '3.9.3', true);

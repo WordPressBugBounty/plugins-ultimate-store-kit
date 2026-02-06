@@ -121,12 +121,12 @@ class Shiny_Grid extends Module_Base
                 'tablet_default' => '2',
                 'mobile_default' => '1',
                 'options' => [
-                    '1' => '1',
-                    '2' => '2',
-                    '3' => '3',
-                    '4' => '4',
-                    '5' => '5',
-                    '6' => '6',
+                    '1' => esc_html__('1', 'ultimate-store-kit'),
+                    '2' => esc_html__('2', 'ultimate-store-kit'),
+                    '3' => esc_html__('3', 'ultimate-store-kit'),
+                    '4' => esc_html__('4', 'ultimate-store-kit'),
+                    '5' => esc_html__('5', 'ultimate-store-kit'),
+                    '6' => esc_html__('6', 'ultimate-store-kit'),
                 ],
                 'condition' => [
                     'layout_style' => 'grid',
@@ -149,12 +149,12 @@ class Shiny_Grid extends Module_Base
                 'tablet_default' => '2',
                 'mobile_default' => '1',
                 'options' => [
-                    '1' => '1',
-                    '2' => '2',
-                    '3' => '3',
-                    '4' => '4',
-                    '5' => '5',
-                    '6' => '6',
+                    '1' => esc_html__('1', 'ultimate-store-kit'),
+                    '2' => esc_html__('2', 'ultimate-store-kit'),
+                    '3' => esc_html__('3', 'ultimate-store-kit'),
+                    '4' => esc_html__('4', 'ultimate-store-kit'),
+                    '5' => esc_html__('5', 'ultimate-store-kit'),
+                    '6' => esc_html__('6', 'ultimate-store-kit'),
                 ],
                 'condition' => [
                     'layout_style' => 'list'
@@ -352,7 +352,7 @@ class Shiny_Grid extends Module_Base
     public function query_product()
     {
         $default = $this->getGroupControlQueryArgs();
-        $this->_query = new WP_Query($default);
+        $this->_query = $this->build_query_from_args($default);
     }
     protected function template_grid_columns()
     {

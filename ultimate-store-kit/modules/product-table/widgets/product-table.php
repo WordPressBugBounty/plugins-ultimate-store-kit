@@ -224,7 +224,7 @@ class Product_Table extends Module_Base {
         $this->start_controls_section(
             'section_woocommerce_additional',
             [
-                'label' => esc_html__('Additional', 'ultimate-store-kit'),
+                'label' => esc_html__('Additional Options', 'ultimate-store-kit'),
             ]
         );
 
@@ -2206,6 +2206,6 @@ class Product_Table extends Module_Base {
         }
         public function query_product() {
             $default = $this->getGroupControlQueryArgs();
-            $this->_query = new WP_Query($default);
+            $this->_query = $this->build_query_from_args($default);
         }
     }
