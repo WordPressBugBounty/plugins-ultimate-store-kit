@@ -2,14 +2,14 @@
 # This file is distributed under the GPL3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Store Kit 3.0.1\n"
+"Project-Id-Version: Ultimate Store Kit 3.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-store-kit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-28T06:59:48+00:00\n"
+"POT-Creation-Date: 2026-05-06T11:09:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ultimate-store-kit\n"
@@ -536,76 +536,76 @@ msgstr ""
 msgid "Template Type "
 msgstr ""
 
-#: includes/builder/builder-cpt.php:408
 #: includes/builder/builder-cpt.php:409
+#: includes/builder/builder-cpt.php:410
 msgid "Template Builder"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:417
+#: includes/builder/builder-cpt.php:418
 msgctxt "post type general name"
 msgid "Template Items"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:418
+#: includes/builder/builder-cpt.php:419
 msgctxt "post type singular name"
 msgid "Template Item"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:419
+#: includes/builder/builder-cpt.php:420
 msgctxt "admin menu"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:420
+#: includes/builder/builder-cpt.php:421
 msgctxt "add new on admin bar"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:421
+#: includes/builder/builder-cpt.php:422
 msgctxt "template_manager"
 msgid "Add New"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:422
+#: includes/builder/builder-cpt.php:423
 msgid "Add New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:423
+#: includes/builder/builder-cpt.php:424
 #: includes/builder/modal/modal.php:7
 msgid "New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:424
+#: includes/builder/builder-cpt.php:425
 #: includes/helper.php:500
 msgid "Edit Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:425
+#: includes/builder/builder-cpt.php:426
 msgid "View Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:426
+#: includes/builder/builder-cpt.php:427
 #: assets/admin/admin.js:1
 msgid "All Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:427
+#: includes/builder/builder-cpt.php:428
 msgid "Search Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:428
+#: includes/builder/builder-cpt.php:429
 msgid "Parent Template:"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:429
+#: includes/builder/builder-cpt.php:430
 msgid "No Template found."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:430
+#: includes/builder/builder-cpt.php:431
 msgid "No Template found in Trash."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:435
+#: includes/builder/builder-cpt.php:436
 msgid "Description."
 msgstr ""
 
@@ -675,6 +675,7 @@ msgid "Active"
 msgstr ""
 
 #: includes/builder/modal/modal.php:90
+#: assets/admin/others/js/ultimate-builder.js:1
 msgid "Create Template"
 msgstr ""
 
@@ -6139,23 +6140,23 @@ msgstr ""
 msgid "Popularity"
 msgstr ""
 
-#: templates/shiny-grid.php:189
+#: templates/shiny-grid.php:188
 msgid "Add to cart"
 msgstr ""
 
-#: templates/shiny-grid.php:189
+#: templates/shiny-grid.php:188
 msgid "Select options"
 msgstr ""
 
 #. Translators: %s is the name of the color option (e.g., "Red", "Blue").
 #. Translators: %s is the name of the variation option (e.g., "Large", "Cotton").
-#: templates/shiny-grid.php:441
-#: templates/shiny-grid.php:451
+#: templates/shiny-grid.php:440
+#: templates/shiny-grid.php:450
 #, php-format
 msgid "Select %s"
 msgstr ""
 
-#: templates/shiny-grid.php:505
+#: templates/shiny-grid.php:504
 msgid "Choose an option"
 msgstr ""
 
@@ -6506,6 +6507,14 @@ msgstr ""
 
 #: assets/admin/admin.js:1
 msgid "Display live visitor count on product pages to create urgency."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Upsell & Cross-Sell"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Display upsell and cross-sell products on product pages to increase sales."
 msgstr ""
 
 #: assets/admin/admin.js:1
@@ -7042,4 +7051,16 @@ msgstr ""
 
 #: assets/admin/admin.js:1
 msgid "All rights reserved."
+msgstr ""
+
+#: assets/admin/others/js/admin-api-biggopti.js:1
+msgid "Go Pro"
+msgstr ""
+
+#: assets/admin/others/js/ultimate-builder.js:1
+msgid "Update Template"
+msgstr ""
+
+#: assets/admin/others/js/ultimate-builder.js:1
+msgid "Permission denied or invalid request"
 msgstr ""
