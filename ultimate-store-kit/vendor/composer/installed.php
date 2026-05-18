@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bdthemes/ultimate-store-kit',
-        'pretty_version' => '3.0.2',
-        'version' => '3.0.2.0',
-        'reference' => '067cb89d879709e3b41fabdfc9cb0ad852fd223d',
+        'pretty_version' => '3.0.3',
+        'version' => '3.0.3.0',
+        'reference' => '96ca8dc50b1f9014ea12e8e6d6d49eb4fd26fc43',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bdthemes/ultimate-store-kit' => array(
-            'pretty_version' => '3.0.2',
-            'version' => '3.0.2.0',
-            'reference' => '067cb89d879709e3b41fabdfc9cb0ad852fd223d',
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'reference' => '96ca8dc50b1f9014ea12e8e6d6d49eb4fd26fc43',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
