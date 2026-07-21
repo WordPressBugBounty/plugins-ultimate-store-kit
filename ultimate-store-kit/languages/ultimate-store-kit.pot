@@ -2,14 +2,14 @@
 # This file is distributed under the GPL3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Store Kit 3.0.5\n"
+"Project-Id-Version: Ultimate Store Kit 3.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-store-kit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-21T10:35:59+00:00\n"
+"POT-Creation-Date: 2026-07-21T09:29:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ultimate-store-kit\n"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: includes/Admin/ModuleService.php:339
 #: modules/glossy-grid/module.info.php:8
-#: modules/glossy-grid/widgets/glossy-grid.php:37
+#: modules/glossy-grid/widgets/glossy-grid.php:34
 msgid "Glossy Grid"
 msgstr ""
 
@@ -348,7 +348,7 @@ msgstr ""
 
 #: includes/Admin/ModuleService.php:701
 #: modules/shiny-grid/module.info.php:8
-#: modules/shiny-grid/widgets/shiny-grid.php:36
+#: modules/shiny-grid/widgets/shiny-grid.php:33
 msgid "Shiny Grid"
 msgstr ""
 
@@ -576,7 +576,7 @@ msgid "New Template"
 msgstr ""
 
 #: includes/builder/builder-cpt.php:425
-#: includes/helper.php:500
+#: includes/helper.php:470
 msgid "Edit Template"
 msgstr ""
 
@@ -609,16 +609,16 @@ msgstr ""
 msgid "Description."
 msgstr ""
 
-#: includes/builder/builder-integration.php:222
+#: includes/builder/builder-integration.php:212
 msgid "Builder Settings"
 msgstr ""
 
-#: includes/builder/builder-integration.php:230
+#: includes/builder/builder-integration.php:220
 msgid "Builder Post"
 msgstr ""
 
-#: includes/builder/builder-integration.php:244
-#: includes/builder/builder-integration.php:247
+#: includes/builder/builder-integration.php:234
+#: includes/builder/builder-integration.php:237
 msgid "Apply & Preview"
 msgstr ""
 
@@ -669,7 +669,7 @@ msgstr ""
 #: traits/global-widget-controls.php:1819
 #: traits/global-widget-controls.php:1944
 #: traits/global-widget-controls.php:2341
-#: traits/global-widget-controls.php:4480
+#: traits/global-widget-controls.php:4483
 #: assets/admin/admin.js:1
 msgid "Active"
 msgstr ""
@@ -758,7 +758,7 @@ msgstr ""
 #: includes/controls/group-query/group-control-query.php:291
 #: includes/controls/group-query/group-control-query.php:388
 #: includes/controls/group-query/group-control-query.php:531
-#: includes/helper.php:1033
+#: includes/helper.php:1003
 #: modules/product-review-carousel/widgets/product-review-carousel.php:179
 #: modules/product-reviews/widgets/product-reviews.php:165
 #: modules/up-sells/widgets/up-sells.php:91
@@ -770,7 +770,7 @@ msgstr ""
 #: includes/controls/group-query/group-control-query.php:214
 #: includes/controls/group-query/group-control-query.php:292
 #: includes/controls/group-query/group-control-query.php:436
-#: modules/page-cart/widgets/page-cart.php:274
+#: modules/page-cart/widgets/page-cart.php:314
 #: modules/page-single/widgets/page-single.php:161
 msgid "Product Image"
 msgstr ""
@@ -783,13 +783,13 @@ msgstr ""
 #: includes/modal/modal-controls.php:419
 #: modules/image-hotspot/widgets/image-hotspot.php:1262
 #: modules/mentor-slider/widgets/mentor-slider.php:282
-#: modules/mentor-slider/widgets/mentor-slider.php:768
+#: modules/mentor-slider/widgets/mentor-slider.php:774
 #: modules/mini-cart/templates/cart/mini-cart-backup.php:65
 #: modules/mini-cart/templates/cart/mini-cart.php:53
 #: modules/mini-cart/widgets/mini-cart.php:544
 #: modules/mini-cart/widgets/mini-cart.php:1368
-#: modules/page-cart/widgets/page-cart.php:1545
-#: modules/page-cart/widgets/page-cart.php:1622
+#: modules/page-cart/widgets/page-cart.php:1601
+#: modules/page-cart/widgets/page-cart.php:1675
 #: modules/page-single/widgets/page-single.php:1001
 #: modules/product-accordion/widgets/product-accordion.php:179
 #: modules/product-list/widgets/product-list.php:163
@@ -885,12 +885,12 @@ msgstr ""
 #: includes/controls/group-query/group-control-query.php:440
 #: includes/controls/group-query/group-control-query.php:458
 #: includes/controls/group-query/group-control-query.php:476
-#: includes/helper.php:791
+#: includes/helper.php:761
 #: modules/featured-box/widgets/featured-box.php:157
 #: modules/featured-box/widgets/featured-box.php:276
 #: modules/featured-box/widgets/featured-box.php:298
 #: modules/heaven-slider/widgets/heaven-slider.php:740
-#: modules/mentor-slider/widgets/mentor-slider.php:1345
+#: modules/mentor-slider/widgets/mentor-slider.php:1351
 #: modules/mobile-menu/widgets/mobile-menu.php:90
 #: modules/mobile-menu/widgets/mobile-menu.php:309
 #: modules/product-table/widgets/product-table.php:200
@@ -973,7 +973,7 @@ msgid "Order By"
 msgstr ""
 
 #: includes/controls/group-query/group-control-query.php:529
-#: includes/helper.php:1031
+#: includes/helper.php:1001
 #: includes/modal/modal-controls.php:306
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:116
 #: modules/featured-box/widgets/featured-box.php:76
@@ -983,12 +983,12 @@ msgstr ""
 #: modules/info-list/widgets/info-list.php:99
 #: modules/info-list/widgets/info-list.php:482
 #: modules/mentor-slider/widgets/mentor-slider.php:230
-#: modules/mentor-slider/widgets/mentor-slider.php:653
-#: modules/page-cart/widgets/page-cart.php:1260
-#: modules/page-cart/widgets/page-cart.php:1323
-#: modules/page-order/widgets/page-order.php:181
-#: modules/page-order/widgets/page-order.php:507
-#: modules/page-order/widgets/page-order.php:963
+#: modules/mentor-slider/widgets/mentor-slider.php:656
+#: modules/page-cart/widgets/page-cart.php:1300
+#: modules/page-cart/widgets/page-cart.php:1363
+#: modules/page-order/widgets/page-order.php:175
+#: modules/page-order/widgets/page-order.php:497
+#: modules/page-order/widgets/page-order.php:944
 #: modules/page-single/widgets/page-single.php:976
 #: modules/product-category-carousel/widgets/product-category-carousel.php:698
 #: modules/product-category/widgets/product-category.php:715
@@ -1021,7 +1021,7 @@ msgid "Title"
 msgstr ""
 
 #: includes/controls/group-query/group-control-query.php:530
-#: includes/helper.php:1032
+#: includes/helper.php:1002
 msgid "ID"
 msgstr ""
 
@@ -1050,7 +1050,7 @@ msgid "Modified"
 msgstr ""
 
 #: includes/controls/group-query/group-control-query.php:536
-#: includes/helper.php:1034
+#: includes/helper.php:1004
 #: modules/product-review-carousel/widgets/product-review-carousel.php:181
 #: modules/product-reviews/widgets/product-reviews.php:167
 #: modules/up-sells/widgets/up-sells.php:96
@@ -1064,7 +1064,7 @@ msgid "Sales"
 msgstr ""
 
 #: includes/controls/group-query/group-control-query.php:548
-#: modules/page-order/widgets/page-order.php:1054
+#: modules/page-order/widgets/page-order.php:1034
 #: modules/product-review-carousel/widgets/product-review-carousel.php:188
 #: modules/product-reviews/widgets/product-reviews.php:174
 #: modules/product-table/widgets/product-table.php:212
@@ -1099,7 +1099,7 @@ msgid "Give your Query a custom unique id to allow server side filtering"
 msgstr ""
 
 #: includes/controls/group-query/group-control-query.php:583
-#: modules/page-order/widgets/page-order.php:1094
+#: modules/page-order/widgets/page-order.php:1077
 msgid "Product"
 msgstr ""
 
@@ -1122,14 +1122,13 @@ msgstr ""
 msgid "Select Type"
 msgstr ""
 
-#: includes/helper.php:309
-#: includes/helper.php:420
+#: includes/helper.php:392
 #: modules/florence-grid/widgets/florence-grid.php:231
-#: modules/glossy-grid/widgets/glossy-grid.php:248
-#: modules/mentor-slider/widgets/mentor-slider.php:1525
+#: modules/glossy-grid/widgets/glossy-grid.php:236
+#: modules/mentor-slider/widgets/mentor-slider.php:1531
 #: modules/product-reviews/widgets/product-reviews.php:259
 #: modules/product-table/widgets/product-table.php:1732
-#: modules/shiny-grid/widgets/shiny-grid.php:246
+#: modules/shiny-grid/widgets/shiny-grid.php:235
 #: traits/global-edd-widget-controls.php:210
 #: traits/global-edd-widget-controls.php:1367
 #: traits/global-widget-controls.php:161
@@ -1137,38 +1136,36 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: includes/helper.php:317
-#: includes/helper.php:430
+#: includes/helper.php:402
 msgid "Previous Page"
 msgstr ""
 
-#: includes/helper.php:373
-#: includes/helper.php:484
+#: includes/helper.php:457
 msgid "Next Page"
 msgstr ""
 
-#: includes/helper.php:588
+#: includes/helper.php:558
 msgid "Select Menu"
 msgstr ""
 
-#: includes/helper.php:625
+#: includes/helper.php:595
 msgid "Template Not Found!"
 msgstr ""
 
-#: includes/helper.php:627
+#: includes/helper.php:597
 msgid "Select Template"
 msgstr ""
 
-#: includes/helper.php:647
+#: includes/helper.php:617
 msgid "No sidebars were found"
 msgstr ""
 
-#: includes/helper.php:649
+#: includes/helper.php:619
 msgid "Select Sidebar"
 msgstr ""
 
-#: includes/helper.php:695
-#: includes/helper.php:744
+#: includes/helper.php:665
+#: includes/helper.php:714
 #: modules/featured-box/widgets/featured-box.php:882
 #: modules/featured-box/widgets/featured-box.php:1254
 #: modules/image-hotspot/widgets/image-hotspot.php:301
@@ -1177,7 +1174,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: includes/helper.php:745
+#: includes/helper.php:715
 #: modules/image-hotspot/widgets/image-hotspot.php:193
 #: modules/image-hotspot/widgets/image-hotspot.php:401
 #: modules/mobile-menu/widgets/mobile-menu.php:214
@@ -1186,116 +1183,116 @@ msgstr ""
 msgid "Fade"
 msgstr ""
 
-#: includes/helper.php:746
+#: includes/helper.php:716
 msgid "Scale Up"
 msgstr ""
 
-#: includes/helper.php:747
+#: includes/helper.php:717
 msgid "Scale Down"
 msgstr ""
 
-#: includes/helper.php:748
+#: includes/helper.php:718
 msgid "Slide Top"
 msgstr ""
 
-#: includes/helper.php:749
+#: includes/helper.php:719
 msgid "Slide Bottom"
 msgstr ""
 
-#: includes/helper.php:750
+#: includes/helper.php:720
 msgid "Slide Left"
 msgstr ""
 
-#: includes/helper.php:751
+#: includes/helper.php:721
 msgid "Slide Right"
 msgstr ""
 
-#: includes/helper.php:752
+#: includes/helper.php:722
 msgid "Slide Top Small"
 msgstr ""
 
-#: includes/helper.php:753
+#: includes/helper.php:723
 msgid "Slide Bottom Small"
 msgstr ""
 
-#: includes/helper.php:754
+#: includes/helper.php:724
 msgid "Slide Left Small"
 msgstr ""
 
-#: includes/helper.php:755
+#: includes/helper.php:725
 msgid "Slide Right Small"
 msgstr ""
 
-#: includes/helper.php:756
+#: includes/helper.php:726
 msgid "Slide Top Medium"
 msgstr ""
 
-#: includes/helper.php:757
+#: includes/helper.php:727
 msgid "Slide Bottom Medium"
 msgstr ""
 
-#: includes/helper.php:758
+#: includes/helper.php:728
 msgid "Slide Left Medium"
 msgstr ""
 
-#: includes/helper.php:759
+#: includes/helper.php:729
 msgid "Slide Right Medium"
 msgstr ""
 
-#: includes/helper.php:768
+#: includes/helper.php:738
 msgid "Multiply"
 msgstr ""
 
-#: includes/helper.php:769
+#: includes/helper.php:739
 msgid "Screen"
 msgstr ""
 
-#: includes/helper.php:770
+#: includes/helper.php:740
 #: includes/modal/modal-controls.php:232
 msgid "Overlay"
 msgstr ""
 
-#: includes/helper.php:771
+#: includes/helper.php:741
 msgid "Darken"
 msgstr ""
 
-#: includes/helper.php:772
+#: includes/helper.php:742
 msgid "Lighten"
 msgstr ""
 
-#: includes/helper.php:773
+#: includes/helper.php:743
 msgid "Color-Dodge"
 msgstr ""
 
-#: includes/helper.php:774
+#: includes/helper.php:744
 msgid "Color-Burn"
 msgstr ""
 
-#: includes/helper.php:775
+#: includes/helper.php:745
 msgid "Hard-Light"
 msgstr ""
 
-#: includes/helper.php:776
+#: includes/helper.php:746
 msgid "Soft-Light"
 msgstr ""
 
-#: includes/helper.php:777
+#: includes/helper.php:747
 msgid "Difference"
 msgstr ""
 
-#: includes/helper.php:778
+#: includes/helper.php:748
 msgid "Exclusion"
 msgstr ""
 
-#: includes/helper.php:779
+#: includes/helper.php:749
 msgid "Hue"
 msgstr ""
 
-#: includes/helper.php:780
+#: includes/helper.php:750
 msgid "Saturation"
 msgstr ""
 
-#: includes/helper.php:781
+#: includes/helper.php:751
 #: includes/modal/modal-controls.php:257
 #: includes/modal/modal-controls.php:284
 #: includes/modal/modal-controls.php:323
@@ -1350,21 +1347,21 @@ msgstr ""
 #: modules/info-list/widgets/info-list.php:542
 #: modules/info-list/widgets/info-list.php:592
 #: modules/info-list/widgets/info-list.php:682
-#: modules/mentor-slider/widgets/mentor-slider.php:664
-#: modules/mentor-slider/widgets/mentor-slider.php:733
-#: modules/mentor-slider/widgets/mentor-slider.php:826
-#: modules/mentor-slider/widgets/mentor-slider.php:892
-#: modules/mentor-slider/widgets/mentor-slider.php:1012
-#: modules/mentor-slider/widgets/mentor-slider.php:1040
-#: modules/mentor-slider/widgets/mentor-slider.php:1071
-#: modules/mentor-slider/widgets/mentor-slider.php:1099
-#: modules/mentor-slider/widgets/mentor-slider.php:1130
-#: modules/mentor-slider/widgets/mentor-slider.php:1158
-#: modules/mentor-slider/widgets/mentor-slider.php:1202
-#: modules/mentor-slider/widgets/mentor-slider.php:1295
-#: modules/mentor-slider/widgets/mentor-slider.php:1385
-#: modules/mentor-slider/widgets/mentor-slider.php:1486
-#: modules/mentor-slider/widgets/mentor-slider.php:1536
+#: modules/mentor-slider/widgets/mentor-slider.php:667
+#: modules/mentor-slider/widgets/mentor-slider.php:739
+#: modules/mentor-slider/widgets/mentor-slider.php:832
+#: modules/mentor-slider/widgets/mentor-slider.php:898
+#: modules/mentor-slider/widgets/mentor-slider.php:1018
+#: modules/mentor-slider/widgets/mentor-slider.php:1046
+#: modules/mentor-slider/widgets/mentor-slider.php:1077
+#: modules/mentor-slider/widgets/mentor-slider.php:1105
+#: modules/mentor-slider/widgets/mentor-slider.php:1136
+#: modules/mentor-slider/widgets/mentor-slider.php:1164
+#: modules/mentor-slider/widgets/mentor-slider.php:1208
+#: modules/mentor-slider/widgets/mentor-slider.php:1301
+#: modules/mentor-slider/widgets/mentor-slider.php:1391
+#: modules/mentor-slider/widgets/mentor-slider.php:1492
+#: modules/mentor-slider/widgets/mentor-slider.php:1542
 #: modules/mini-cart/widgets/mini-cart.php:390
 #: modules/mini-cart/widgets/mini-cart.php:661
 #: modules/mini-cart/widgets/mini-cart.php:789
@@ -1374,42 +1371,42 @@ msgstr ""
 #: modules/mobile-menu/widgets/mobile-menu.php:549
 #: modules/mobile-menu/widgets/mobile-menu.php:614
 #: modules/mobile-menu/widgets/mobile-menu.php:704
-#: modules/page-cart/widgets/page-cart.php:144
-#: modules/page-cart/widgets/page-cart.php:350
-#: modules/page-cart/widgets/page-cart.php:401
-#: modules/page-cart/widgets/page-cart.php:458
-#: modules/page-cart/widgets/page-cart.php:565
-#: modules/page-cart/widgets/page-cart.php:608
-#: modules/page-cart/widgets/page-cart.php:702
-#: modules/page-cart/widgets/page-cart.php:755
-#: modules/page-cart/widgets/page-cart.php:783
-#: modules/page-cart/widgets/page-cart.php:873
-#: modules/page-cart/widgets/page-cart.php:960
-#: modules/page-cart/widgets/page-cart.php:1013
-#: modules/page-cart/widgets/page-cart.php:1115
-#: modules/page-cart/widgets/page-cart.php:1168
-#: modules/page-cart/widgets/page-cart.php:1268
-#: modules/page-cart/widgets/page-cart.php:1296
-#: modules/page-cart/widgets/page-cart.php:1331
-#: modules/page-cart/widgets/page-cart.php:1359
-#: modules/page-cart/widgets/page-cart.php:1398
-#: modules/page-cart/widgets/page-cart.php:1479
+#: modules/page-cart/widgets/page-cart.php:184
+#: modules/page-cart/widgets/page-cart.php:390
+#: modules/page-cart/widgets/page-cart.php:441
+#: modules/page-cart/widgets/page-cart.php:498
+#: modules/page-cart/widgets/page-cart.php:605
+#: modules/page-cart/widgets/page-cart.php:648
+#: modules/page-cart/widgets/page-cart.php:742
+#: modules/page-cart/widgets/page-cart.php:795
+#: modules/page-cart/widgets/page-cart.php:823
+#: modules/page-cart/widgets/page-cart.php:913
+#: modules/page-cart/widgets/page-cart.php:1000
+#: modules/page-cart/widgets/page-cart.php:1053
+#: modules/page-cart/widgets/page-cart.php:1155
+#: modules/page-cart/widgets/page-cart.php:1208
+#: modules/page-cart/widgets/page-cart.php:1308
+#: modules/page-cart/widgets/page-cart.php:1336
+#: modules/page-cart/widgets/page-cart.php:1371
+#: modules/page-cart/widgets/page-cart.php:1399
+#: modules/page-cart/widgets/page-cart.php:1438
+#: modules/page-cart/widgets/page-cart.php:1519
 #: modules/page-checkout/widgets/page-checkout.php:234
 #: modules/page-checkout/widgets/page-checkout.php:298
 #: modules/page-checkout/widgets/page-checkout.php:351
 #: modules/page-checkout/widgets/page-checkout.php:854
 #: modules/page-checkout/widgets/page-checkout.php:925
-#: modules/page-order/widgets/page-order.php:187
-#: modules/page-order/widgets/page-order.php:213
-#: modules/page-order/widgets/page-order.php:356
-#: modules/page-order/widgets/page-order.php:385
-#: modules/page-order/widgets/page-order.php:450
-#: modules/page-order/widgets/page-order.php:514
-#: modules/page-order/widgets/page-order.php:691
-#: modules/page-order/widgets/page-order.php:790
-#: modules/page-order/widgets/page-order.php:879
-#: modules/page-order/widgets/page-order.php:970
-#: modules/page-order/widgets/page-order.php:1010
+#: modules/page-order/widgets/page-order.php:181
+#: modules/page-order/widgets/page-order.php:207
+#: modules/page-order/widgets/page-order.php:348
+#: modules/page-order/widgets/page-order.php:377
+#: modules/page-order/widgets/page-order.php:441
+#: modules/page-order/widgets/page-order.php:504
+#: modules/page-order/widgets/page-order.php:680
+#: modules/page-order/widgets/page-order.php:775
+#: modules/page-order/widgets/page-order.php:864
+#: modules/page-order/widgets/page-order.php:951
+#: modules/page-order/widgets/page-order.php:991
 #: modules/page-single/widgets/page-single.php:70
 #: modules/page-single/widgets/page-single.php:140
 #: modules/page-single/widgets/page-single.php:307
@@ -1534,22 +1531,22 @@ msgstr ""
 #: traits/global-widget-controls.php:3091
 #: traits/global-widget-controls.php:3169
 #: traits/global-widget-controls.php:3283
-#: traits/global-widget-controls.php:4310
-#: traits/global-widget-controls.php:4362
-#: traits/global-widget-controls.php:4447
-#: traits/global-widget-controls.php:4489
+#: traits/global-widget-controls.php:4313
+#: traits/global-widget-controls.php:4365
+#: traits/global-widget-controls.php:4450
+#: traits/global-widget-controls.php:4492
 msgid "Color"
 msgstr ""
 
-#: includes/helper.php:782
+#: includes/helper.php:752
 msgid "Luminosity"
 msgstr ""
 
-#: includes/helper.php:792
-#: includes/helper.php:809
-#: includes/helper.php:824
-#: includes/helper.php:838
-#: includes/helper.php:856
+#: includes/helper.php:762
+#: includes/helper.php:779
+#: includes/helper.php:794
+#: includes/helper.php:808
+#: includes/helper.php:826
 #: modules/featured-box/widgets/featured-box.php:162
 #: modules/featured-box/widgets/featured-box.php:1153
 #: modules/image-hotspot/widgets/image-hotspot.php:415
@@ -1557,20 +1554,20 @@ msgstr ""
 msgid "Top Left"
 msgstr ""
 
-#: includes/helper.php:793
-#: includes/helper.php:810
-#: includes/helper.php:825
-#: includes/helper.php:839
-#: includes/helper.php:857
+#: includes/helper.php:763
+#: includes/helper.php:780
+#: includes/helper.php:795
+#: includes/helper.php:809
+#: includes/helper.php:827
 #: modules/featured-box/widgets/featured-box.php:161
 msgid "Top Center"
 msgstr ""
 
-#: includes/helper.php:794
-#: includes/helper.php:811
-#: includes/helper.php:826
-#: includes/helper.php:840
-#: includes/helper.php:858
+#: includes/helper.php:764
+#: includes/helper.php:781
+#: includes/helper.php:796
+#: includes/helper.php:810
+#: includes/helper.php:828
 #: modules/featured-box/widgets/featured-box.php:163
 #: modules/featured-box/widgets/featured-box.php:1154
 #: modules/image-hotspot/widgets/image-hotspot.php:417
@@ -1578,8 +1575,8 @@ msgstr ""
 msgid "Top Right"
 msgstr ""
 
-#: includes/helper.php:795
-#: includes/helper.php:827
+#: includes/helper.php:765
+#: includes/helper.php:797
 #: modules/featured-box/widgets/featured-box.php:458
 #: modules/featured-box/widgets/featured-box.php:481
 #: modules/image-hotspot/widgets/image-hotspot.php:217
@@ -1587,10 +1584,10 @@ msgstr ""
 #: modules/info-list/widgets/info-list.php:300
 #: modules/mini-cart/widgets/mini-cart.php:253
 #: modules/mobile-menu/widgets/mobile-menu.php:825
-#: modules/page-cart/widgets/page-cart.php:126
-#: modules/page-cart/widgets/page-cart.php:255
-#: modules/page-cart/widgets/page-cart.php:480
-#: modules/page-order/widgets/page-order.php:128
+#: modules/page-cart/widgets/page-cart.php:166
+#: modules/page-cart/widgets/page-cart.php:295
+#: modules/page-cart/widgets/page-cart.php:520
+#: modules/page-order/widgets/page-order.php:122
 #: modules/product-category-carousel/widgets/product-category-carousel.php:213
 #: modules/product-category/widgets/product-category.php:205
 #: modules/product-category/widgets/product-category.php:239
@@ -1611,23 +1608,23 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
-#: includes/helper.php:796
-#: includes/helper.php:812
+#: includes/helper.php:766
+#: includes/helper.php:782
 #: modules/featured-box/widgets/featured-box.php:159
 msgid "Center Left"
 msgstr ""
 
-#: includes/helper.php:797
-#: includes/helper.php:813
+#: includes/helper.php:767
+#: includes/helper.php:783
 #: modules/featured-box/widgets/featured-box.php:160
 msgid "Center Right"
 msgstr ""
 
+#: includes/helper.php:768
+#: includes/helper.php:784
 #: includes/helper.php:798
-#: includes/helper.php:814
-#: includes/helper.php:828
-#: includes/helper.php:841
-#: includes/helper.php:852
+#: includes/helper.php:811
+#: includes/helper.php:822
 #: modules/featured-box/widgets/featured-box.php:165
 #: modules/featured-box/widgets/featured-box.php:1155
 #: modules/image-hotspot/widgets/image-hotspot.php:418
@@ -1635,20 +1632,20 @@ msgstr ""
 msgid "Bottom Left"
 msgstr ""
 
+#: includes/helper.php:769
+#: includes/helper.php:785
 #: includes/helper.php:799
-#: includes/helper.php:815
-#: includes/helper.php:829
-#: includes/helper.php:842
-#: includes/helper.php:853
+#: includes/helper.php:812
+#: includes/helper.php:823
 #: modules/featured-box/widgets/featured-box.php:164
 msgid "Bottom Center"
 msgstr ""
 
+#: includes/helper.php:770
+#: includes/helper.php:786
 #: includes/helper.php:800
-#: includes/helper.php:816
-#: includes/helper.php:830
-#: includes/helper.php:843
-#: includes/helper.php:854
+#: includes/helper.php:813
+#: includes/helper.php:824
 #: modules/featured-box/widgets/featured-box.php:166
 #: modules/featured-box/widgets/featured-box.php:1156
 #: modules/image-hotspot/widgets/image-hotspot.php:420
@@ -1656,88 +1653,88 @@ msgstr ""
 msgid "Bottom Right"
 msgstr ""
 
-#: includes/helper.php:855
+#: includes/helper.php:825
 msgid "Bottom Justify"
 msgstr ""
 
-#: includes/helper.php:859
+#: includes/helper.php:829
 msgid "Top Justify"
 msgstr ""
 
-#: includes/helper.php:860
+#: includes/helper.php:830
 msgid "Left Top"
 msgstr ""
 
-#: includes/helper.php:861
+#: includes/helper.php:831
 msgid "Left Center"
 msgstr ""
 
-#: includes/helper.php:862
+#: includes/helper.php:832
 msgid "Left Bottom"
 msgstr ""
 
-#: includes/helper.php:863
+#: includes/helper.php:833
 msgid "Right Top"
 msgstr ""
 
-#: includes/helper.php:864
+#: includes/helper.php:834
 msgid "Right Center"
 msgstr ""
 
-#: includes/helper.php:865
+#: includes/helper.php:835
 msgid "Right Bottom"
 msgstr ""
 
-#: includes/helper.php:874
+#: includes/helper.php:844
 msgid "Extra Small"
 msgstr ""
 
-#: includes/helper.php:875
+#: includes/helper.php:845
 msgid "Small"
 msgstr ""
 
-#: includes/helper.php:876
+#: includes/helper.php:846
 msgid "Medium"
 msgstr ""
 
-#: includes/helper.php:877
+#: includes/helper.php:847
 msgid "Large"
 msgstr ""
 
-#: includes/helper.php:878
+#: includes/helper.php:848
 msgid "Extra Large"
 msgstr ""
 
-#: includes/helper.php:919
+#: includes/helper.php:889
 msgid "Select Mask"
 msgstr ""
 
-#: includes/helper.php:1035
-#: modules/page-cart/widgets/page-cart.php:389
+#: includes/helper.php:1005
+#: modules/page-cart/widgets/page-cart.php:429
 #: modules/page-single/widgets/page-single.php:260
 msgid "Product Price"
 msgstr ""
 
-#: includes/helper.php:1036
+#: includes/helper.php:1006
 msgid "Top Seller"
 msgstr ""
 
-#: includes/helper.php:1037
+#: includes/helper.php:1007
 msgid "Most Reviewed"
 msgstr ""
 
-#: includes/helper.php:1038
+#: includes/helper.php:1008
 msgid "Top Rated"
 msgstr ""
 
-#: includes/helper.php:1188
+#: includes/helper.php:1158
 #: modules/mini-cart/templates/cart/mini-cart-backup.php:114
 #: modules/mini-cart/templates/cart/mini-cart.php:101
 #: modules/mini-cart/widgets/mini-cart.php:1305
 msgid "View cart"
 msgstr ""
 
-#: includes/helper.php:1227
+#: includes/helper.php:1197
 msgid "Placeholder"
 msgstr ""
 
@@ -1756,7 +1753,7 @@ msgstr ""
 #: modules/florence-carousel/widgets/florence-carousel.php:81
 #: modules/florence-grid/widgets/florence-grid.php:75
 #: modules/glossy-carousel/widgets/glossy-carousel.php:84
-#: modules/glossy-grid/widgets/glossy-grid.php:92
+#: modules/glossy-grid/widgets/glossy-grid.php:80
 #: modules/heaven-slider/widgets/heaven-slider.php:85
 #: modules/image-hotspot/widgets/image-hotspot.php:96
 #: modules/mentor-slider/widgets/mentor-slider.php:86
@@ -1770,7 +1767,7 @@ msgstr ""
 #: modules/product-reviews/widgets/product-reviews.php:73
 #: modules/product-table/widgets/product-table.php:78
 #: modules/shiny-carousel/widgets/shiny-carousel.php:80
-#: modules/shiny-grid/widgets/shiny-grid.php:88
+#: modules/shiny-grid/widgets/shiny-grid.php:77
 #: modules/showcase-slider/widgets/showcase-slider.php:84
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:75
 #: modules/sub-category/widgets/sub-category.php:72
@@ -1787,10 +1784,10 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:802
 #: modules/mini-cart/widgets/mini-cart.php:131
 #: modules/mobile-menu/widgets/mobile-menu.php:764
-#: modules/page-cart/widgets/page-cart.php:438
-#: modules/page-cart/widgets/page-cart.php:834
-#: modules/page-cart/widgets/page-cart.php:923
-#: modules/page-cart/widgets/page-cart.php:1077
+#: modules/page-cart/widgets/page-cart.php:478
+#: modules/page-cart/widgets/page-cart.php:874
+#: modules/page-cart/widgets/page-cart.php:963
+#: modules/page-cart/widgets/page-cart.php:1117
 #: modules/page-single/widgets/page-single.php:514
 #: modules/product-category-carousel/widgets/product-category-carousel.php:437
 #: modules/product-category/widgets/product-category.php:454
@@ -1968,7 +1965,7 @@ msgstr ""
 
 #: includes/modal/modal-controls.php:148
 #: includes/modal/modal-controls.php:240
-#: modules/page-cart/widgets/page-cart.php:592
+#: modules/page-cart/widgets/page-cart.php:632
 msgid "Close Button"
 msgstr ""
 
@@ -2062,17 +2059,17 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1026
 #: modules/image-hotspot/widgets/image-hotspot.php:1762
 #: modules/image-hotspot/widgets/image-hotspot.php:1863
-#: modules/mentor-slider/widgets/mentor-slider.php:530
-#: modules/mentor-slider/widgets/mentor-slider.php:620
-#: modules/mentor-slider/widgets/mentor-slider.php:914
-#: modules/mentor-slider/widgets/mentor-slider.php:1022
-#: modules/mentor-slider/widgets/mentor-slider.php:1050
-#: modules/mentor-slider/widgets/mentor-slider.php:1081
-#: modules/mentor-slider/widgets/mentor-slider.php:1109
-#: modules/mentor-slider/widgets/mentor-slider.php:1140
-#: modules/mentor-slider/widgets/mentor-slider.php:1168
-#: modules/mentor-slider/widgets/mentor-slider.php:1396
-#: modules/mentor-slider/widgets/mentor-slider.php:1497
+#: modules/mentor-slider/widgets/mentor-slider.php:533
+#: modules/mentor-slider/widgets/mentor-slider.php:623
+#: modules/mentor-slider/widgets/mentor-slider.php:920
+#: modules/mentor-slider/widgets/mentor-slider.php:1028
+#: modules/mentor-slider/widgets/mentor-slider.php:1056
+#: modules/mentor-slider/widgets/mentor-slider.php:1087
+#: modules/mentor-slider/widgets/mentor-slider.php:1115
+#: modules/mentor-slider/widgets/mentor-slider.php:1146
+#: modules/mentor-slider/widgets/mentor-slider.php:1174
+#: modules/mentor-slider/widgets/mentor-slider.php:1402
+#: modules/mentor-slider/widgets/mentor-slider.php:1503
 #: modules/mini-cart/widgets/mini-cart.php:401
 #: modules/mini-cart/widgets/mini-cart.php:687
 #: modules/mini-cart/widgets/mini-cart.php:692
@@ -2084,21 +2081,21 @@ msgstr ""
 #: modules/mini-cart/widgets/mini-cart.php:1119
 #: modules/mini-cart/widgets/mini-cart.php:1137
 #: modules/mini-cart/widgets/mini-cart.php:1188
-#: modules/page-cart/widgets/page-cart.php:156
+#: modules/page-cart/widgets/page-cart.php:196
 #: modules/page-checkout/widgets/page-checkout.php:162
 #: modules/page-checkout/widgets/page-checkout.php:374
 #: modules/page-checkout/widgets/page-checkout.php:511
 #: modules/page-checkout/widgets/page-checkout.php:562
 #: modules/page-checkout/widgets/page-checkout.php:865
 #: modules/page-checkout/widgets/page-checkout.php:936
-#: modules/page-order/widgets/page-order.php:157
-#: modules/page-order/widgets/page-order.php:315
-#: modules/page-order/widgets/page-order.php:484
-#: modules/page-order/widgets/page-order.php:569
-#: modules/page-order/widgets/page-order.php:727
-#: modules/page-order/widgets/page-order.php:803
-#: modules/page-order/widgets/page-order.php:905
-#: modules/page-order/widgets/page-order.php:938
+#: modules/page-order/widgets/page-order.php:151
+#: modules/page-order/widgets/page-order.php:307
+#: modules/page-order/widgets/page-order.php:475
+#: modules/page-order/widgets/page-order.php:558
+#: modules/page-order/widgets/page-order.php:713
+#: modules/page-order/widgets/page-order.php:788
+#: modules/page-order/widgets/page-order.php:890
+#: modules/page-order/widgets/page-order.php:922
 #: modules/page-single/widgets/page-single.php:81
 #: modules/page-single/widgets/page-single.php:360
 #: modules/page-single/widgets/page-single.php:493
@@ -2165,17 +2162,17 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1737
 #: modules/info-list/widgets/info-list.php:361
 #: modules/info-list/widgets/info-list.php:585
-#: modules/mentor-slider/widgets/mentor-slider.php:1196
-#: modules/mentor-slider/widgets/mentor-slider.php:1378
-#: modules/mentor-slider/widgets/mentor-slider.php:1578
+#: modules/mentor-slider/widgets/mentor-slider.php:1202
+#: modules/mentor-slider/widgets/mentor-slider.php:1384
+#: modules/mentor-slider/widgets/mentor-slider.php:1584
 #: modules/mobile-menu/widgets/mobile-menu.php:291
 #: modules/mobile-menu/widgets/mobile-menu.php:461
 #: modules/mobile-menu/widgets/mobile-menu.php:607
-#: modules/page-cart/widgets/page-cart.php:601
-#: modules/page-cart/widgets/page-cart.php:866
-#: modules/page-cart/widgets/page-cart.php:1006
-#: modules/page-cart/widgets/page-cart.php:1391
-#: modules/page-order/widgets/page-order.php:783
+#: modules/page-cart/widgets/page-cart.php:641
+#: modules/page-cart/widgets/page-cart.php:906
+#: modules/page-cart/widgets/page-cart.php:1046
+#: modules/page-cart/widgets/page-cart.php:1431
+#: modules/page-order/widgets/page-order.php:768
 #: modules/page-single/widgets/page-single.php:340
 #: modules/page-single/widgets/page-single.php:722
 #: modules/page-single/widgets/page-single.php:1115
@@ -2255,20 +2252,20 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:2314
 #: modules/info-list/widgets/info-list.php:437
 #: modules/info-list/widgets/info-list.php:675
-#: modules/mentor-slider/widgets/mentor-slider.php:1032
-#: modules/mentor-slider/widgets/mentor-slider.php:1091
-#: modules/mentor-slider/widgets/mentor-slider.php:1150
-#: modules/mentor-slider/widgets/mentor-slider.php:1289
-#: modules/mentor-slider/widgets/mentor-slider.php:1479
-#: modules/mentor-slider/widgets/mentor-slider.php:1615
+#: modules/mentor-slider/widgets/mentor-slider.php:1038
+#: modules/mentor-slider/widgets/mentor-slider.php:1097
+#: modules/mentor-slider/widgets/mentor-slider.php:1156
+#: modules/mentor-slider/widgets/mentor-slider.php:1295
+#: modules/mentor-slider/widgets/mentor-slider.php:1485
+#: modules/mentor-slider/widgets/mentor-slider.php:1621
 #: modules/mobile-menu/widgets/mobile-menu.php:407
 #: modules/mobile-menu/widgets/mobile-menu.php:542
 #: modules/mobile-menu/widgets/mobile-menu.php:697
-#: modules/page-cart/widgets/page-cart.php:695
-#: modules/page-cart/widgets/page-cart.php:953
-#: modules/page-cart/widgets/page-cart.php:1108
-#: modules/page-cart/widgets/page-cart.php:1472
-#: modules/page-order/widgets/page-order.php:872
+#: modules/page-cart/widgets/page-cart.php:735
+#: modules/page-cart/widgets/page-cart.php:993
+#: modules/page-cart/widgets/page-cart.php:1148
+#: modules/page-cart/widgets/page-cart.php:1512
+#: modules/page-order/widgets/page-order.php:857
 #: modules/page-single/widgets/page-single.php:460
 #: modules/page-single/widgets/page-single.php:753
 #: modules/page-single/widgets/page-single.php:1244
@@ -2322,7 +2319,7 @@ msgstr ""
 #: traits/global-widget-controls.php:2117
 #: traits/global-widget-controls.php:2300
 #: traits/global-widget-controls.php:3081
-#: traits/global-widget-controls.php:4438
+#: traits/global-widget-controls.php:4441
 msgid "Hover"
 msgstr ""
 
@@ -2344,12 +2341,12 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1318
 #: modules/image-hotspot/widgets/image-hotspot.php:1458
 #: modules/info-list/widgets/info-list.php:665
-#: modules/mentor-slider/widgets/mentor-slider.php:699
-#: modules/mentor-slider/widgets/mentor-slider.php:757
-#: modules/mentor-slider/widgets/mentor-slider.php:804
-#: modules/mentor-slider/widgets/mentor-slider.php:1274
-#: modules/mentor-slider/widgets/mentor-slider.php:1452
-#: modules/mentor-slider/widgets/mentor-slider.php:1559
+#: modules/mentor-slider/widgets/mentor-slider.php:702
+#: modules/mentor-slider/widgets/mentor-slider.php:763
+#: modules/mentor-slider/widgets/mentor-slider.php:810
+#: modules/mentor-slider/widgets/mentor-slider.php:1280
+#: modules/mentor-slider/widgets/mentor-slider.php:1458
+#: modules/mentor-slider/widgets/mentor-slider.php:1565
 #: modules/mini-cart/widgets/mini-cart.php:772
 #: modules/mini-cart/widgets/mini-cart.php:900
 #: modules/mini-cart/widgets/mini-cart.php:1063
@@ -2359,15 +2356,15 @@ msgstr ""
 #: modules/page-checkout/widgets/page-checkout.php:744
 #: modules/page-checkout/widgets/page-checkout.php:840
 #: modules/page-checkout/widgets/page-checkout.php:910
-#: modules/page-order/widgets/page-order.php:199
-#: modules/page-order/widgets/page-order.php:224
-#: modules/page-order/widgets/page-order.php:537
-#: modules/page-order/widgets/page-order.php:590
-#: modules/page-order/widgets/page-order.php:674
-#: modules/page-order/widgets/page-order.php:706
-#: modules/page-order/widgets/page-order.php:760
-#: modules/page-order/widgets/page-order.php:993
-#: modules/page-order/widgets/page-order.php:1023
+#: modules/page-order/widgets/page-order.php:193
+#: modules/page-order/widgets/page-order.php:218
+#: modules/page-order/widgets/page-order.php:527
+#: modules/page-order/widgets/page-order.php:579
+#: modules/page-order/widgets/page-order.php:663
+#: modules/page-order/widgets/page-order.php:695
+#: modules/page-order/widgets/page-order.php:746
+#: modules/page-order/widgets/page-order.php:974
+#: modules/page-order/widgets/page-order.php:1004
 #: modules/page-single/widgets/page-single.php:1064
 #: modules/product-accordion/widgets/product-accordion.php:438
 #: modules/product-accordion/widgets/product-accordion.php:758
@@ -2424,7 +2421,7 @@ msgstr ""
 #: modules/heaven-slider/widgets/heaven-slider.php:510
 #: modules/image-hotspot/widgets/image-hotspot.php:1328
 #: modules/mentor-slider/widgets/mentor-slider.php:248
-#: modules/mentor-slider/widgets/mentor-slider.php:815
+#: modules/mentor-slider/widgets/mentor-slider.php:821
 #: modules/product-accordion/widgets/product-accordion.php:170
 #: modules/product-list/widgets/product-list.php:171
 #: modules/product-review-carousel/widgets/product-review-carousel.php:246
@@ -2447,7 +2444,7 @@ msgstr ""
 
 #: includes/modal/modal-controls.php:436
 #: modules/image-hotspot/widgets/image-hotspot.php:1272
-#: modules/mentor-slider/widgets/mentor-slider.php:778
+#: modules/mentor-slider/widgets/mentor-slider.php:784
 #: modules/page-single/widgets/page-single.php:268
 #: modules/product-table/widgets/product-table.php:1335
 #: modules/up-sells/widgets/up-sells.php:510
@@ -2469,8 +2466,8 @@ msgstr ""
 
 #: includes/modal/modal-controls.php:479
 #: modules/mini-cart/widgets/mini-cart.php:202
-#: modules/page-order/widgets/page-order.php:109
-#: modules/page-order/widgets/page-order.php:207
+#: modules/page-order/widgets/page-order.php:103
+#: modules/page-order/widgets/page-order.php:201
 #: modules/product-table/widgets/product-table.php:202
 #: modules/product-table/widgets/product-table.php:273
 #: modules/product-table/widgets/product-table.php:1165
@@ -2493,12 +2490,12 @@ msgstr ""
 #: modules/heaven-slider/widgets/heaven-slider.php:412
 #: modules/image-hotspot/widgets/image-hotspot.php:1072
 #: modules/info-list/widgets/info-list.php:501
-#: modules/mentor-slider/widgets/mentor-slider.php:675
-#: modules/mentor-slider/widgets/mentor-slider.php:903
+#: modules/mentor-slider/widgets/mentor-slider.php:678
+#: modules/mentor-slider/widgets/mentor-slider.php:909
 #: modules/mini-cart/widgets/mini-cart.php:674
 #: modules/mini-cart/widgets/mini-cart.php:802
 #: modules/mini-cart/widgets/mini-cart.php:929
-#: modules/page-cart/widgets/page-cart.php:364
+#: modules/page-cart/widgets/page-cart.php:404
 #: modules/product-image-accordion/widgets/product-image-accordion.php:230
 #: modules/product-review-carousel/widgets/product-review-carousel.php:441
 #: modules/product-review-carousel/widgets/product-review-carousel.php:572
@@ -2517,7 +2514,7 @@ msgid "Hover Color"
 msgstr ""
 
 #: includes/modal/modal-controls.php:559
-#: modules/mentor-slider/widgets/mentor-slider.php:925
+#: modules/mentor-slider/widgets/mentor-slider.php:931
 #: modules/mini-cart/widgets/mini-cart.php:707
 #: modules/mini-cart/widgets/mini-cart.php:835
 msgid "Hover Background"
@@ -2539,7 +2536,7 @@ msgstr ""
 #: includes/modal/modal-controls.php:608
 #: includes/modal/modal-controls.php:670
 #: modules/page-checkout/widgets/page-checkout.php:291
-#: modules/page-order/widgets/page-order.php:349
+#: modules/page-order/widgets/page-order.php:341
 #: modules/product-table/widgets/product-table.php:737
 msgid "Label"
 msgstr ""
@@ -2561,7 +2558,7 @@ msgstr ""
 
 #: includes/modal/modal-controls.php:633
 #: includes/modal/modal-controls.php:695
-#: modules/page-order/widgets/page-order.php:378
+#: modules/page-order/widgets/page-order.php:370
 msgid "Value"
 msgstr ""
 
@@ -2575,7 +2572,7 @@ msgstr ""
 #: modules/heaven-slider/widgets/heaven-slider.php:565
 #: modules/image-hotspot/widgets/image-hotspot.php:1108
 #: modules/mentor-slider/widgets/mentor-slider.php:291
-#: modules/mentor-slider/widgets/mentor-slider.php:1183
+#: modules/mentor-slider/widgets/mentor-slider.php:1189
 #: modules/product-accordion/widgets/product-accordion.php:130
 #: modules/product-accordion/widgets/product-accordion.php:672
 #: modules/showcase-slider/widgets/showcase-slider.php:191
@@ -2590,31 +2587,50 @@ msgstr ""
 msgid "Category Color"
 msgstr ""
 
-#: includes/wishlist-compare.php:36
-#: includes/wishlist-compare.php:101
-#: includes/wishlist-compare.php:144
+#: includes/wishlist-compare.php:58
+#: includes/wishlist-compare.php:124
+#: includes/wishlist-compare.php:187
+#: includes/wishlist-compare.php:246
 msgid "Unauthorized!"
 msgstr ""
 
-#: includes/wishlist-compare.php:40
-#: includes/wishlist-compare.php:105
-#: includes/wishlist-compare.php:147
+#: includes/wishlist-compare.php:62
+#: includes/wishlist-compare.php:128
+#: includes/wishlist-compare.php:191
+#: includes/wishlist-compare.php:249
 msgid "No product selected!"
 msgstr ""
 
-#: includes/wishlist-compare.php:70
+#: includes/wishlist-compare.php:81
+#: includes/wishlist-compare.php:198
+msgid "Invalid product!"
+msgstr ""
+
+#: includes/wishlist-compare.php:86
+msgid "Wishlist is full!"
+msgstr ""
+
+#: includes/wishlist-compare.php:104
 msgid "Wishlist item Added!"
 msgstr ""
 
-#: includes/wishlist-compare.php:73
+#: includes/wishlist-compare.php:107
 msgid "Add To Wishlist"
 msgstr ""
 
-#: includes/wishlist-compare.php:129
+#: includes/wishlist-compare.php:147
+msgid "Wishlist item removed!"
+msgstr ""
+
+#: includes/wishlist-compare.php:210
+msgid "Compare list is full!"
+msgstr ""
+
+#: includes/wishlist-compare.php:229
 msgid "Added"
 msgstr ""
 
-#: includes/wishlist-compare.php:137
+#: includes/wishlist-compare.php:237
 #: modules/image-hotspot/widgets/image-hotspot.php:2135
 #: modules/showcase-slider/widgets/showcase-slider.php:323
 #: modules/showcase-slider/widgets/showcase-slider.php:1107
@@ -2624,7 +2640,7 @@ msgid "Compare"
 msgstr ""
 
 #. translators: %s is the action performed on the compared product
-#: includes/wishlist-compare.php:166
+#: includes/wishlist-compare.php:272
 #, php-format
 msgid "Compared product item: %s."
 msgstr ""
@@ -2680,17 +2696,17 @@ msgstr ""
 #: modules/florence-grid/widgets/florence-grid.php:97
 #: modules/florence-grid/widgets/florence-grid.php:125
 #: modules/glossy-carousel/widgets/glossy-carousel.php:91
-#: modules/glossy-grid/widgets/glossy-grid.php:114
-#: modules/glossy-grid/widgets/glossy-grid.php:142
+#: modules/glossy-grid/widgets/glossy-grid.php:102
+#: modules/glossy-grid/widgets/glossy-grid.php:130
 #: modules/info-list/widgets/info-list.php:175
-#: modules/page-order/widgets/page-order.php:253
+#: modules/page-order/widgets/page-order.php:247
 #: modules/product-category-carousel/widgets/product-category-carousel.php:117
 #: modules/product-category/widgets/product-category.php:116
 #: modules/product-review-carousel/widgets/product-review-carousel.php:79
 #: modules/product-reviews/widgets/product-reviews.php:80
 #: modules/shiny-carousel/widgets/shiny-carousel.php:87
-#: modules/shiny-grid/widgets/shiny-grid.php:110
-#: modules/shiny-grid/widgets/shiny-grid.php:138
+#: modules/shiny-grid/widgets/shiny-grid.php:99
+#: modules/shiny-grid/widgets/shiny-grid.php:127
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:81
 #: modules/sub-category/widgets/sub-category.php:78
 #: modules/up-sells/widgets/up-sells.php:75
@@ -2719,10 +2735,10 @@ msgstr ""
 #: modules/featured-box/widgets/featured-box.php:473
 #: modules/info-list/widgets/info-list.php:292
 #: modules/mini-cart/widgets/mini-cart.php:245
-#: modules/page-cart/widgets/page-cart.php:118
-#: modules/page-cart/widgets/page-cart.php:247
-#: modules/page-cart/widgets/page-cart.php:472
-#: modules/page-order/widgets/page-order.php:120
+#: modules/page-cart/widgets/page-cart.php:158
+#: modules/page-cart/widgets/page-cart.php:287
+#: modules/page-cart/widgets/page-cart.php:512
+#: modules/page-order/widgets/page-order.php:114
 #: modules/product-category-carousel/widgets/product-category-carousel.php:205
 #: modules/product-category-carousel/widgets/product-category-carousel.php:267
 #: modules/product-category/widgets/product-category.php:197
@@ -2744,7 +2760,7 @@ msgstr ""
 #: modules/glossy-carousel/widgets/glossy-carousel.php:149
 #: modules/info-list/widgets/info-list.php:75
 #: modules/info-list/widgets/info-list.php:351
-#: modules/page-order/widgets/page-order.php:297
+#: modules/page-order/widgets/page-order.php:289
 #: modules/product-list/widgets/product-list.php:269
 #: traits/global-widget-controls.php:679
 msgid "Items"
@@ -2766,24 +2782,24 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1772
 #: modules/image-hotspot/widgets/image-hotspot.php:1921
 #: modules/info-list/widgets/info-list.php:377
-#: modules/mentor-slider/widgets/mentor-slider.php:540
-#: modules/mentor-slider/widgets/mentor-slider.php:630
-#: modules/mentor-slider/widgets/mentor-slider.php:937
-#: modules/mentor-slider/widgets/mentor-slider.php:1220
+#: modules/mentor-slider/widgets/mentor-slider.php:543
+#: modules/mentor-slider/widgets/mentor-slider.php:633
+#: modules/mentor-slider/widgets/mentor-slider.php:943
+#: modules/mentor-slider/widgets/mentor-slider.php:1226
 #: modules/mini-cart/widgets/mini-cart.php:341
 #: modules/mini-cart/widgets/mini-cart.php:717
 #: modules/mini-cart/widgets/mini-cart.php:845
 #: modules/mini-cart/widgets/mini-cart.php:963
 #: modules/mobile-menu/widgets/mobile-menu.php:91
 #: modules/mobile-menu/widgets/mobile-menu.php:875
-#: modules/page-cart/widgets/page-cart.php:169
-#: modules/page-cart/widgets/page-cart.php:312
+#: modules/page-cart/widgets/page-cart.php:209
+#: modules/page-cart/widgets/page-cart.php:352
 #: modules/page-checkout/widgets/page-checkout.php:196
 #: modules/page-checkout/widgets/page-checkout.php:417
 #: modules/page-checkout/widgets/page-checkout.php:483
 #: modules/page-checkout/widgets/page-checkout.php:807
 #: modules/page-checkout/widgets/page-checkout.php:889
-#: modules/page-order/widgets/page-order.php:822
+#: modules/page-order/widgets/page-order.php:807
 #: modules/page-single/widgets/page-single.php:381
 #: modules/page-single/widgets/page-single.php:563
 #: modules/product-accordion/widgets/product-accordion.php:527
@@ -2841,9 +2857,9 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1929
 #: modules/info-list/widgets/info-list.php:403
 #: modules/info-list/widgets/info-list.php:620
-#: modules/mentor-slider/widgets/mentor-slider.php:1228
-#: modules/mentor-slider/widgets/mentor-slider.php:1415
-#: modules/mentor-slider/widgets/mentor-slider.php:1602
+#: modules/mentor-slider/widgets/mentor-slider.php:1234
+#: modules/mentor-slider/widgets/mentor-slider.php:1421
+#: modules/mentor-slider/widgets/mentor-slider.php:1608
 #: modules/mini-cart/widgets/mini-cart.php:349
 #: modules/mini-cart/widgets/mini-cart.php:739
 #: modules/mini-cart/widgets/mini-cart.php:867
@@ -2853,18 +2869,18 @@ msgstr ""
 #: modules/mobile-menu/widgets/mobile-menu.php:497
 #: modules/mobile-menu/widgets/mobile-menu.php:642
 #: modules/mobile-menu/widgets/mobile-menu.php:885
-#: modules/page-cart/widgets/page-cart.php:323
-#: modules/page-cart/widgets/page-cart.php:538
-#: modules/page-cart/widgets/page-cart.php:636
-#: modules/page-cart/widgets/page-cart.php:822
-#: modules/page-cart/widgets/page-cart.php:899
-#: modules/page-cart/widgets/page-cart.php:1041
-#: modules/page-cart/widgets/page-cart.php:1426
+#: modules/page-cart/widgets/page-cart.php:363
+#: modules/page-cart/widgets/page-cart.php:578
+#: modules/page-cart/widgets/page-cart.php:676
+#: modules/page-cart/widgets/page-cart.php:862
+#: modules/page-cart/widgets/page-cart.php:939
+#: modules/page-cart/widgets/page-cart.php:1081
+#: modules/page-cart/widgets/page-cart.php:1466
 #: modules/page-checkout/widgets/page-checkout.php:205
 #: modules/page-checkout/widgets/page-checkout.php:428
 #: modules/page-checkout/widgets/page-checkout.php:816
 #: modules/page-checkout/widgets/page-checkout.php:898
-#: modules/page-order/widgets/page-order.php:831
+#: modules/page-order/widgets/page-order.php:816
 #: modules/page-single/widgets/page-single.php:111
 #: modules/page-single/widgets/page-single.php:189
 #: modules/page-single/widgets/page-single.php:231
@@ -2928,8 +2944,8 @@ msgstr ""
 #: traits/global-widget-controls.php:2429
 #: traits/global-widget-controls.php:3007
 #: traits/global-widget-controls.php:3197
-#: traits/global-widget-controls.php:4341
-#: traits/global-widget-controls.php:4426
+#: traits/global-widget-controls.php:4344
+#: traits/global-widget-controls.php:4429
 msgid "Border Radius"
 msgstr ""
 
@@ -2958,10 +2974,10 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:1941
 #: modules/info-list/widgets/info-list.php:415
 #: modules/info-list/widgets/info-list.php:632
-#: modules/mentor-slider/widgets/mentor-slider.php:576
-#: modules/mentor-slider/widgets/mentor-slider.php:955
-#: modules/mentor-slider/widgets/mentor-slider.php:1239
-#: modules/mentor-slider/widgets/mentor-slider.php:1427
+#: modules/mentor-slider/widgets/mentor-slider.php:579
+#: modules/mentor-slider/widgets/mentor-slider.php:961
+#: modules/mentor-slider/widgets/mentor-slider.php:1245
+#: modules/mentor-slider/widgets/mentor-slider.php:1433
 #: modules/mini-cart/widgets/mini-cart.php:361
 #: modules/mini-cart/widgets/mini-cart.php:751
 #: modules/mini-cart/widgets/mini-cart.php:879
@@ -2972,20 +2988,20 @@ msgstr ""
 #: modules/mobile-menu/widgets/mobile-menu.php:509
 #: modules/mobile-menu/widgets/mobile-menu.php:654
 #: modules/mobile-menu/widgets/mobile-menu.php:861
-#: modules/page-cart/widgets/page-cart.php:178
-#: modules/page-cart/widgets/page-cart.php:512
-#: modules/page-cart/widgets/page-cart.php:648
-#: modules/page-cart/widgets/page-cart.php:802
-#: modules/page-cart/widgets/page-cart.php:911
-#: modules/page-cart/widgets/page-cart.php:1053
-#: modules/page-cart/widgets/page-cart.php:1229
-#: modules/page-cart/widgets/page-cart.php:1438
+#: modules/page-cart/widgets/page-cart.php:218
+#: modules/page-cart/widgets/page-cart.php:552
+#: modules/page-cart/widgets/page-cart.php:688
+#: modules/page-cart/widgets/page-cart.php:842
+#: modules/page-cart/widgets/page-cart.php:951
+#: modules/page-cart/widgets/page-cart.php:1093
+#: modules/page-cart/widgets/page-cart.php:1269
+#: modules/page-cart/widgets/page-cart.php:1478
 #: modules/page-checkout/widgets/page-checkout.php:173
 #: modules/page-checkout/widgets/page-checkout.php:386
 #: modules/page-checkout/widgets/page-checkout.php:523
 #: modules/page-checkout/widgets/page-checkout.php:783
 #: modules/page-checkout/widgets/page-checkout.php:876
-#: modules/page-order/widgets/page-order.php:843
+#: modules/page-order/widgets/page-order.php:828
 #: modules/page-single/widgets/page-single.php:89
 #: modules/page-single/widgets/page-single.php:419
 #: modules/page-single/widgets/page-single.php:611
@@ -3041,7 +3057,7 @@ msgstr ""
 #: traits/global-widget-controls.php:2243
 #: traits/global-widget-controls.php:2440
 #: traits/global-widget-controls.php:3022
-#: traits/global-widget-controls.php:4393
+#: traits/global-widget-controls.php:4396
 msgid "Padding"
 msgstr ""
 
@@ -3093,25 +3109,25 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:2344
 #: modules/info-list/widgets/info-list.php:452
 #: modules/info-list/widgets/info-list.php:702
-#: modules/mentor-slider/widgets/mentor-slider.php:1312
-#: modules/mentor-slider/widgets/mentor-slider.php:1508
-#: modules/mentor-slider/widgets/mentor-slider.php:1630
+#: modules/mentor-slider/widgets/mentor-slider.php:1318
+#: modules/mentor-slider/widgets/mentor-slider.php:1514
+#: modules/mentor-slider/widgets/mentor-slider.php:1636
 #: modules/mobile-menu/widgets/mobile-menu.php:345
 #: modules/mobile-menu/widgets/mobile-menu.php:422
 #: modules/mobile-menu/widgets/mobile-menu.php:569
 #: modules/mobile-menu/widgets/mobile-menu.php:723
-#: modules/page-cart/widgets/page-cart.php:721
-#: modules/page-cart/widgets/page-cart.php:979
-#: modules/page-cart/widgets/page-cart.php:1134
-#: modules/page-cart/widgets/page-cart.php:1498
+#: modules/page-cart/widgets/page-cart.php:761
+#: modules/page-cart/widgets/page-cart.php:1019
+#: modules/page-cart/widgets/page-cart.php:1174
+#: modules/page-cart/widgets/page-cart.php:1538
 #: modules/page-checkout/widgets/page-checkout.php:245
-#: modules/page-order/widgets/page-order.php:166
-#: modules/page-order/widgets/page-order.php:325
-#: modules/page-order/widgets/page-order.php:493
-#: modules/page-order/widgets/page-order.php:525
-#: modules/page-order/widgets/page-order.php:890
-#: modules/page-order/widgets/page-order.php:949
-#: modules/page-order/widgets/page-order.php:981
+#: modules/page-order/widgets/page-order.php:160
+#: modules/page-order/widgets/page-order.php:317
+#: modules/page-order/widgets/page-order.php:484
+#: modules/page-order/widgets/page-order.php:515
+#: modules/page-order/widgets/page-order.php:875
+#: modules/page-order/widgets/page-order.php:931
+#: modules/page-order/widgets/page-order.php:962
 #: modules/page-single/widgets/page-single.php:478
 #: modules/page-single/widgets/page-single.php:780
 #: modules/page-single/widgets/page-single.php:824
@@ -3176,8 +3192,8 @@ msgstr ""
 #: traits/global-widget-controls.php:2687
 #: traits/global-widget-controls.php:2736
 #: traits/global-widget-controls.php:3119
-#: traits/global-widget-controls.php:4469
-#: traits/global-widget-controls.php:4511
+#: traits/global-widget-controls.php:4472
+#: traits/global-widget-controls.php:4514
 msgid "Border Color"
 msgstr ""
 
@@ -3189,8 +3205,8 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:133
 #: modules/image-hotspot/widgets/image-hotspot.php:861
 #: modules/mini-cart/widgets/mini-cart.php:583
-#: modules/page-cart/widgets/page-cart.php:1537
-#: modules/page-cart/widgets/page-cart.php:1584
+#: modules/page-cart/widgets/page-cart.php:1593
+#: modules/page-cart/widgets/page-cart.php:1638
 #: modules/product-category-carousel/widgets/product-category-carousel.php:381
 #: modules/product-category/widgets/product-category.php:398
 #: modules/product-list/widgets/product-list.php:145
@@ -3220,15 +3236,15 @@ msgstr ""
 
 #: modules/brand-grid/widgets/brand-grid.php:182
 #: modules/florence-grid/widgets/florence-grid.php:166
-#: modules/glossy-grid/widgets/glossy-grid.php:183
+#: modules/glossy-grid/widgets/glossy-grid.php:171
 #: modules/info-list/widgets/info-list.php:211
-#: modules/shiny-grid/widgets/shiny-grid.php:179
+#: modules/shiny-grid/widgets/shiny-grid.php:168
 #: traits/global-edd-widget-controls.php:154
 msgid "Row Gap"
 msgstr ""
 
 #: modules/edd-beauty-carousel/widgets/edd-beauty-carousel.php:156
-#: modules/edd-beauty-grid/widgets/edd-beauty-grid.php:140
+#: modules/edd-beauty-grid/widgets/edd-beauty-grid.php:143
 #: modules/edd-classic-carousel/widgets/edd-classic-carousel.php:144
 #: modules/edd-classic-grid/widgets/edd-classic-grid.php:146
 #: modules/edd-standard-carousel/widgets/edd-standard-carousel.php:142
@@ -3240,7 +3256,7 @@ msgid "View Details"
 msgstr ""
 
 #: modules/edd-beauty-carousel/widgets/edd-beauty-carousel.php:188
-#: modules/edd-beauty-grid/widgets/edd-beauty-grid.php:172
+#: modules/edd-beauty-grid/widgets/edd-beauty-grid.php:175
 #: modules/edd-classic-carousel/widgets/edd-classic-carousel.php:178
 #: modules/edd-classic-grid/widgets/edd-classic-grid.php:180
 #: modules/edd-standard-carousel/widgets/edd-standard-carousel.php:174
@@ -3258,7 +3274,7 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:85
 #: modules/edd-category-grid/widgets/edd-category-grid.php:87
 #: modules/heaven-slider/widgets/heaven-slider.php:741
-#: modules/mentor-slider/widgets/mentor-slider.php:1346
+#: modules/mentor-slider/widgets/mentor-slider.php:1352
 #: modules/product-category/widgets/product-category.php:87
 #: traits/global-widget-controls.php:2874
 msgid "Style 1"
@@ -3267,7 +3283,7 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:86
 #: modules/edd-category-grid/widgets/edd-category-grid.php:88
 #: modules/heaven-slider/widgets/heaven-slider.php:742
-#: modules/mentor-slider/widgets/mentor-slider.php:1347
+#: modules/mentor-slider/widgets/mentor-slider.php:1353
 #: modules/product-category/widgets/product-category.php:88
 #: traits/global-widget-controls.php:2875
 msgid "Style 2"
@@ -3276,7 +3292,7 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:87
 #: modules/edd-category-grid/widgets/edd-category-grid.php:89
 #: modules/heaven-slider/widgets/heaven-slider.php:743
-#: modules/mentor-slider/widgets/mentor-slider.php:1348
+#: modules/mentor-slider/widgets/mentor-slider.php:1354
 #: modules/product-category/widgets/product-category.php:89
 #: traits/global-widget-controls.php:2876
 msgid "Style 3"
@@ -3285,7 +3301,7 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:88
 #: modules/edd-category-grid/widgets/edd-category-grid.php:90
 #: modules/heaven-slider/widgets/heaven-slider.php:744
-#: modules/mentor-slider/widgets/mentor-slider.php:1349
+#: modules/mentor-slider/widgets/mentor-slider.php:1355
 #: modules/product-category/widgets/product-category.php:90
 #: traits/global-widget-controls.php:2877
 msgid "Style 4"
@@ -3294,7 +3310,7 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:89
 #: modules/edd-category-grid/widgets/edd-category-grid.php:91
 #: modules/heaven-slider/widgets/heaven-slider.php:745
-#: modules/mentor-slider/widgets/mentor-slider.php:1350
+#: modules/mentor-slider/widgets/mentor-slider.php:1356
 #: modules/product-category/widgets/product-category.php:91
 #: traits/global-widget-controls.php:2878
 msgid "Style 5"
@@ -3302,48 +3318,48 @@ msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:104
 #: modules/shiny-carousel/widgets/shiny-carousel.php:93
-#: modules/shiny-grid/widgets/shiny-grid.php:116
-#: modules/shiny-grid/widgets/shiny-grid.php:144
+#: modules/shiny-grid/widgets/shiny-grid.php:105
+#: modules/shiny-grid/widgets/shiny-grid.php:133
 #: modules/showcase-slider/widgets/showcase-slider.php:481
 msgid "1"
 msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:105
 #: modules/shiny-carousel/widgets/shiny-carousel.php:94
-#: modules/shiny-grid/widgets/shiny-grid.php:117
-#: modules/shiny-grid/widgets/shiny-grid.php:145
+#: modules/shiny-grid/widgets/shiny-grid.php:106
+#: modules/shiny-grid/widgets/shiny-grid.php:134
 #: modules/showcase-slider/widgets/showcase-slider.php:482
 msgid "2"
 msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:106
 #: modules/shiny-carousel/widgets/shiny-carousel.php:95
-#: modules/shiny-grid/widgets/shiny-grid.php:118
-#: modules/shiny-grid/widgets/shiny-grid.php:146
+#: modules/shiny-grid/widgets/shiny-grid.php:107
+#: modules/shiny-grid/widgets/shiny-grid.php:135
 #: modules/showcase-slider/widgets/showcase-slider.php:483
 msgid "3"
 msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:107
 #: modules/shiny-carousel/widgets/shiny-carousel.php:96
-#: modules/shiny-grid/widgets/shiny-grid.php:119
-#: modules/shiny-grid/widgets/shiny-grid.php:147
+#: modules/shiny-grid/widgets/shiny-grid.php:108
+#: modules/shiny-grid/widgets/shiny-grid.php:136
 #: modules/showcase-slider/widgets/showcase-slider.php:484
 msgid "4"
 msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:108
 #: modules/shiny-carousel/widgets/shiny-carousel.php:97
-#: modules/shiny-grid/widgets/shiny-grid.php:120
-#: modules/shiny-grid/widgets/shiny-grid.php:148
+#: modules/shiny-grid/widgets/shiny-grid.php:109
+#: modules/shiny-grid/widgets/shiny-grid.php:137
 #: modules/showcase-slider/widgets/showcase-slider.php:485
 msgid "5"
 msgstr ""
 
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:109
 #: modules/shiny-carousel/widgets/shiny-carousel.php:98
-#: modules/shiny-grid/widgets/shiny-grid.php:121
-#: modules/shiny-grid/widgets/shiny-grid.php:149
+#: modules/shiny-grid/widgets/shiny-grid.php:110
+#: modules/shiny-grid/widgets/shiny-grid.php:138
 #: modules/showcase-slider/widgets/showcase-slider.php:486
 msgid "6"
 msgstr ""
@@ -3451,19 +3467,19 @@ msgstr ""
 #: modules/info-list/widgets/info-list.php:512
 #: modules/info-list/widgets/info-list.php:553
 #: modules/info-list/widgets/info-list.php:644
-#: modules/mentor-slider/widgets/mentor-slider.php:686
-#: modules/mentor-slider/widgets/mentor-slider.php:744
-#: modules/mentor-slider/widgets/mentor-slider.php:850
-#: modules/mentor-slider/widgets/mentor-slider.php:966
-#: modules/mentor-slider/widgets/mentor-slider.php:1250
-#: modules/mentor-slider/widgets/mentor-slider.php:1439
+#: modules/mentor-slider/widgets/mentor-slider.php:689
+#: modules/mentor-slider/widgets/mentor-slider.php:750
+#: modules/mentor-slider/widgets/mentor-slider.php:856
+#: modules/mentor-slider/widgets/mentor-slider.php:972
+#: modules/mentor-slider/widgets/mentor-slider.php:1256
+#: modules/mentor-slider/widgets/mentor-slider.php:1445
 #: modules/mini-cart/widgets/mini-cart.php:1050
 #: modules/mini-cart/widgets/mini-cart.php:1167
 #: modules/mobile-menu/widgets/mobile-menu.php:384
 #: modules/mobile-menu/widgets/mobile-menu.php:666
-#: modules/page-cart/widgets/page-cart.php:1065
-#: modules/page-cart/widgets/page-cart.php:1240
-#: modules/page-cart/widgets/page-cart.php:1450
+#: modules/page-cart/widgets/page-cart.php:1105
+#: modules/page-cart/widgets/page-cart.php:1280
+#: modules/page-cart/widgets/page-cart.php:1490
 #: modules/page-checkout/widgets/page-checkout.php:184
 #: modules/page-checkout/widgets/page-checkout.php:404
 #: modules/page-checkout/widgets/page-checkout.php:795
@@ -3511,8 +3527,8 @@ msgstr ""
 #: traits/global-widget-controls.php:1568
 #: traits/global-widget-controls.php:1691
 #: traits/global-widget-controls.php:2451
-#: traits/global-widget-controls.php:4296
-#: traits/global-widget-controls.php:4405
+#: traits/global-widget-controls.php:4299
+#: traits/global-widget-controls.php:4408
 msgid "Margin"
 msgstr ""
 
@@ -3520,9 +3536,9 @@ msgstr ""
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:480
 #: modules/edd-category-grid/widgets/edd-category-grid.php:349
 #: modules/edd-category-grid/widgets/edd-category-grid.php:477
-#: modules/mentor-slider/widgets/mentor-slider.php:565
-#: modules/mentor-slider/widgets/mentor-slider.php:638
-#: modules/mentor-slider/widgets/mentor-slider.php:944
+#: modules/mentor-slider/widgets/mentor-slider.php:568
+#: modules/mentor-slider/widgets/mentor-slider.php:641
+#: modules/mentor-slider/widgets/mentor-slider.php:950
 #: modules/up-sells/widgets/up-sells.php:615
 #: traits/global-edd-widget-controls.php:1094
 msgid "Radius"
@@ -3568,7 +3584,7 @@ msgstr ""
 #: modules/image-hotspot/widgets/image-hotspot.php:535
 #: modules/mini-cart/widgets/mini-cart.php:422
 #: modules/mobile-menu/widgets/mobile-menu.php:529
-#: modules/page-order/widgets/page-order.php:428
+#: modules/page-order/widgets/page-order.php:419
 #: modules/page-single/widgets/page-single.php:430
 #: modules/product-accordion/widgets/product-accordion.php:567
 #: modules/product-category-carousel/widgets/product-category-carousel.php:923
@@ -3579,7 +3595,7 @@ msgstr ""
 #: modules/product-reviews/widgets/product-reviews.php:611
 #: modules/showcase-slider/widgets/showcase-slider.php:786
 #: traits/global-widget-controls.php:3037
-#: traits/global-widget-controls.php:4317
+#: traits/global-widget-controls.php:4320
 msgid "Size"
 msgstr ""
 
@@ -3685,7 +3701,7 @@ msgstr ""
 #: modules/mentor-slider/widgets/mentor-slider.php:160
 #: modules/mentor-slider/widgets/mentor-slider.php:185
 #: modules/mentor-slider/widgets/mentor-slider.php:300
-#: modules/mentor-slider/widgets/mentor-slider.php:725
+#: modules/mentor-slider/widgets/mentor-slider.php:728
 #: modules/product-accordion/widgets/product-accordion.php:150
 #: modules/product-accordion/widgets/product-accordion.php:807
 #: modules/product-review-carousel/widgets/product-review-carousel.php:472
@@ -3759,10 +3775,10 @@ msgstr ""
 #: modules/mini-cart/widgets/mini-cart.php:249
 #: modules/mobile-menu/widgets/mobile-menu.php:195
 #: modules/mobile-menu/widgets/mobile-menu.php:821
-#: modules/page-cart/widgets/page-cart.php:122
-#: modules/page-cart/widgets/page-cart.php:251
-#: modules/page-cart/widgets/page-cart.php:476
-#: modules/page-order/widgets/page-order.php:124
+#: modules/page-cart/widgets/page-cart.php:162
+#: modules/page-cart/widgets/page-cart.php:291
+#: modules/page-cart/widgets/page-cart.php:516
+#: modules/page-order/widgets/page-order.php:118
 #: modules/product-accordion/widgets/product-accordion.php:201
 #: modules/product-category-carousel/widgets/product-category-carousel.php:209
 #: modules/product-category/widgets/product-category.php:201
@@ -3794,10 +3810,10 @@ msgstr ""
 #: modules/mini-cart/widgets/mini-cart.php:257
 #: modules/mobile-menu/widgets/mobile-menu.php:196
 #: modules/mobile-menu/widgets/mobile-menu.php:829
-#: modules/page-cart/widgets/page-cart.php:130
-#: modules/page-cart/widgets/page-cart.php:259
-#: modules/page-cart/widgets/page-cart.php:484
-#: modules/page-order/widgets/page-order.php:132
+#: modules/page-cart/widgets/page-cart.php:170
+#: modules/page-cart/widgets/page-cart.php:299
+#: modules/page-cart/widgets/page-cart.php:524
+#: modules/page-order/widgets/page-order.php:126
 #: modules/product-accordion/widgets/product-accordion.php:209
 #: modules/product-category-carousel/widgets/product-category-carousel.php:217
 #: modules/product-category/widgets/product-category.php:209
@@ -3821,7 +3837,7 @@ msgstr ""
 
 #: modules/featured-box/widgets/featured-box.php:498
 #: modules/info-list/widgets/info-list.php:317
-#: modules/page-cart/widgets/page-cart.php:72
+#: modules/page-cart/widgets/page-cart.php:112
 msgid "Show Title"
 msgstr ""
 
@@ -3910,7 +3926,7 @@ msgstr ""
 #: modules/florence-carousel/widgets/florence-carousel.php:132
 #: modules/florence-grid/widgets/florence-grid.php:241
 #: modules/glossy-carousel/widgets/glossy-carousel.php:134
-#: modules/glossy-grid/widgets/glossy-grid.php:258
+#: modules/glossy-grid/widgets/glossy-grid.php:246
 #: modules/heaven-slider/widgets/heaven-slider.php:168
 #: modules/image-hotspot/widgets/image-hotspot.php:238
 #: modules/mentor-slider/widgets/mentor-slider.php:204
@@ -3921,7 +3937,7 @@ msgstr ""
 #: modules/product-reviews/widgets/product-reviews.php:124
 #: modules/product-table/widgets/product-table.php:186
 #: modules/shiny-carousel/widgets/shiny-carousel.php:131
-#: modules/shiny-grid/widgets/shiny-grid.php:256
+#: modules/shiny-grid/widgets/shiny-grid.php:245
 #: modules/showcase-slider/widgets/showcase-slider.php:158
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:206
 #: modules/sub-category/widgets/sub-category.php:192
@@ -3934,13 +3950,13 @@ msgstr ""
 #: modules/florence-carousel/widgets/florence-carousel.php:167
 #: modules/florence-grid/widgets/florence-grid.php:331
 #: modules/glossy-carousel/widgets/glossy-carousel.php:266
-#: modules/glossy-grid/widgets/glossy-grid.php:335
+#: modules/glossy-grid/widgets/glossy-grid.php:320
 #: modules/heaven-slider/widgets/heaven-slider.php:1243
 #: modules/heaven-slider/widgets/heaven-slider.php:1265
 #: modules/image-hotspot/widgets/image-hotspot.php:2609
 #: modules/image-hotspot/widgets/image-hotspot.php:2707
-#: modules/mentor-slider/widgets/mentor-slider.php:1861
-#: modules/mentor-slider/widgets/mentor-slider.php:1880
+#: modules/mentor-slider/widgets/mentor-slider.php:1873
+#: modules/mentor-slider/widgets/mentor-slider.php:1892
 #: modules/product-accordion/widgets/product-accordion.php:1313
 #: modules/product-image-accordion/widgets/product-image-accordion.php:344
 #: modules/product-list/widgets/product-list.php:485
@@ -3950,94 +3966,94 @@ msgid "Ops! There no product to display."
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:82
-#: modules/glossy-grid/widgets/glossy-grid.php:99
+#: modules/glossy-grid/widgets/glossy-grid.php:87
 #: modules/product-category-carousel/widgets/product-category-carousel.php:85
 #: modules/product-category/widgets/product-category.php:83
-#: modules/shiny-grid/widgets/shiny-grid.php:95
+#: modules/shiny-grid/widgets/shiny-grid.php:84
 msgid "Style"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:86
-#: modules/glossy-grid/widgets/glossy-grid.php:103
-#: modules/shiny-grid/widgets/shiny-grid.php:99
+#: modules/glossy-grid/widgets/glossy-grid.php:91
+#: modules/shiny-grid/widgets/shiny-grid.php:88
 #: traits/global-widget-controls.php:2493
 msgid "Grid"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:87
 #: modules/florence-grid/widgets/florence-grid.php:198
-#: modules/glossy-grid/widgets/glossy-grid.php:104
-#: modules/shiny-grid/widgets/shiny-grid.php:100
-#: modules/shiny-grid/widgets/shiny-grid.php:212
+#: modules/glossy-grid/widgets/glossy-grid.php:92
+#: modules/shiny-grid/widgets/shiny-grid.php:89
+#: modules/shiny-grid/widgets/shiny-grid.php:201
 msgid "List"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:182
-#: modules/glossy-grid/widgets/glossy-grid.php:199
-#: modules/shiny-grid/widgets/shiny-grid.php:195
+#: modules/glossy-grid/widgets/glossy-grid.php:187
+#: modules/shiny-grid/widgets/shiny-grid.php:184
 #: traits/global-edd-widget-controls.php:342
 #: traits/global-widget-controls.php:473
 msgid "Columns Filter"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:193
-#: modules/glossy-grid/widgets/glossy-grid.php:210
-#: modules/shiny-grid/widgets/shiny-grid.php:207
+#: modules/glossy-grid/widgets/glossy-grid.php:198
+#: modules/shiny-grid/widgets/shiny-grid.php:196
 msgid "Select Column Type"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:199
-#: modules/glossy-grid/widgets/glossy-grid.php:216
-#: modules/shiny-grid/widgets/shiny-grid.php:213
+#: modules/glossy-grid/widgets/glossy-grid.php:204
+#: modules/shiny-grid/widgets/shiny-grid.php:202
 msgid "Column 2"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:200
-#: modules/glossy-grid/widgets/glossy-grid.php:217
-#: modules/shiny-grid/widgets/shiny-grid.php:214
+#: modules/glossy-grid/widgets/glossy-grid.php:205
+#: modules/shiny-grid/widgets/shiny-grid.php:203
 msgid "Column 3"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:201
-#: modules/glossy-grid/widgets/glossy-grid.php:218
-#: modules/shiny-grid/widgets/shiny-grid.php:215
+#: modules/glossy-grid/widgets/glossy-grid.php:206
+#: modules/shiny-grid/widgets/shiny-grid.php:204
 msgid "Column 4"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:202
-#: modules/glossy-grid/widgets/glossy-grid.php:219
-#: modules/shiny-grid/widgets/shiny-grid.php:216
+#: modules/glossy-grid/widgets/glossy-grid.php:207
+#: modules/shiny-grid/widgets/shiny-grid.php:205
 msgid "Column 5"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:203
-#: modules/glossy-grid/widgets/glossy-grid.php:220
-#: modules/shiny-grid/widgets/shiny-grid.php:217
+#: modules/glossy-grid/widgets/glossy-grid.php:208
+#: modules/shiny-grid/widgets/shiny-grid.php:206
 msgid "Column 6"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:216
-#: modules/glossy-grid/widgets/glossy-grid.php:233
-#: modules/shiny-grid/widgets/shiny-grid.php:231
+#: modules/glossy-grid/widgets/glossy-grid.php:221
+#: modules/shiny-grid/widgets/shiny-grid.php:220
 msgid "Result Count"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:218
-#: modules/glossy-grid/widgets/glossy-grid.php:235
+#: modules/glossy-grid/widgets/glossy-grid.php:223
 #: modules/mentor-slider/widgets/mentor-slider.php:398
 #: modules/product-accordion/widgets/product-accordion.php:330
 #: modules/product-table/widgets/product-table.php:581
-#: modules/shiny-grid/widgets/shiny-grid.php:233
+#: modules/shiny-grid/widgets/shiny-grid.php:222
 #: modules/up-sells/widgets/up-sells.php:134
 msgid "Show"
 msgstr ""
 
 #: modules/florence-grid/widgets/florence-grid.php:219
-#: modules/glossy-grid/widgets/glossy-grid.php:236
+#: modules/glossy-grid/widgets/glossy-grid.php:224
 #: modules/mentor-slider/widgets/mentor-slider.php:399
 #: modules/product-accordion/widgets/product-accordion.php:331
 #: modules/product-table/widgets/product-table.php:582
-#: modules/shiny-grid/widgets/shiny-grid.php:234
+#: modules/shiny-grid/widgets/shiny-grid.php:223
 #: modules/up-sells/widgets/up-sells.php:133
 msgid "Hide"
 msgstr ""
@@ -4047,13 +4063,13 @@ msgstr ""
 msgid "Shape Color"
 msgstr ""
 
-#: modules/glossy-grid/widgets/glossy-grid.php:169
-#: modules/shiny-grid/widgets/shiny-grid.php:165
+#: modules/glossy-grid/widgets/glossy-grid.php:157
+#: modules/shiny-grid/widgets/shiny-grid.php:154
 #: traits/global-edd-widget-controls.php:140
 msgid "Columns Gap"
 msgstr ""
 
-#: modules/glossy-grid/widgets/glossy-grid.php:215
+#: modules/glossy-grid/widgets/glossy-grid.php:203
 msgid "List view"
 msgstr ""
 
@@ -4064,7 +4080,7 @@ msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:114
 #: modules/mentor-slider/widgets/mentor-slider.php:118
-#: modules/page-cart/widgets/page-cart.php:286
+#: modules/page-cart/widgets/page-cart.php:326
 #: modules/product-accordion/widgets/product-accordion.php:188
 #: modules/product-image-accordion/widgets/product-image-accordion.php:128
 #: modules/product-list/widgets/product-list.php:109
@@ -4116,57 +4132,57 @@ msgid "Pause on Hover"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:220
-#: modules/mentor-slider/widgets/mentor-slider.php:460
+#: modules/mentor-slider/widgets/mentor-slider.php:463
 #: modules/showcase-slider/widgets/showcase-slider.php:503
-#: traits/global-widget-controls.php:4194
+#: traits/global-widget-controls.php:4197
 msgid "Grab Cursor"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:228
-#: modules/mentor-slider/widgets/mentor-slider.php:468
+#: modules/mentor-slider/widgets/mentor-slider.php:471
 #: modules/showcase-slider/widgets/showcase-slider.php:511
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:316
 #: modules/sub-category/widgets/sub-category.php:689
-#: traits/global-widget-controls.php:4202
+#: traits/global-widget-controls.php:4205
 msgid "Loop"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:238
-#: modules/mentor-slider/widgets/mentor-slider.php:478
+#: modules/mentor-slider/widgets/mentor-slider.php:481
 msgid "Mousewheel"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:246
-#: modules/mentor-slider/widgets/mentor-slider.php:489
+#: modules/mentor-slider/widgets/mentor-slider.php:492
 #: modules/showcase-slider/widgets/showcase-slider.php:521
-#: traits/global-widget-controls.php:4213
+#: traits/global-widget-controls.php:4216
 msgid "Animation Speed (ms)"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:264
-#: modules/mentor-slider/widgets/mentor-slider.php:507
+#: modules/mentor-slider/widgets/mentor-slider.php:510
 #: modules/showcase-slider/widgets/showcase-slider.php:539
-#: traits/global-widget-controls.php:4231
+#: traits/global-widget-controls.php:4234
 msgid "Observer"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:265
-#: modules/mentor-slider/widgets/mentor-slider.php:508
+#: modules/mentor-slider/widgets/mentor-slider.php:511
 #: modules/showcase-slider/widgets/showcase-slider.php:540
-#: traits/global-widget-controls.php:4232
+#: traits/global-widget-controls.php:4235
 msgid "When you use carousel in any hidden place (in tabs, accordion etc) keep it yes."
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:278
 #: modules/image-hotspot/widgets/image-hotspot.php:100
-#: modules/mentor-slider/widgets/mentor-slider.php:521
+#: modules/mentor-slider/widgets/mentor-slider.php:524
 msgid "Slider"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:533
 #: modules/image-hotspot/widgets/image-hotspot.php:1351
-#: modules/mentor-slider/widgets/mentor-slider.php:838
-#: modules/mentor-slider/widgets/mentor-slider.php:1547
+#: modules/mentor-slider/widgets/mentor-slider.php:844
+#: modules/mentor-slider/widgets/mentor-slider.php:1553
 #: modules/product-table/widgets/product-table.php:1299
 #: modules/product-table/widgets/product-table.php:1764
 #: traits/global-widget-controls.php:1616
@@ -4182,7 +4198,7 @@ msgstr ""
 #: modules/heaven-slider/widgets/heaven-slider.php:657
 #: modules/image-hotspot/widgets/image-hotspot.php:1191
 #: modules/image-hotspot/widgets/image-hotspot.php:1442
-#: modules/mentor-slider/widgets/mentor-slider.php:1262
+#: modules/mentor-slider/widgets/mentor-slider.php:1268
 #: modules/product-accordion/widgets/product-accordion.php:660
 #: modules/product-review-carousel/widgets/product-review-carousel.php:396
 #: modules/product-reviews/widgets/product-reviews.php:390
@@ -4198,7 +4214,7 @@ msgid "Space Between"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:725
-#: modules/mentor-slider/widgets/mentor-slider.php:1330
+#: modules/mentor-slider/widgets/mentor-slider.php:1336
 #: traits/global-widget-controls.php:2756
 #: traits/global-widget-controls.php:2763
 #: traits/global-widget-controls.php:2923
@@ -4207,128 +4223,128 @@ msgid "Navigation"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:736
-#: modules/mentor-slider/widgets/mentor-slider.php:1341
+#: modules/mentor-slider/widgets/mentor-slider.php:1347
 #: traits/global-widget-controls.php:2870
 msgid "Arrows Icon"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:746
-#: modules/mentor-slider/widgets/mentor-slider.php:1351
+#: modules/mentor-slider/widgets/mentor-slider.php:1357
 #: modules/product-category/widgets/product-category.php:92
 #: traits/global-widget-controls.php:2879
 msgid "Style 6"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:747
-#: modules/mentor-slider/widgets/mentor-slider.php:1352
+#: modules/mentor-slider/widgets/mentor-slider.php:1358
 #: traits/global-widget-controls.php:2880
 msgid "Style 7"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:748
-#: modules/mentor-slider/widgets/mentor-slider.php:1353
+#: modules/mentor-slider/widgets/mentor-slider.php:1359
 #: traits/global-widget-controls.php:2881
 msgid "Style 8"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:749
-#: modules/mentor-slider/widgets/mentor-slider.php:1354
+#: modules/mentor-slider/widgets/mentor-slider.php:1360
 #: traits/global-widget-controls.php:2882
 msgid "Style 9"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:750
-#: modules/mentor-slider/widgets/mentor-slider.php:1355
+#: modules/mentor-slider/widgets/mentor-slider.php:1361
 #: traits/global-widget-controls.php:2883
 msgid "Style 10"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:751
-#: modules/mentor-slider/widgets/mentor-slider.php:1356
+#: modules/mentor-slider/widgets/mentor-slider.php:1362
 #: traits/global-widget-controls.php:2884
 msgid "Style 11"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:752
-#: modules/mentor-slider/widgets/mentor-slider.php:1357
+#: modules/mentor-slider/widgets/mentor-slider.php:1363
 #: traits/global-widget-controls.php:2885
 msgid "Style 12"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:753
-#: modules/mentor-slider/widgets/mentor-slider.php:1358
+#: modules/mentor-slider/widgets/mentor-slider.php:1364
 #: traits/global-widget-controls.php:2886
 msgid "Style 13"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:754
-#: modules/mentor-slider/widgets/mentor-slider.php:1359
+#: modules/mentor-slider/widgets/mentor-slider.php:1365
 #: traits/global-widget-controls.php:2887
 msgid "Style 14"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:755
-#: modules/mentor-slider/widgets/mentor-slider.php:1360
+#: modules/mentor-slider/widgets/mentor-slider.php:1366
 #: traits/global-widget-controls.php:2888
 msgid "Style 15"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:756
-#: modules/mentor-slider/widgets/mentor-slider.php:1361
+#: modules/mentor-slider/widgets/mentor-slider.php:1367
 #: traits/global-widget-controls.php:2889
 msgid "Style 16"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:757
-#: modules/mentor-slider/widgets/mentor-slider.php:1362
+#: modules/mentor-slider/widgets/mentor-slider.php:1368
 #: traits/global-widget-controls.php:2890
 msgid "Style 17"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:758
-#: modules/mentor-slider/widgets/mentor-slider.php:1363
+#: modules/mentor-slider/widgets/mentor-slider.php:1369
 #: traits/global-widget-controls.php:2891
 msgid "Style 18"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:759
-#: modules/mentor-slider/widgets/mentor-slider.php:1364
+#: modules/mentor-slider/widgets/mentor-slider.php:1370
 #: traits/global-widget-controls.php:2892
 msgid "Style 19"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:760
-#: modules/mentor-slider/widgets/mentor-slider.php:1365
+#: modules/mentor-slider/widgets/mentor-slider.php:1371
 #: traits/global-widget-controls.php:2893
 msgid "Style 20"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:761
-#: modules/mentor-slider/widgets/mentor-slider.php:1366
+#: modules/mentor-slider/widgets/mentor-slider.php:1372
 #: traits/global-widget-controls.php:2894
 msgid "Style 21"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:762
-#: modules/mentor-slider/widgets/mentor-slider.php:1367
+#: modules/mentor-slider/widgets/mentor-slider.php:1373
 #: traits/global-widget-controls.php:2895
 msgid "Style 22"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:763
-#: modules/mentor-slider/widgets/mentor-slider.php:1368
+#: modules/mentor-slider/widgets/mentor-slider.php:1374
 #: traits/global-widget-controls.php:2896
 msgid "Style 23"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:863
-#: modules/mentor-slider/widgets/mentor-slider.php:1460
+#: modules/mentor-slider/widgets/mentor-slider.php:1466
 #: traits/global-widget-controls.php:3058
 msgid "Space Between Arrows"
 msgstr ""
 
 #: modules/heaven-slider/widgets/heaven-slider.php:927
-#: modules/mentor-slider/widgets/mentor-slider.php:1569
+#: modules/mentor-slider/widgets/mentor-slider.php:1575
 msgid "Thumbs"
 msgstr ""
 
@@ -4348,7 +4364,7 @@ msgstr ""
 #: modules/info-list/widgets/info-list.php:85
 #: modules/info-list/widgets/info-list.php:575
 #: modules/mobile-menu/widgets/mobile-menu.php:103
-#: modules/page-order/widgets/page-order.php:421
+#: modules/page-order/widgets/page-order.php:412
 msgid "Icon"
 msgstr ""
 
@@ -4464,7 +4480,7 @@ msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:547
 #: modules/image-hotspot/widgets/image-hotspot.php:1965
-#: modules/page-cart/widgets/page-cart.php:671
+#: modules/page-cart/widgets/page-cart.php:711
 #: modules/page-single/widgets/page-single.php:1418
 #: modules/product-category-carousel/widgets/product-category-carousel.php:946
 #: modules/product-category/widgets/product-category.php:963
@@ -4488,7 +4504,7 @@ msgid "Product Items"
 msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:735
-#: modules/page-order/widgets/page-order.php:272
+#: modules/page-order/widgets/page-order.php:266
 #: modules/page-single/widgets/page-single.php:1173
 #: modules/product-category/widgets/product-category.php:138
 #: modules/product-reviews/widgets/product-reviews.php:102
@@ -4515,7 +4531,7 @@ msgid "Image Border"
 msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:1286
-#: modules/mentor-slider/widgets/mentor-slider.php:790
+#: modules/mentor-slider/widgets/mentor-slider.php:796
 #: modules/page-single/widgets/page-single.php:279
 #: modules/product-table/widgets/product-table.php:1347
 #: modules/up-sells/widgets/up-sells.php:496
@@ -4561,7 +4577,7 @@ msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:1892
 #: modules/mentor-slider/widgets/mentor-slider.php:381
-#: modules/mentor-slider/widgets/mentor-slider.php:867
+#: modules/mentor-slider/widgets/mentor-slider.php:873
 #: modules/product-accordion/widgets/product-accordion.php:313
 #: modules/product-accordion/widgets/product-accordion.php:847
 #: modules/showcase-slider/widgets/showcase-slider.php:300
@@ -4574,7 +4590,7 @@ msgid "Action Button"
 msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:1984
-#: modules/mentor-slider/widgets/mentor-slider.php:978
+#: modules/mentor-slider/widgets/mentor-slider.php:984
 #: modules/showcase-slider/widgets/showcase-slider.php:1006
 #: traits/global-widget-controls.php:1720
 msgid "Tooltip Font"
@@ -4582,7 +4598,7 @@ msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:1998
 #: modules/mentor-slider/widgets/mentor-slider.php:396
-#: modules/mentor-slider/widgets/mentor-slider.php:1003
+#: modules/mentor-slider/widgets/mentor-slider.php:1009
 #: modules/product-accordion/widgets/product-accordion.php:328
 #: modules/product-accordion/widgets/product-accordion.php:990
 #: modules/showcase-slider/widgets/showcase-slider.php:315
@@ -4603,8 +4619,8 @@ msgstr ""
 #: modules/mini-cart/widgets/mini-cart.php:329
 #: modules/mini-cart/widgets/mini-cart.php:940
 #: modules/page-checkout/widgets/page-checkout.php:772
-#: modules/page-order/widgets/page-order.php:615
-#: modules/page-order/widgets/page-order.php:648
+#: modules/page-order/widgets/page-order.php:604
+#: modules/page-order/widgets/page-order.php:637
 #: modules/product-accordion/widgets/product-accordion.php:515
 #: modules/product-accordion/widgets/product-accordion.php:925
 #: modules/product-accordion/widgets/product-accordion.php:966
@@ -4642,14 +4658,14 @@ msgstr ""
 #: traits/global-widget-controls.php:2223
 #: traits/global-widget-controls.php:2316
 #: traits/global-widget-controls.php:2357
-#: traits/global-widget-controls.php:4381
-#: traits/global-widget-controls.php:4458
-#: traits/global-widget-controls.php:4500
+#: traits/global-widget-controls.php:4384
+#: traits/global-widget-controls.php:4461
+#: traits/global-widget-controls.php:4503
 msgid "Background Color"
 msgstr ""
 
 #: modules/image-hotspot/widgets/image-hotspot.php:2269
-#: modules/mentor-slider/widgets/mentor-slider.php:1062
+#: modules/mentor-slider/widgets/mentor-slider.php:1068
 #: modules/product-accordion/widgets/product-accordion.php:1098
 #: modules/showcase-slider/widgets/showcase-slider.php:1194
 #: traits/global-widget-controls.php:1986
@@ -4753,21 +4769,21 @@ msgstr ""
 msgid "Quick View"
 msgstr ""
 
-#: modules/mentor-slider/widgets/mentor-slider.php:592
+#: modules/mentor-slider/widgets/mentor-slider.php:595
 #: modules/showcase-slider/widgets/showcase-slider.php:634
 #: traits/global-edd-widget-controls.php:568
 msgid "Content Padding"
 msgstr ""
 
-#: modules/mentor-slider/widgets/mentor-slider.php:611
+#: modules/mentor-slider/widgets/mentor-slider.php:614
 msgid "Images"
 msgstr ""
 
-#: modules/mentor-slider/widgets/mentor-slider.php:990
+#: modules/mentor-slider/widgets/mentor-slider.php:996
 msgid "Button Separator"
 msgstr ""
 
-#: modules/mentor-slider/widgets/mentor-slider.php:1121
+#: modules/mentor-slider/widgets/mentor-slider.php:1127
 #: modules/mobile-menu/widgets/mobile-menu.php:147
 #: modules/page-single/widgets/page-single.php:1026
 #: modules/product-accordion/widgets/product-accordion.php:906
@@ -4780,6 +4796,7 @@ msgstr ""
 #: modules/mini-cart/templates/cart/mini-cart-backup.php:74
 #: modules/mini-cart/templates/cart/mini-cart.php:62
 #: modules/mini-cart/widgets/mini-cart.php:1377
+#: modules/page-cart/widgets/page-cart.php:1630
 msgid "Remove this item"
 msgstr ""
 
@@ -4793,9 +4810,9 @@ msgstr ""
 #: modules/mini-cart/templates/cart/mini-cart.php:93
 #: modules/mini-cart/widgets/mini-cart.php:613
 #: modules/mini-cart/widgets/mini-cart.php:1296
-#: modules/page-cart/widgets/page-cart.php:1253
-#: modules/page-cart/widgets/page-cart.php:1553
-#: modules/page-cart/widgets/page-cart.php:1658
+#: modules/page-cart/widgets/page-cart.php:1293
+#: modules/page-cart/widgets/page-cart.php:1609
+#: modules/page-cart/widgets/page-cart.php:1711
 msgid "Subtotal"
 msgstr ""
 
@@ -4902,7 +4919,7 @@ msgid "Hover Border Color"
 msgstr ""
 
 #: modules/mini-cart/widgets/mini-cart.php:780
-#: modules/page-cart/widgets/page-cart.php:1382
+#: modules/page-cart/widgets/page-cart.php:1422
 msgid "Checkout Button"
 msgstr ""
 
@@ -4931,7 +4948,7 @@ msgid "Item Hover Background"
 msgstr ""
 
 #: modules/mini-cart/widgets/mini-cart.php:1179
-#: modules/page-order/widgets/page-order.php:719
+#: modules/page-order/widgets/page-order.php:705
 #: modules/product-table/widgets/product-table.php:1719
 msgid "Footer"
 msgstr ""
@@ -5025,10 +5042,10 @@ msgstr ""
 #: modules/page-checkout/widgets/page-checkout.php:551
 #: modules/page-checkout/widgets/page-checkout.php:608
 #: modules/page-checkout/widgets/page-checkout.php:707
-#: modules/page-order/widgets/page-order.php:578
-#: modules/page-order/widgets/page-order.php:626
-#: modules/page-order/widgets/page-order.php:659
-#: modules/page-order/widgets/page-order.php:736
+#: modules/page-order/widgets/page-order.php:567
+#: modules/page-order/widgets/page-order.php:615
+#: modules/page-order/widgets/page-order.php:648
+#: modules/page-order/widgets/page-order.php:722
 #: modules/page-single/widgets/page-single.php:1121
 #: modules/page-single/widgets/page-single.php:1250
 #: modules/page-single/widgets/page-single.php:1299
@@ -5054,93 +5071,93 @@ msgstr ""
 msgid "Page Cart"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:21
+#: modules/page-cart/widgets/page-cart.php:40
 msgid "Cart Page"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:55
+#: modules/page-cart/widgets/page-cart.php:95
 msgid "Cart Layout"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:63
+#: modules/page-cart/widgets/page-cart.php:103
 #: modules/product-category-carousel/widgets/product-category-carousel.php:239
 #: modules/product-category/widgets/product-category.php:259
 msgid "Show Image"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:81
+#: modules/page-cart/widgets/page-cart.php:121
 msgid "Show Price"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:90
+#: modules/page-cart/widgets/page-cart.php:130
 msgid "Show Quantity"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:99
+#: modules/page-cart/widgets/page-cart.php:139
 msgid "Show Subtotal"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:110
+#: modules/page-cart/widgets/page-cart.php:150
 msgid "Cart Heading"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:200
+#: modules/page-cart/widgets/page-cart.php:240
 msgid "Cart Item"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:215
+#: modules/page-cart/widgets/page-cart.php:255
 #: modules/product-table/widgets/product-table.php:627
 msgid "Cell Padding"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:226
+#: modules/page-cart/widgets/page-cart.php:266
 msgid "Even Row Background Color"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:236
+#: modules/page-cart/widgets/page-cart.php:276
 msgid "Odd Row Background Color"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:338
-#: modules/page-cart/widgets/page-cart.php:1541
-#: modules/page-cart/widgets/page-cart.php:1599
+#: modules/page-cart/widgets/page-cart.php:378
+#: modules/page-cart/widgets/page-cart.php:1597
+#: modules/page-cart/widgets/page-cart.php:1653
 #: modules/page-single/widgets/page-single.php:132
 msgid "Product Title"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:426
+#: modules/page-cart/widgets/page-cart.php:466
 msgid "Product Quantity"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:553
+#: modules/page-cart/widgets/page-cart.php:593
 msgid "Product Sub Total"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:739
+#: modules/page-cart/widgets/page-cart.php:779
 msgid "Coupon Style"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:747
+#: modules/page-cart/widgets/page-cart.php:787
 msgid "Coupon Label"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:774
+#: modules/page-cart/widgets/page-cart.php:814
 msgid "Coupon Field"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:856
+#: modules/page-cart/widgets/page-cart.php:896
 msgid "Coupon Button"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:997
+#: modules/page-cart/widgets/page-cart.php:1037
 msgid "Cart Update Button"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1152
+#: modules/page-cart/widgets/page-cart.php:1192
 msgid "Cart Collaterals"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1160
+#: modules/page-cart/widgets/page-cart.php:1200
 #: modules/page-checkout/widgets/page-checkout.php:227
 #: modules/page-single/widgets/page-single.php:937
 #: modules/up-sells/widgets/up-sells.php:123
@@ -5148,7 +5165,7 @@ msgstr ""
 msgid "Heading"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1187
+#: modules/page-cart/widgets/page-cart.php:1227
 #: modules/page-checkout/widgets/page-checkout.php:265
 #: modules/page-checkout/widgets/page-checkout.php:321
 #: modules/page-checkout/widgets/page-checkout.php:827
@@ -5156,26 +5173,26 @@ msgstr ""
 msgid "Bottom Spacing"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1205
+#: modules/page-cart/widgets/page-cart.php:1245
 msgid "Table Body"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1287
-#: modules/page-cart/widgets/page-cart.php:1350
+#: modules/page-cart/widgets/page-cart.php:1327
+#: modules/page-cart/widgets/page-cart.php:1390
 msgid "Amount"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1316
-#: modules/page-order/widgets/page-order.php:1096
+#: modules/page-cart/widgets/page-cart.php:1356
+#: modules/page-order/widgets/page-order.php:1079
 msgid "Total"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1534
+#: modules/page-cart/widgets/page-cart.php:1590
 msgid "Close"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1549
-#: modules/page-cart/widgets/page-cart.php:1631
+#: modules/page-cart/widgets/page-cart.php:1605
+#: modules/page-cart/widgets/page-cart.php:1684
 #: modules/product-table/widgets/product-table.php:328
 #: modules/product-table/widgets/product-table.php:1517
 #: modules/product-table/widgets/product-table.php:2058
@@ -5183,27 +5200,27 @@ msgstr ""
 msgid "Quantity"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1574
+#: modules/page-cart/widgets/page-cart.php:1628
 msgid "Remove"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1615
+#: modules/page-cart/widgets/page-cart.php:1668
 msgid "Available on backorder"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1675
+#: modules/page-cart/widgets/page-cart.php:1728
 msgid "Coupon:"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1677
+#: modules/page-cart/widgets/page-cart.php:1730
 msgid "Coupon code"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1679
+#: modules/page-cart/widgets/page-cart.php:1732
 msgid "Apply coupon"
 msgstr ""
 
-#: modules/page-cart/widgets/page-cart.php:1685
+#: modules/page-cart/widgets/page-cart.php:1738
 msgid "Update cart"
 msgstr ""
 
@@ -5264,7 +5281,7 @@ msgid "Create an account?"
 msgstr ""
 
 #: modules/page-checkout/widgets/page-checkout.php:154
-#: modules/page-order/widgets/page-order.php:245
+#: modules/page-order/widgets/page-order.php:239
 msgid "Container"
 msgstr ""
 
@@ -5303,7 +5320,7 @@ msgid "Focus Background"
 msgstr ""
 
 #: modules/page-checkout/widgets/page-checkout.php:475
-#: modules/page-order/widgets/page-order.php:467
+#: modules/page-order/widgets/page-order.php:458
 msgid "Order Details"
 msgstr ""
 
@@ -5373,15 +5390,15 @@ msgstr ""
 msgid "Page Order"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:34
+#: modules/page-order/widgets/page-order.php:30
 msgid "Order Page"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:73
+#: modules/page-order/widgets/page-order.php:67
 msgid "ThankYou Order"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:81
+#: modules/page-order/widgets/page-order.php:75
 #: modules/page-single/widgets/page-single.php:202
 #: modules/page-single/widgets/page-single.php:243
 #: modules/product-accordion/widgets/product-accordion.php:545
@@ -5391,127 +5408,127 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:100
+#: modules/page-order/widgets/page-order.php:94
 msgid "Show Order ID"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:113
-#: modules/page-order/widgets/page-order.php:114
+#: modules/page-order/widgets/page-order.php:107
+#: modules/page-order/widgets/page-order.php:108
 msgid "Thank you. Your order has been received."
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:148
+#: modules/page-order/widgets/page-order.php:142
 msgid "Order Heading"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:236
+#: modules/page-order/widgets/page-order.php:230
 msgid "Order Card"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:308
-#: modules/page-order/widgets/page-order.php:476
-#: modules/page-order/widgets/page-order.php:930
-#: traits/global-widget-controls.php:4289
+#: modules/page-order/widgets/page-order.php:300
+#: modules/page-order/widgets/page-order.php:467
+#: modules/page-order/widgets/page-order.php:914
+#: traits/global-widget-controls.php:4292
 msgid "Wrapper"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:336
+#: modules/page-order/widgets/page-order.php:328
 msgid "Style Border Color"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:397
+#: modules/page-order/widgets/page-order.php:389
 msgid "Total Value Color"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:549
+#: modules/page-order/widgets/page-order.php:539
 #: modules/product-table/widgets/product-table.php:533
 msgid "Table"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:560
+#: modules/page-order/widgets/page-order.php:550
 #: modules/product-table/widgets/product-table.php:541
 msgid "Header"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:600
+#: modules/page-order/widgets/page-order.php:589
 msgid "Body"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:607
+#: modules/page-order/widgets/page-order.php:596
 msgid "Odd Row"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:639
+#: modules/page-order/widgets/page-order.php:628
 msgid "Even Row"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:682
+#: modules/page-order/widgets/page-order.php:671
 msgid "Meta Data"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:748
+#: modules/page-order/widgets/page-order.php:734
 msgid "Total Amount Color"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:773
+#: modules/page-order/widgets/page-order.php:758
 msgid "Order Button"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:920
+#: modules/page-order/widgets/page-order.php:904
 msgid "Address Details"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1003
+#: modules/page-order/widgets/page-order.php:984
 msgid "Address"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1058
+#: modules/page-order/widgets/page-order.php:1039
 msgid "Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again."
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1088
+#: modules/page-order/widgets/page-order.php:1071
 msgid "Order details"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1139
+#: modules/page-order/widgets/page-order.php:1125
 msgid "Note:"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1166
+#: modules/page-order/widgets/page-order.php:1151
 msgid "Order number:"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1174
+#: modules/page-order/widgets/page-order.php:1159
 msgid "Order Date:"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1182
+#: modules/page-order/widgets/page-order.php:1167
 msgid "Order status"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1190
+#: modules/page-order/widgets/page-order.php:1175
 #: assets/admin/admin.js:1
 msgid "Total:"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1199
+#: modules/page-order/widgets/page-order.php:1185
 msgid "Payment method:"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1220
+#: modules/page-order/widgets/page-order.php:1207
 msgid "Billing address"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1223
-#: modules/page-order/widgets/page-order.php:1241
+#: modules/page-order/widgets/page-order.php:1210
+#: modules/page-order/widgets/page-order.php:1231
 msgid "N/A"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1239
+#: modules/page-order/widgets/page-order.php:1229
 msgid "Shipping address"
 msgstr ""
 
-#: modules/page-order/widgets/page-order.php:1266
+#: modules/page-order/widgets/page-order.php:1260
 msgid "No orders found. Please create a test order to preview this widget."
 msgstr ""
 
@@ -5959,7 +5976,7 @@ msgstr ""
 msgid "Alignement"
 msgstr ""
 
-#: modules/shiny-grid/widgets/shiny-grid.php:332
+#: modules/shiny-grid/widgets/shiny-grid.php:322
 msgid "Ops! There no product to display"
 msgstr ""
 
@@ -5993,27 +6010,27 @@ msgid "Depth"
 msgstr ""
 
 #: modules/showcase-slider/widgets/showcase-slider.php:476
-#: traits/global-widget-controls.php:4167
+#: traits/global-widget-controls.php:4170
 msgid "Slides to Scroll"
 msgstr ""
 
 #: modules/showcase-slider/widgets/showcase-slider.php:494
-#: traits/global-widget-controls.php:4185
+#: traits/global-widget-controls.php:4188
 msgid "Center Slide"
 msgstr ""
 
 #: modules/showcase-slider/widgets/showcase-slider.php:495
-#: traits/global-widget-controls.php:4186
+#: traits/global-widget-controls.php:4189
 msgid "Use even items from Layout > Columns settings for better preview."
 msgstr ""
 
 #: modules/showcase-slider/widgets/showcase-slider.php:548
-#: traits/global-widget-controls.php:4240
+#: traits/global-widget-controls.php:4243
 msgid "Match Padding"
 msgstr ""
 
 #: modules/showcase-slider/widgets/showcase-slider.php:549
-#: traits/global-widget-controls.php:4241
+#: traits/global-widget-controls.php:4244
 msgid "You have to add padding for matching overlaping normal/hover box shadow when you used Box Shadow option."
 msgstr ""
 
@@ -6407,15 +6424,15 @@ msgstr ""
 msgid "Coverflow"
 msgstr ""
 
-#: traits/global-widget-controls.php:4262
+#: traits/global-widget-controls.php:4265
 msgid "Item Match Height"
 msgstr ""
 
-#: traits/global-widget-controls.php:4276
+#: traits/global-widget-controls.php:4279
 msgid "Variation"
 msgstr ""
 
-#: traits/global-widget-controls.php:4355
+#: traits/global-widget-controls.php:4358
 msgid "Common"
 msgstr ""
 
