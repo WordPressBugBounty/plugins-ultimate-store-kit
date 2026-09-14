@@ -1,15 +1,15 @@
-=== Ultimate Store Kit - Addon For WooCommerce, EDD and Elementor ===
-Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, muhammadasik, sohanurrahman, saifullahnakiih, shaikatazim, mohan00, syedfarhanreza, shmusuf, arafatakashakku, shamim496
-Donate link: http://bdthemes.com/
-Tags: elementor, elementor addons, woocommerce builder, woocommerce elementor, woocommerce product, woocommerce design, woocommerce widgets, EDD, cart
-Stable tag: 3.0.7
-Requires PHP: 7.0.0
-Requires at least: 5.0.0
-Tested up to: 7.0.2
+=== Ultimate Store Kit ===
+Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, muhammadasik, sohanurrahman, saifullahnakiih, shaikatazim, mohan00, shmusuf, arafatakashakku, shamim496
+Donate link: https://bdthemes.com/
+Tags: elementor, woocommerce, elementor addons, woocommerce builder, edd
+Stable tag: 3.1.2
+Requires PHP: 7.0
+Requires at least: 6.8
+Tested up to: 7.1
 License: GPL3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Elementor requires at least: 4.0.0
-Elementor tested up to: 4.2.0
+Elementor tested up to: 4.2.2
 
 WooCommerce and EDD Elementor addon with product grid, category, reviews, carousel, filters, cart, checkout, slider and more
 
@@ -42,7 +42,7 @@ Take full control of your WooCommerce store or EDD store with Ultimate Store Kit
 
 
 ###USEFUL LINKS 👇###
-**[Live Demo](https://storekit.pro/)** | **[Documentation](https://bdthemes.com/all-knowledge-base-of-ultimate-store-kit/)** | **[Video Tutorial](https://www.youtube.com/watch?v=uX7TaFJgs9w&list=PLP0S85GEw7DPkLjMkYt4qNkJy3ywuakLd)** | **[Need Support?](https://bdthemes.com/support/)**
+**[Live Demo](https://storekit.pro/)** | **[Documentation](https://bdthemes.com/knowledge-base/ultimate-store-kit/)** | **[Video Tutorial](https://www.youtube.com/watch?v=uX7TaFJgs9w&list=PLP0S85GEw7DPkLjMkYt4qNkJy3ywuakLd)** | **[Need Support?](https://bdthemes.com/support/)**
 
 https://youtu.be/EI21j-CU9t4?si=1eFri9BweVmQfnbN
 
@@ -71,19 +71,17 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 * [Product Review Carousel](https://storekit.pro/demo/product-review-carousel/) - Display reviews in a dynamic carousel.
 * [Product Table](https://storekit.pro/demo/product-table/) - Organize and showcase products in a sortable table layout.
 * [Shiny Carousel](https://storekit.pro/demo/shiny-carousel/) - Add a sleek and shiny carousel to your WooCommerce store.
-* [Shiny Grid](https://storekit.pro/demo/shiny-carousel/) - Present products in an appealing grid format.
+* [Shiny Grid](https://storekit.pro/demo/shiny-grid/) - Present products in an appealing grid format.
 * [Showcase Slider](https://storekit.pro/demo/showcase-slider/) - Highlight featured products with a customizable slider.
 * [Sub Category](https://storekit.pro/demo/sub-category/) - Display subcategories for better product navigation.
 * [Sub Category Carousel](https://storekit.pro/demo/sub-category-carousel/) - Showcase subcategories in an interactive carousel.
 * [Product Category Carousel](https://storekit.pro/demo/product-category-carousel/) - Add a carousel for product categories to enhance browsing.
 * [Page Cart](https://storekit.pro/demo/page-cart/) - Customize the WooCommerce cart page for better user experience.
 * [Page Checkout](https://storekit.pro/demo/page-checkout/) - Design an optimized and user-friendly checkout page.
-* [Page My Account](https://storekit.pro/demo/page-my-account/) - Personalize the "My Account" page for customers.
 * [Page Order](https://storekit.pro/demo/page-order/) - Simplify and enhance the order tracking experience.
 * [Page Single](https://storekit.pro/demo/page-single/) - Customize single product pages to boost conversions.
 * [Up Sells](https://storekit.pro/demo/up-sells/) - Promote related or complementary products to increase sales.
 * [Image Hotspot](https://storekit.pro/demo/image-hotspot/) - Add interactive hotspots to images for enhanced user engagement and information display.
-* [Variation Swatches](https://storekit.pro/demo/variation-swatches/) - Enhance WooCommerce product variations with customizable color, image and label swatches.
 
 = Easy Digital Downloads 💲 =
 
@@ -105,7 +103,6 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 * [Featured Box](https://storekit.pro/demo/featured-box/) - Highlight key features or services with customizable featured boxes.
 * [Info List](https://storekit.pro/demo/info-list/) - Present information in a clean and well-structured list format.
 * [QR Code](https://storekit.pro/demo/qr-code/) - Generate and display QR codes for quick sharing or scanning.
-* [Marquee](https://storekit.pro/demo/marquee/) - Add scrolling text or content banners to your store for announcements, promotions, or highlights.
 
 == Pro version Widgets 🔥 ==
 
@@ -115,12 +112,12 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 * [Account Dashboard](https://storekit.pro/demo/account-dashboard/) - Create a user-friendly dashboard for customer accounts.
 * [Account Details](https://storekit.pro/demo/account-details/) - Allow customers to update personal account details easily.
 * [Account Downloads](https://storekit.pro/demo/account-downloads/) - Display downloadable products for customer accounts.
-* [Account Login-form](https://storekit.pro/demo/account-login-form/) - Add a simple and secure login form for customers.
+* [Account Login Form](https://storekit.pro/demo/account-login-form/) - Add a simple and secure login form for customers.
 * [Account Logout](https://storekit.pro/demo/account-logout/) - Provide a straightforward logout option for users.
 * [Account Navigation](https://storekit.pro/demo/account-navigation/) - Enhance account navigation for better user experience.
-* [Account Order-details](https://storekit.pro/demo/account-order-details/) - Display detailed information about customer orders.
+* [Account Order Details](https://storekit.pro/demo/account-order-details/) - Display detailed information about customer orders.
 * [Account Orders](https://storekit.pro/demo/account-orders/) - List all customer orders in a clean and accessible layout.
-* [Account Registration-form](https://storekit.pro/demo/account-registration-form/) - Create a registration form for new users.
+* [Account Registration Form](https://storekit.pro/demo/account-registration-form/) - Create a registration form for new users.
 * [Add To Cart](https://storekit.pro/demo/add-to-cart/) - Add a fully functional "Add to Cart" button to your store.
 * [Additional Information](https://storekit.pro/demo/additional-information/) - Display extra product details with this widget.
 * [Compare Button](https://storekit.pro/demo/compare-button/) - Add a comparison button to products for better decision-making.
@@ -131,8 +128,7 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 * [Checkout Login Form](https://storekit.pro/demo/checkout-login-form/) - Allow users to log in directly from the checkout page.
 * [Checkout Order Review](https://storekit.pro/demo/checkout-order-review/) - Display a summary of the order before payment.
 * [Checkout Payment](https://storekit.pro/demo/checkout-payment/) - Customize and display payment options during checkout.
-* [Checkout Shipping Form](https://storekit.pro/demo/checkout-shipping-form/) - Add a shipping form for user details during checkout.
-* [Checkout Shipping Methods](https://storekit.pro/demo/checkout-shipping-methods/) - List all available shipping methods for selection.
+* [Page My Account](https://storekit.pro/demo/page-my-account/) - Personalize the "My Account" page for your customers.
 * [Product Description](https://storekit.pro/demo/product-description/) - Display detailed product descriptions attractively.
 * [Product Image](https://storekit.pro/demo/product-image/) - Showcase product images in a visually appealing way.
 * [Product Meta](https://storekit.pro/demo/product-meta/) - Display product metadata like SKU and categories.
@@ -142,12 +138,7 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 * [Product Stock](https://storekit.pro/demo/product-stock/) - Highlight product stock status dynamically.
 * [Product Tabs](https://storekit.pro/demo/product-tabs/) - Organize product information into collapsible tabs.
 * [Product Title](https://storekit.pro/demo/product-title/) - Customize and display product titles effectively.
-* [Thankyou Order](https://storekit.pro/demo/thankyou-order/) - Customize the thank-you page for completed orders.
-* [Thankyou Order Confirmation](https://storekit.pro/demo/thankyou-order-confirmation/) - Display detailed order confirmation information.
-* [Thankyou Order Customer Address](https://storekit.pro/demo/thankyou-order-customer-address/) - Show customer address on the thank-you page.
-* [Thankyou Order Details](https://storekit.pro/demo/thankyou-order-details/) - Provide a detailed order summary on the thank-you page.
-* [Wishlist Button](https://storekit.pro/demo/wishlist-button/) - Add a button for customers to save products to their wishlist.
-* [Wishlist Products](https://storekit.pro/demo/wishlist-products/) - Display saved products in an organized wishlist layout.
+* [Variation Swatches](https://storekit.pro/demo/variation-swatches/) - Enhance WooCommerce product variations with customizable color, image and label swatches.
 
 = Easy Digital Downloads 💲 =
 
@@ -157,6 +148,7 @@ Build, customize and manage single pages, cart pages and every pages belonging t
 = Others 🌅 =
 
 * [Breadcrumbs](https://storekit.pro/demo/breadcrumbs/) - Add easy navigation paths to improve user experience and site structure.
+* [Marquee](https://storekit.pro/demo/marquee/) - Add scrolling text or content banners for announcements, promotions and highlights.
 
 More widgets & extensions are coming soon...
 
@@ -171,7 +163,7 @@ Ans. It's due to your server PHP setting. You can increase PHP memory limit from
 Is there any feature that you want to get in this plugins?
 Please use the suggest page to send us a message about the feature you think we should add to our products.
 Needs assistance to use this plugins?
-Feel free to [Contact us](https://bdthemes.com/support-new/) 💌 or check our widget Tutorials to learn about how to use them efficiently.
+Feel free to [Contact us](https://bdthemes.com/support/) 💌 or check our widget Tutorials to learn about how to use them efficiently.
 
 == Checkout our other Plugins 👑 ==
 
@@ -223,7 +215,96 @@ e.g.
 https://youtu.be/9J4zCaDcPnk
 
 
+== External services ==
+
+This plugin relies on the external services listed below. Each entry explains what the service is, what data leaves your site, and when.
+
+**BdThemes product feed — dashboard.bdthemes.io**
+
+What it is: an endpoint operated by BdThemes that returns the current product announcements shown in the "BdThemes News & Updates" widget on the WordPress dashboard.
+What is sent and when: your site requests `https://dashboard.bdthemes.io/wp-json/bdthemes/v1/product-feed/` when a logged-in administrator opens the WordPress dashboard and the cached copy of the feed is more than six hours old. The request carries only the product category being asked for. No personal data, site content, licence key or URL is included. The response is cached in your site's transients for six hours.
+Provided by BdThemes: terms of use https://bdthemes.com/terms-of-use/ , privacy policy https://bdthemes.com/privacy-policy/
+
+**BdThemes blog feed — bdthemes.com**
+
+What it is: the public RSS feed of the BdThemes blog, listed underneath the product announcements in the same dashboard widget.
+What is sent and when: your site requests `https://bdthemes.com/feed` under the same conditions as above — administrator opens the dashboard, cached copy older than six hours. Nothing but the feed request itself is sent, and the result is cached for six hours.
+Provided by BdThemes: terms of use https://bdthemes.com/terms-of-use/ , privacy policy https://bdthemes.com/privacy-policy/
+
+**QR code images — api.qrserver.com (goQR.me)**
+
+What it is: a QR code image API. The QR Code widget renders its code as an image served by this API rather than generating the image locally.
+What is sent and when: the widget outputs an `<img>` tag pointing at `https://api.qrserver.com/v1/create-qr-code/`, so the request is made by the visitor's browser every time a page containing a QR Code widget is displayed. The URL carries the permalink of the product the code points at, and — if the widget's "cart URL" option is enabled — the add-to-cart query string for that product. As with any third-party image, the visitor's browser also reveals its own IP address and user agent to that service. Nothing else is sent. This request only happens on pages where you have placed the QR Code widget.
+Provided by goQR.me: terms of use https://goqr.me/legal/ , privacy policy https://goqr.me/privacy-safety-security/
+
+== Source code and build process ==
+
+This plugin ships no obfuscated code. The human-readable sources for every compiled or minified asset are included in the plugin package under `/src`, alongside the build configuration used to produce them:
+
+* `/src/js` — front-end and editor scripts, built to `/assets/js`
+* `/src/admin` — the admin dashboard app (React/`@wordpress/element`), built to `/assets/admin`
+* `/src/scss` — stylesheets, built to `/assets/css`
+* `/src/vendor` — bundled third-party libraries, copied to `/assets/vendor`
+
+Build tooling: [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) (webpack), Tailwind CSS and PostCSS. The configuration lives in `package.json`, `webpack.config.js`, `postcss.config.js` and `tailwind.config.js`, all of which are included in the package.
+
+To regenerate the compiled assets from source:
+
+1. `npm install`
+2. `npm run build` (or `npm start` for a watching development build)
+
+The compiled output is written to `/assets` and is the only thing the plugin loads at runtime.
+
+**Bundled third-party libraries**
+
+The following libraries are shipped under `/src/vendor` and `/assets/vendor`. Where a library was obtained in a pre-minified form upstream, that is noted:
+
+* DataTables 3.0.3 — https://datatables.net/ — MIT
+* Accordion 3.1.1 — https://github.com/michu2k/Accordion — MIT
+* MicroModal — https://micromodal.vercel.app/ — MIT
+* Popper — https://popper.js.org/ — MIT (distributed upstream as `popper.min.js`)
+* Tippy.js 6.3.7 — https://atomiks.github.io/tippyjs/ — MIT (distributed upstream as `tippy.all.min.js`)
+* Slick Modal 5.0 — https://codecanyon.net/item/slick-modal-css3-powered-popups/12335988
+
 == Changelog ==
+
+= 3.1.2 [7th September 2026] =
+
+* Fixed: Template Builder could not create a template. Saving failed because the template type value was having its separator stripped, so no type was ever recognised as valid
+* Fixed: Filtering the Template Items list by template type returned no results, and the selected type was not kept in the filter dropdown
+
+* Security: Removed a template-preview bypass that accepted a fixed token in place of a nonce on hosts whose name matched a demo list, which could let a visitor render the Elementor content of an unpublished post. Preview now requires a valid nonce and edit permission for that template
+* Security: Removed an unused public AJAX endpoint for variation images that was reachable without authentication
+* Changed: Prefixed plugin functions, options, transients, quick-view Kit settings and script/style handles for WordPress.org naming compliance. Saved settings are migrated automatically on update
+* Fixed: Quick-view modal styling, assigned builder templates and the compare page setting are carried over to the new setting names, so existing configurations are preserved
+* Fixed: Quantity buttons no longer remove WooCommerce's own hooks on the single product page, which could suppress store notices
+* Fixed: The Product Table stylesheet is now registered by this plugin instead of relying on another plugin providing it
+* Fixed: Builder preview data is no longer stored permanently in the options table
+* Updated: DataTables to 3.0.3 and Tippy.js to 6.3.7, and rebuilt the bundled assets
+* Removed: Unused helper functions and a stale third-party credit link
+
+= 3.1.1 [18th August 2026] =
+
+* Removed: Deprecated BdThemes product-feed remote endpoint (returned an empty response) and its unused fetch code
+
+= 3.1.0 [17th August 2026] =
+
+* Fixed: Admin dashboard could hang and return a gateway timeout when the remote news feed server was slow or unreachable
+
+= 3.0.10 [12th August 2026] =
+
+* Updated: System improved
+
+= 3.0.9 [10th August 2026] =
+
+* Updated: Admin API Biggopti removed
+
+= 3.0.8 [8th August 2026] =
+
+* Added: Tooltip text color and background styling controls added in the action button style section for product grid and carousel widgets
+* Fixed: Security issue where data returned by the promotions API could be injected as script into the WordPress admin area
+* Fixed: Promotion links and images are now restricted to http(s) and mailto addresses
+* Updated: Security improved
 
 = 3.0.7 [21st July 2026] =
 

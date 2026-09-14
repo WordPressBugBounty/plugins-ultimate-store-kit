@@ -18,6 +18,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// phpcs:disable WordPressVIPMinimum.Performance.WPQueryParams -- WordPressVIPMinimum targets the VIP platform, not the plugin directory. These exclusionary parameters come from a widget's own "exclude" control: the list is whatever the site owner picked in Elementor, applied to a bounded result set, not an unbounded catalogue scan.
+
 // Exit if accessed directly
 
 class Product_Accordion extends Module_Base
@@ -66,9 +68,9 @@ class Product_Accordion extends Module_Base
     public function get_script_depends()
     {
         if ($this->usk_is_edit_mode()) {
-            return ['micromodal', 'usk-accordion'];
+            return ['ultimate-store-kit-micromodal', 'usk-accordion'];
         } else {
-            return ['micromodal', 'usk-product-accordion', 'usk-accordion'];
+            return ['ultimate-store-kit-micromodal', 'usk-product-accordion', 'usk-accordion'];
         }
     }
 

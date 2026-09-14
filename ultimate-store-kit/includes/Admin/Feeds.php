@@ -16,6 +16,17 @@ class Feeds {
 	private $settings;
 
 	/**
+	 * Max seconds to wait for a remote feed. Kept short so a slow or dead
+	 * endpoint can never stall the admin dashboard into a gateway timeout.
+	 */
+	const REQUEST_TIMEOUT = 5;
+
+	/**
+	 * How long to skip remote requests after a failure.
+	 */
+	const FAILURE_BACKOFF = HOUR_IN_SECONDS;
+
+	/**
 	 * Static variable to track if the feed has been displayed
 	 */
 	private static $feed_displayed = false;
@@ -28,7 +39,6 @@ class Feeds {
 			'feed_title'       => 'BdThemes News & Updates',
 			'transient_key'    => 'bdthemes_product_feeds',
 			'feed_link'        => 'https://bdthemes.com/feed',
-			'remote_feed_link' => 'https://dashboard.bdthemes.io/wp-json/bdthemes/v1/product-feed/?product_category=element-pack',
 			'text_domain'      => 'ultimate-store-kit',
 			'footer_links'     => [
 				[
@@ -83,59 +93,9 @@ class Feeds {
 	 * Display RSS Feeds Content
 	 */
 	public function display_rss_feeds_content() {
-		$feeds = $this->get_remote_feeds_data();
-		if (is_array($feeds)) {
-			foreach ($feeds as $feed) {
-?>
-				<div class="activity-block">
-					<a href="<?php echo esc_url($feed->demo_link); ?>" target="_blank" style="margin-bottom:10px; display: inline-block;">
-						<img src="<?php echo esc_url($feed->image); ?>" style="width:100%;min-height:240px;">
-					</a>
-					<p>
-						<?php echo wp_kses_post(wp_trim_words(wp_strip_all_tags($feed->content), 50)); ?>
-						<a href="<?php echo esc_url($feed->demo_link); ?>" target="_blank">
-							<?php esc_html_e('Learn more...', $this->settings['text_domain']); ?>
-						</a>
-					</p>
-				</div>
-		<?php
-			}
-		}
 		echo wp_kses_post($this->get_rss_posts_data());
 	}
 
-	/**
-	 * Get Remote Feeds Data
-	 *
-	 * @return array|mixed
-	 */
-	private function get_remote_feeds_data() {
-		$transient_key = $this->settings['transient_key'];
-		$cached_data   = get_transient($transient_key);
-
-		if (! empty($cached_data)) {
-			return json_decode($cached_data);
-		}
-
-		$response = wp_remote_get(
-			$this->settings['remote_feed_link'],
-			array(
-				'timeout' => 30,
-				'headers' => array(
-					'Accept' => 'application/json',
-				),
-			)
-		);
-
-		if (is_wp_error($response)) {
-			return [];
-		}
-
-		$response_body = wp_remote_retrieve_body($response);
-		set_transient($transient_key, $response_body, 6 * HOUR_IN_SECONDS);
-
-		return json_decode($response_body);
-	}
 
 	/**
 	 * Get RSS Posts Data
@@ -143,21 +103,37 @@ class Feeds {
 	 * @return string
 	 */
 	private function get_rss_posts_data() {
-		$transient_key = $this->settings['transient_key'] . '_rss';
-		$cached_data   = get_transient($transient_key);
+		// Written out in full rather than concatenated so the prefix is visible to
+		// static analysis. The resolved key is byte-identical to the previous
+		// $this->settings['transient_key'] . '_rss', so no cached data is orphaned.
+		$transient_key        = 'bdthemes_product_feeds_rss';
+		$transient_failed_key = 'bdthemes_product_feeds_rss_failed';
+		$cached_data          = get_transient($transient_key);
 
 		if (! empty($cached_data)) {
 			/**
 			 * Decode as associative array
 			 */
 			$rss_items = json_decode($cached_data, true);
+
+			if (! is_array($rss_items)) {
+				$rss_items = [];
+			}
+		} elseif (get_transient($transient_failed_key)) {
+			/**
+			 * A recent fetch failed, so skip the blocking request entirely.
+			 */
+			$rss_items = [];
 		} else {
 			include_once ABSPATH . WPINC . '/feed.php';
 
+			add_action('wp_feed_options', [$this, 'set_feed_timeout']);
 			$rss = fetch_feed($this->settings['feed_link']);
+			remove_action('wp_feed_options', [$this, 'set_feed_timeout']);
 
 			if (is_wp_error($rss)) {
-				return '<li>' . esc_html__('Items Not Found', $this->settings['text_domain']) . '.</li>';
+				set_transient($transient_failed_key, 1, self::FAILURE_BACKOFF);
+				return '<li>' . esc_html__('Items Not Found', 'ultimate-store-kit') . '.</li>';
 			}
 
 			$maxitems  = $rss->get_item_quantity(5);
@@ -184,19 +160,19 @@ class Feeds {
 		<div class="bdt-widget">
 			<ul>
 				<?php if (empty($rss_items)) : ?>
-					<li><?php esc_html_e('Items Not Found', $this->settings['text_domain']); ?>.</li>
+					<li><?php esc_html_e('Items Not Found', 'ultimate-store-kit'); ?>.</li>
 				<?php else : ?>
 					<?php foreach ($rss_items as $item) : ?>
 						<li>
 							<a target="_blank" href="<?php echo esc_url($item['link']); ?>"
 								title="<?php echo esc_html($item['date']); ?>">
 								<?php if ($this->is_feed_item_new($item['date'])) : ?>
-									<span class="bdt-feed-badge bdt-feed-badge--new"><?php esc_html_e('New', $this->settings['text_domain']); ?></span>
+									<span class="bdt-feed-badge bdt-feed-badge--new"><?php esc_html_e('New', 'ultimate-store-kit'); ?></span>
 								<?php endif; ?>
 								<?php echo esc_html($item['title']); ?>
 							</a>
 							<span class="bdt-date" style="display: block; margin: 0;">
-								<?php echo esc_html(human_time_diff($item['date'], current_time('timestamp')) . ' ' . __('ago', $this->settings['text_domain'])); ?>
+								<?php echo esc_html(human_time_diff($item['date'], current_time('timestamp')) . ' ' . __('ago', 'ultimate-store-kit')); ?>
 							</span>
 							<div class="bdt-summary">
 								<?php echo esc_html(wp_html_excerpt($item['content'], 120) . ' [...]'); ?>
@@ -223,6 +199,16 @@ class Feeds {
 		</p>
 <?php
 		return ob_get_clean();
+	}
+
+	/**
+	 * Keep SimplePie's socket timeout in line with our own limit.
+	 *
+	 * @param object $feed SimplePie instance.
+	 * @return void
+	 */
+	public function set_feed_timeout($feed) {
+		$feed->set_timeout(self::REQUEST_TIMEOUT);
 	}
 
 	/**

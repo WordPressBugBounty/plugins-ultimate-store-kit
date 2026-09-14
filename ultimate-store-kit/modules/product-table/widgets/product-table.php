@@ -17,6 +17,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// phpcs:disable WordPressVIPMinimum.Performance.WPQueryParams -- WordPressVIPMinimum targets the VIP platform, not the plugin directory. These exclusionary parameters come from a widget's own "exclude" control: the list is whatever the site owner picked in Elementor, applied to a bounded result set, not an unbounded catalogue scan.
+// phpcs:disable WordPress.DB.SlowDBQuery -- meta_query / tax_query / meta_key are the documented way to express these widget filters. Removing them means fetching every post and filtering in PHP, which is strictly slower.
+
 // Exit if accessed directly
 
 class Product_Table extends Module_Base {
@@ -51,9 +54,9 @@ class Product_Table extends Module_Base {
 
     public function get_script_depends() {
         if ($this->usk_is_edit_mode()) {
-            return ['datatables', 'micromodal', 'usk-site'];
+            return ['ultimate-store-kit-datatables', 'ultimate-store-kit-micromodal', 'usk-site'];
         } else {
-            return ['datatables', 'micromodal', 'usk-product-table'];
+            return ['ultimate-store-kit-datatables', 'ultimate-store-kit-micromodal', 'usk-product-table'];
         }
     }
 
@@ -61,7 +64,7 @@ class Product_Table extends Module_Base {
         if ($this->usk_is_edit_mode()) {
             return ['usk-all-styles'];
         } else {
-            return ['usk-font', 'datatables', 'usk-product-table'];
+            return ['usk-font', 'ultimate-store-kit-datatables', 'usk-product-table'];
         }
     }
     public function get_query() {

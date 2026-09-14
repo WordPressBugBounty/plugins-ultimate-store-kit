@@ -2,6 +2,10 @@
 
 namespace UltimateStoreKit\Includes\Builder;
 
+if (! defined('ABSPATH')) {
+	exit; // Exit if accessed directly
+}
+
 class Builder_Template_Helper {
 
 	public static function isTemplateEditMode() {
@@ -9,6 +13,7 @@ class Builder_Template_Helper {
 			return true;
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only check on whether a builder template is being edited.
 		if ( isset( $_REQUEST[ Meta::POST_TYPE ] ) ) {
 			return true;
 		}
@@ -27,7 +32,7 @@ class Builder_Template_Helper {
 			'tag'            => 'Tag Page',
 			'cart'           => 'Cart Page',
 			'checkout'       => 'Checkout',
-			'order-received' => 'Order Received',
+			'order-received' => 'Order Received (Thank You Page)',
 		];
 
 		$my_account = [ 
@@ -55,7 +60,10 @@ class Builder_Template_Helper {
 			foreach ( $wcItems as $key => $item ) {
 				$label = ucwords( str_replace( '-', ' ', $key ) );
 				if ( in_array( $key, $order_flow_endpoints, true ) ) {
-					$shop_item[ $key ] = $label;
+					// Keep hand-written labels (e.g. order-received) intact.
+					if ( ! isset( $shop_item[ $key ] ) ) {
+						$shop_item[ $key ] = $label;
+					}
 				} else {
 					$my_account[ $key ] = $label;
 				}
@@ -123,17 +131,14 @@ class Builder_Template_Helper {
 
 		$separator       = static::separator();
 		$template        = strtolower( "{$postType}{$separator}{$slug}" );
-		$enabledTemplate = strtolower( Meta::TEMPLATE_ID . $template );
-
 		/**
 		 * important area for debugging
 		 */
 
-		return get_option( $enabledTemplate );
+		return Meta::get_template_option( $template );
 	}
 
 	public static function getTemplateId( $templateType ) {
-		$metaIndex = strtolower( Meta::TEMPLATE_ID . $templateType );
-		return intval( get_option( $metaIndex ) );
+		return intval( Meta::get_template_option( $templateType ) );
 	}
 }

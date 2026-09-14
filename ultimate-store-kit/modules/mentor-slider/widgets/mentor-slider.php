@@ -22,6 +22,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// phpcs:disable WordPressVIPMinimum.Performance.WPQueryParams -- WordPressVIPMinimum targets the VIP platform, not the plugin directory. These exclusionary parameters come from a widget's own "exclude" control: the list is whatever the site owner picked in Elementor, applied to a bounded result set, not an unbounded catalogue scan.
+
 // Exit if accessed directly
 
 class Mentor_Slider extends Module_Base {
@@ -55,9 +57,9 @@ class Mentor_Slider extends Module_Base {
 
     public function get_script_depends() {
         if ($this->usk_is_edit_mode()) {
-            return ['swiper', 'micromodal', 'usk-site'];
+            return ['swiper', 'ultimate-store-kit-micromodal', 'usk-site'];
         } else {
-            return ['swiper', 'micromodal', 'usk-mentor-slider'];
+            return ['swiper', 'ultimate-store-kit-micromodal', 'usk-mentor-slider'];
         }
     }
 

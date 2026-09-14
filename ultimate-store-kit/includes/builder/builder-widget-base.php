@@ -10,6 +10,8 @@ if (! defined('ABSPATH')) {
 	exit;
 } // Exit if accessed directly
 
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals -- usk_ / BDTUSK_ / ultimate-store-kit- are this plugin's established public prefixes. Ultimate Store Kit Pro calls into these names, as does third-party integration code, so renaming them is a breaking change. Plugin Check only recognises prefixes derived verbatim from the slug and so reports them as unprefixed.
+
 abstract class Builder_Widget_Base extends Widget_Base {
 
 	public $__temp_query = null;
@@ -60,8 +62,8 @@ abstract class Builder_Widget_Base extends Widget_Base {
 
 		global $post;
 
-		$templateId = get_transient('ultimate_store_template_id_' . get_current_user_id());
-		$posts      = get_transient('ultimate_store_template_sample_post_' . get_current_user_id());
+		$templateId = get_transient('ultimate_store_kit_template_id_' . get_current_user_id());
+		$posts      = get_transient('ultimate_store_kit_template_sample_post_' . get_current_user_id());
 
 		if ($posts instanceof \WP_Query && $posts->have_posts() && $templateId == $post->ID) {
 			foreach ($posts->posts as $post) {

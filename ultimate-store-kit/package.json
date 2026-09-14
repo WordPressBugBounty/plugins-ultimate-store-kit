@@ -1,17 +1,23 @@
 {
   "name": "ultimate-store-kit",
-  "version": "2.9.7",
+  "version": "3.1.2",
   "main": "index.php",
   "files": [
     "assets",
     "base",
     "includes",
+    "!includes/Admin/assets/js",
+    "!includes/Admin/assets/css",
     "languages",
     "modules",
+    "src",
     "templates",
     "traits",
     "vendor",
     "composer.json",
+    "postcss.config.js",
+    "tailwind.config.js",
+    "webpack.config.js",
     "*.php"
   ],
   "scripts": {

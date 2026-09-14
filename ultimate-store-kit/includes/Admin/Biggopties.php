@@ -2,6 +2,10 @@
 
 namespace UltimateStoreKit\Admin;
 
+if (! defined('ABSPATH')) {
+	exit; // Exit if accessed directly
+}
+
 use UltimateStoreKit\Base\Singleton;
 
 /**
@@ -10,7 +14,29 @@ use UltimateStoreKit\Base\Singleton;
 class Biggopties {
 	use Singleton;
 
+	/**
+	 * Max seconds to wait for the remote API.
+	 */
+	const REQUEST_TIMEOUT = 5;
+
+	/**
+	 * How long to skip remote requests after a failure.
+	 */
+	const FAILURE_BACKOFF = HOUR_IN_SECONDS;
+
+	/**
+	 * How long a successful response stays cached.
+	 */
+	const CACHE_LIFETIME = HOUR_IN_SECONDS;
+
 	private static $biggopties = [];
+
+	/**
+	 * Every notice id this plugin renders starts with this. The dismiss handler
+	 * writes the id straight into a transient / user-meta key, so it will only
+	 * accept keys that carry the prefix.
+	 */
+	const DISMISS_KEY_PREFIX = 'bdt-admin-biggopti-';
 
 	public function __construct() {
 
@@ -19,70 +45,19 @@ class Biggopties {
 
 		// AJAX endpoint to fetch API biggopties on demand (after page load)
 		add_action('wp_ajax_usk_fetch_api_biggopties', [$this, 'ajax_fetch_api_biggopties']);
-		add_action('wp_ajax_usk_admin_api_biggopti_dismiss', [$this, 'usk_admin_api_biggopti_dismiss']);
 		add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_scripts']);
-	}
-
-	/**
-	 * Dismiss Admin API Biggopti.
-	 */
-	public function usk_admin_api_biggopti_dismiss() {
-		$nonce = (isset($_POST['_wpnonce'])) ? sanitize_text_field($_POST['_wpnonce']) : '';
-		$display_id = (isset($_POST['display_id'])) ? sanitize_text_field($_POST['display_id']) : '';
-		$id   = (isset($_POST['id'])) ? esc_attr($_POST['id']) : '';
-		$meta = (isset($_POST['meta'])) ? esc_attr($_POST['meta']) : '';
-
-		if (! wp_verify_nonce($nonce, 'ultimate-store-kit')) {
-			wp_send_json_error();
-		}
-
-		if (! current_user_can('manage_options')) {
-			wp_send_json_error();
-		}
-
-		// Prefer display_id; fallback: extract from id (bdt-admin-api-biggopti-{display_id})
-		if (empty($display_id) && !empty($id)) {
-			$prefix = 'bdt-admin-api-biggopti-';
-			if (strpos($id, $prefix) === 0) {
-				$display_id = substr($id, strlen($prefix));
-			} else {
-				$display_id = $id;
-			}
-		}
-
-		/**
-		 * Valid inputs?
-		 */
-		if (!empty($display_id)) {
-			if ('user' === $meta) {
-				$user_key = 'bdt-admin-api-biggopti-' . $display_id;
-				update_user_meta(get_current_user_id(), $user_key, true);
-			} else {
-				// Save to options table only - display_id based, no end-time expiration
-				$dismissals_option = get_option('bdt_biggopti_dismissals', []);
-				$dismissals_option[$display_id] = ['dismissed_at' => time()];
-				update_option('bdt_biggopti_dismissals', $dismissals_option, false);
-			}
-
-			wp_send_json_success();
-		}
-
-		wp_send_json_error();
 	}
 
 	/**
 	 * Enqueue admin scripts
 	 */
 	public function enqueue_admin_scripts() {
-		wp_enqueue_style('bdt-admin-api-biggopti', BDTUSK_ASSETS_URL . 'admin/others/css/admin-api-biggopti.css', [], BDTUSK_VER);
-		wp_enqueue_style('bdt-product-feed', BDTUSK_ASSETS_URL . 'admin/others/css/product-feed.css', [], BDTUSK_VER);
+		wp_enqueue_style('ultimate-store-kit-product-feed', BDTUSK_ASSETS_URL . 'admin/others/css/product-feed.css', [], BDTUSK_VER);
 		wp_enqueue_script('usk-biggopti', BDTUSK_ASSETS_URL  . 'admin/others/js/biggopti.js', ['jquery'], BDTUSK_VER, true);
-		wp_enqueue_script('usk-admin-api-biggopti', BDTUSK_ASSETS_URL  . 'admin/others/js/admin-api-biggopti.js', ['jquery', 'wp-i18n'], BDTUSK_VER, true);
-		wp_set_script_translations('usk-admin-api-biggopti', 'ultimate-store-kit');
 
 		$dismissals = get_option('bdt_biggopti_dismissals', []);
 		$dismissed_display_ids = [];
-		$prefix = 'bdt-admin-biggopti-api-biggopti-';
+		$prefix = self::DISMISS_KEY_PREFIX . 'api-biggopti-';
 		foreach (array_keys($dismissals) as $key) {
 			if (strpos($key, $prefix) === 0) {
 				$dismissed_display_ids[] = substr($key, strlen($prefix));
@@ -92,6 +67,7 @@ class Biggopties {
 		}
 
 		$current_sector = '';
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only check of which admin screen is showing.
 		if (isset($_GET['page']) && $_GET['page'] === 'ultimate_store_kit_options') {
 			$current_sector = 'plugin_dashboard';
 		}
@@ -99,14 +75,13 @@ class Biggopties {
 		$script_config = [
 			'ajaxurl'				=> admin_url('admin-ajax.php'),
 			'nonce'					=> wp_create_nonce('ultimate-store-kit'),
-			'isPro'             	=> function_exists('usk_license_validation') && usk_license_validation(),
+			'isPro'             	=> function_exists('ultimate_store_kit_license_validation') && ultimate_store_kit_license_validation(),
 			'assetsUrl'         	=> defined('BDTUSK_ASSETS_URL') ? BDTUSK_ASSETS_URL : '',
 			'dismissedDisplayIds'	=> $dismissed_display_ids,
 			'currentSector'      	=> $current_sector,
 		];
 
 		wp_localize_script('usk-biggopti', 'UltimateStoreKitBiggoptiConfig', $script_config);
-		wp_localize_script('usk-admin-api-biggopti', 'UltimateStoreKitAdminApiBiggoptiConfig', $script_config);
 	}
 
 	/**
@@ -116,24 +91,56 @@ class Biggopties {
 	 */
 	private function get_api_biggopties_data() {
 		// API endpoint for biggopties - you can change this to your actual endpoint
-		$api_url = 'https://api.sigmative.io/prod/store/api/biggopti/api-data-records';
+		$api_url       = '';
+		$transient_key = 'ultimate_store_kit_biggopties_api';
+
+		$cached_data = get_transient($transient_key);
+
+		if (! empty($cached_data)) {
+			$biggopties = json_decode($cached_data);
+			return $this->extract_biggopties($biggopties);
+		}
+
+		/**
+		 * A recent request failed, so don't retry on every admin page load.
+		 */
+		if (get_transient($transient_key . '_failed')) {
+			return [];
+		}
 
 		$response = wp_remote_get($api_url, [
-			'timeout' => 30,
+			'timeout' => self::REQUEST_TIMEOUT,
 			'headers' => [
 				'Accept' => 'application/json',
 			],
 		]);
 
-		if (is_wp_error($response)) {
+		if (is_wp_error($response) || 200 !== (int) wp_remote_retrieve_response_code($response)) {
+			set_transient($transient_key . '_failed', 1, self::FAILURE_BACKOFF);
 			return [];
 		}
-
-		$response_code = wp_remote_retrieve_response_code($response);
 
 		$response_body = wp_remote_retrieve_body($response);
 
 		$biggopties = json_decode($response_body);
+
+		if (null === $biggopties) {
+			set_transient($transient_key . '_failed', 1, self::FAILURE_BACKOFF);
+			return [];
+		}
+
+		set_transient($transient_key, $response_body, self::CACHE_LIFETIME);
+
+		return $this->extract_biggopties($biggopties);
+	}
+
+	/**
+	 * Pull this plugin's records out of the decoded API payload.
+	 *
+	 * @param mixed $biggopties Decoded API response.
+	 * @return array
+	 */
+	private function extract_biggopties($biggopties) {
 
 		if (isset($biggopties) && isset($biggopties->{'ultimate-store-kit'})) {
 			$data = $biggopties->{'ultimate-store-kit'};
@@ -212,7 +219,7 @@ class Biggopties {
 	private function is_biggopti_compatible_with_plugin($biggopti) {
 		// Get current plugin info
 		$current_plugin_slug = $this->get_current_plugin_slug();
-		$is_pro_active = function_exists('_is_usk_pro_activated') ? _is_usk_pro_activated() : false;
+		$is_pro_active = function_exists('ultimate_store_kit_is_pro_activated') ? ultimate_store_kit_is_pro_activated() : false;
 		$is_lite_active = $current_plugin_slug === 'ultimate-store-kit';
 		$is_pro_plugin = $current_plugin_slug === 'ultimate-store-kit-pro';
 
@@ -293,16 +300,16 @@ class Biggopties {
 		$wrapper_classes = 'bdt-biggopti-wrapper';
 
 		if (isset($biggopti->background_color) && !empty($biggopti->background_color)) {
-			$background_style .= 'background-color: ' . esc_attr($biggopti->background_color) . ';';
+			$background_style .= 'background-color: ' . sanitize_text_field($biggopti->background_color) . ';';
 		}
 
 		if (isset($biggopti->image) && !empty($biggopti->image)) {
-			$background_style .= 'background-image: url(' . esc_url($biggopti->image) . ');';
+			$background_style .= 'background-image: url(' . esc_url_raw($biggopti->image) . ');';
 			$wrapper_classes .= ' has-background-image';
 		}
 
 ?>
-		<div class="<?php echo esc_attr($wrapper_classes); ?>" <?php echo $background_style ? 'style="' . $background_style . '"' : ''; ?>>
+		<div class="<?php echo esc_attr($wrapper_classes); ?>" <?php echo $background_style ? 'style="' . esc_attr($background_style) . '"' : ''; ?>>
 
 
 			<?php $title = (isset($biggopti->title) && !empty($biggopti->title)) ? $biggopti->title : ''; ?>
@@ -376,7 +383,7 @@ class Biggopties {
 	 * AJAX: Build and return API biggopties HTML for dynamic injection
 	 */
 	public function ajax_fetch_api_biggopties() {
-		$nonce = isset($_POST['_wpnonce']) ? sanitize_text_field($_POST['_wpnonce']) : '';
+		$nonce = isset($_POST['_wpnonce']) ? sanitize_text_field(wp_unslash($_POST['_wpnonce'])) : '';
 		if (!wp_verify_nonce($nonce, 'ultimate-store-kit')) {
 			wp_send_json_error(['message' => 'invalid_nonce']);
 		}
@@ -386,7 +393,7 @@ class Biggopties {
 		}
 
 		// Don't show biggopties on plugin/theme install and upload pages
-		$current_url = isset($_POST['current_url']) ? sanitize_text_field($_POST['current_url']) : '';
+		$current_url = isset($_POST['current_url']) ? sanitize_text_field(wp_unslash($_POST['current_url'])) : '';
 
 		if (!empty($current_url)) {
 			$excluded_patterns = [
@@ -443,10 +450,13 @@ class Biggopties {
 	 * Dismiss Biggopti.
 	 */
 	public function dismiss() {
-		$nonce = (isset($_POST['_wpnonce'])) ? sanitize_text_field($_POST['_wpnonce']) : '';
-		$id   = (isset($_POST['id'])) ? esc_attr($_POST['id']) : '';
-		$time = (isset($_POST['time'])) ? esc_attr($_POST['time']) : '';
-		$meta = (isset($_POST['meta'])) ? esc_attr($_POST['meta']) : '';
+		$nonce = (isset($_POST['_wpnonce'])) ? sanitize_text_field(wp_unslash($_POST['_wpnonce'])) : '';
+		// Not sanitize_key(): the id is echoed back from the notice markup and has to
+		// match the key show_biggopties() reads verbatim, so it is validated below
+		// rather than rewritten here.
+		$id   = (isset($_POST['id'])) ? sanitize_text_field(wp_unslash($_POST['id'])) : '';
+		$time = (isset($_POST['time'])) ? absint(wp_unslash($_POST['time'])) : 0;
+		$meta = (isset($_POST['meta'])) ? sanitize_key(wp_unslash($_POST['meta'])) : '';
 
 		if (! wp_verify_nonce($nonce, 'ultimate-store-kit')) {
 			wp_send_json_error();
@@ -455,6 +465,19 @@ class Biggopties {
 		if (! current_user_can('manage_options')) {
 			wp_send_json_error();
 		}
+
+		/**
+		 * The id becomes a transient or user-meta key, so it has to be one of ours.
+		 * Every notice rendered by show_biggopties() carries this prefix; anything
+		 * else is a request to write a key this handler has no business writing.
+		 */
+		if (! preg_match('/^' . preg_quote(self::DISMISS_KEY_PREFIX, '/') . '[A-Za-z0-9_.-]{1,120}$/', $id)) {
+			wp_send_json_error();
+		}
+
+		// Likewise the lifetime is request-supplied — keep it inside a sane window
+		// so a dismissal cannot be made effectively permanent.
+		$time = min(max($time, MINUTE_IN_SECONDS), YEAR_IN_SECONDS);
 
 		/**
 		 * Valid inputs?
@@ -526,10 +549,10 @@ class Biggopties {
 			}
 
 			// Biggopti ID.
-			$biggopti_id    = 'bdt-admin-biggopti-' . $biggopti['id'];
+			$biggopti_id    = self::DISMISS_KEY_PREFIX . $biggopti['id'];
 			$biggopti['id'] = $biggopti_id;
 			if (!isset($biggopti['id'])) {
-				$biggopti_id    = 'bdt-admin-biggopti-' . $biggopti['id'];
+				$biggopti_id    = self::DISMISS_KEY_PREFIX . $biggopti['id'];
 				$biggopti['id'] = $biggopti_id;
 			} else {
 				$biggopti_id = $biggopti['id'];
