@@ -289,6 +289,9 @@ class Builder_Cpt {
 
 		$templateId = isset($data['template_id']) ? absint($data['template_id']) : 0;
 		$name       = isset($data['template_name']) ? sanitize_text_field($data['template_name']) : '';
+		$type       = isset($data['template_type'])
+			? implode(Builder_Template_Helper::separator(), array_map('sanitize_key', explode(Builder_Template_Helper::separator(), $data['template_type'])))
+			: '';
 		$type       = isset($data['template_type']) ? sanitize_text_field($data['template_type']) : '';
 		$editWith   = isset($data['edit_with']) ? sanitize_key($data['edit_with']) : 'elementor'; //gutenberg
 		$isEnabled  = (isset($data['template_status']) && $data['template_status']) == 1 ? 1 : 0;
@@ -359,7 +362,7 @@ class Builder_Cpt {
 			}
 			update_post_meta($post_id, '_wp_page_template', 'elementor_header_footer');
 			update_post_meta($post_id, '_elementor_edit_mode', 'builder');
-			update_post_meta($post_id, '_elementor_version', '3.7.1');
+			update_post_meta($post_id, '_elementor_version', defined('ELEMENTOR_VERSION') ? ELEMENTOR_VERSION : '3.7.1');
 		}
 
 		if ($templateId) {

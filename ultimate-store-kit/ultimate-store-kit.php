@@ -4,20 +4,25 @@
  * Plugin Name: Ultimate Store Kit
  * Plugin URI: https://storekit.pro/
  * Description: Build online stores in WordPress with the powerful store builder addon for Elementor. Enjoy a wide range of customizations and easily build product grids, carousels, single product/page elements, checkouts and more.
- * Version: 3.1.4
+ * Version: 4.0.0
  * Author: BdThemes
  * Author URI: https://bdthemes.com/
  * Text Domain: ultimate-store-kit
  * Domain Path: /languages
  * License: GPL3
  * Elementor requires at least: 4.0.0
- * Elementor tested up to: 4.2.4
+ * Elementor tested up to: 4.3.4
  */
 
 
 
 if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly
+}
+
+// BdThemes deals biggopti, shared by all BdThemes plugins (shown once).
+if ( is_admin() ) {
+	require_once __DIR__ . '/includes/bdthemes-deals-biggopti.php';
 }
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals -- BDTUSK_ / ultimate_store_kit_ / ultimate-store-kit- are this plugin's established public prefixes.
@@ -30,7 +35,7 @@ if (file_exists($ultimate_store_kit_autoload_file)) {
 }
 
 // Some pre define value for easy use
-define('BDTUSK_VER', '3.1.4');
+define('BDTUSK_VER', '4.0.0');
 define('BDTUSK__FILE__', __FILE__);
 define('BDTUSK_PNAME', basename(dirname(BDTUSK__FILE__)));
 define('BDTUSK_PBNAME', plugin_basename(BDTUSK__FILE__));

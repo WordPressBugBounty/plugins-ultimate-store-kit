@@ -2,22 +2,23 @@
 # This file is distributed under the GPL3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Store Kit 3.1.4\n"
+"Project-Id-Version: Ultimate Store Kit 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-store-kit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-17T12:22:37+00:00\n"
+"POT-Creation-Date: 2026-10-21T05:28:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ultimate-store-kit\n"
 
 #. Plugin Name of the plugin
 #: ultimate-store-kit.php
-#: includes/Admin/Dashboard.php:43
-#: includes/Admin/Dashboard.php:44
+#: includes/Admin/Dashboard.php:46
+#: includes/Admin/Dashboard.php:47
+#: includes/Admin/Dashboard.php:79
 #: assets/admin/admin.js:1
 msgid "Ultimate Store Kit"
 msgstr ""
@@ -50,33 +51,37 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:54
-#: includes/Admin/Dashboard.php:55
+#: includes/Admin/Dashboard.php:57
+#: includes/Admin/Dashboard.php:58
 #: assets/admin/admin.js:1
 msgid "Welcome"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:182
+#: includes/Admin/Dashboard.php:80
+msgid "Up To 86% Off"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:255
 msgid "Install Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:183
+#: includes/Admin/Dashboard.php:256
 msgid "Install the required plugin first, then you can activate this feature."
 msgstr ""
 
-#: includes/Admin/Dashboard.php:187
+#: includes/Admin/Dashboard.php:260
 msgid "Download Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:193
+#: includes/Admin/Dashboard.php:266
 msgid "Activate Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:194
+#: includes/Admin/Dashboard.php:267
 msgid "Activate the required plugin first, then you can activate this feature."
 msgstr ""
 
-#: includes/Admin/Dashboard.php:221
+#: includes/Admin/Dashboard.php:294
 #: modules/mini-cart/widgets/mini-cart.php:84
 #: modules/sub-category/widgets/sub-category.php:671
 #: traits/global-widget-controls.php:210
@@ -536,9 +541,113 @@ msgstr ""
 msgid "Mobile Menu"
 msgstr ""
 
+#: includes/Admin/ModuleService.php:1054
+msgid "Flash Sale Countdown"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1060
+#: includes/Admin/ModuleService.php:1119
+#: includes/Admin/ModuleService.php:1144
+msgid "Enable"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1073
+msgid "Single Product Position"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1077
+#: includes/Admin/ModuleService.php:1099
+msgid "Before Price"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1078
+#: includes/Admin/ModuleService.php:1100
+msgid "After Price"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1079
+#: includes/Admin/ModuleService.php:1101
+msgid "Before Add to Cart"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1080
+#: includes/Admin/ModuleService.php:1102
+msgid "After Add to Cart"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1085
+msgid "Show on Shop / Archive"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1089
+#: includes/modal/modal-controls.php:158
+#: modules/mentor-slider/widgets/mentor-slider.php:261
+#: modules/mini-cart/widgets/mini-cart.php:166
+#: modules/mini-cart/widgets/mini-cart.php:178
+#: modules/mini-cart/widgets/mini-cart.php:190
+#: modules/product-list/widgets/product-list.php:183
+#: modules/showcase-slider/widgets/showcase-slider.php:211
+#: modules/sub-category-carousel/widgets/sub-category-carousel.php:308
+#: modules/sub-category-carousel/widgets/sub-category-carousel.php:320
+#: modules/sub-category/widgets/sub-category.php:681
+#: modules/sub-category/widgets/sub-category.php:693
+msgid "Yes"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1090
+#: includes/modal/modal-controls.php:159
+#: modules/mentor-slider/widgets/mentor-slider.php:262
+#: modules/mini-cart/widgets/mini-cart.php:167
+#: modules/mini-cart/widgets/mini-cart.php:179
+#: modules/mini-cart/widgets/mini-cart.php:191
+#: modules/product-list/widgets/product-list.php:184
+#: modules/showcase-slider/widgets/showcase-slider.php:212
+#: modules/sub-category-carousel/widgets/sub-category-carousel.php:309
+#: modules/sub-category-carousel/widgets/sub-category-carousel.php:321
+#: modules/sub-category/widgets/sub-category.php:682
+#: modules/sub-category/widgets/sub-category.php:694
+msgid "No"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1095
+msgid "Archive Position"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1113
+msgid "Back Order"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:1138
+msgid "Pre-Order"
+msgstr ""
+
 #: includes/API/Settings.php:64
 #: assets/admin/admin.js:1
 msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:119
+msgid "Build More. Spend Less."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:120
+msgid "Save Up to $4,899"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:122
+msgid "Customize your agency bundle with 14 plugins to choose from Element Pack, Post Kit, Store Kit, Prime Slider, Pixel Gallery, One Accessibility, Spin Wheel & more."
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:124
+msgid "Grab the Deal"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:125
+msgid "Don’t Show Again"
+msgstr ""
+
+#: includes/bdthemes-deals-biggopti.php:128
+msgid "Up To 86% OFF, 60 Days Money Back Guarantee"
 msgstr ""
 
 #: includes/builder/builder-cpt.php:103
@@ -598,76 +707,76 @@ msgstr ""
 msgid "Template Type "
 msgstr ""
 
-#: includes/builder/builder-cpt.php:441
-#: includes/builder/builder-cpt.php:442
+#: includes/builder/builder-cpt.php:444
+#: includes/builder/builder-cpt.php:445
 msgid "Template Builder"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:450
+#: includes/builder/builder-cpt.php:453
 msgctxt "post type general name"
 msgid "Template Items"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:451
+#: includes/builder/builder-cpt.php:454
 msgctxt "post type singular name"
 msgid "Template Item"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:452
+#: includes/builder/builder-cpt.php:455
 msgctxt "admin menu"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:453
+#: includes/builder/builder-cpt.php:456
 msgctxt "add new on admin bar"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:454
+#: includes/builder/builder-cpt.php:457
 msgctxt "template_manager"
 msgid "Add New"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:455
+#: includes/builder/builder-cpt.php:458
 msgid "Add New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:456
+#: includes/builder/builder-cpt.php:459
 #: includes/builder/modal/modal.php:8
 msgid "New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:457
+#: includes/builder/builder-cpt.php:460
 #: includes/helper.php:476
 msgid "Edit Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:458
+#: includes/builder/builder-cpt.php:461
 msgid "View Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:459
+#: includes/builder/builder-cpt.php:462
 #: assets/admin/admin.js:1
 msgid "All Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:460
+#: includes/builder/builder-cpt.php:463
 msgid "Search Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:461
+#: includes/builder/builder-cpt.php:464
 msgid "Parent Template:"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:462
+#: includes/builder/builder-cpt.php:465
 msgid "No Template found."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:463
+#: includes/builder/builder-cpt.php:466
 msgid "No Template found in Trash."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:468
+#: includes/builder/builder-cpt.php:471
 msgid "Description."
 msgstr ""
 
@@ -1989,34 +2098,6 @@ msgstr ""
 
 #: includes/modal/modal-controls.php:156
 msgid "Enable Close Button"
-msgstr ""
-
-#: includes/modal/modal-controls.php:158
-#: modules/mentor-slider/widgets/mentor-slider.php:261
-#: modules/mini-cart/widgets/mini-cart.php:166
-#: modules/mini-cart/widgets/mini-cart.php:178
-#: modules/mini-cart/widgets/mini-cart.php:190
-#: modules/product-list/widgets/product-list.php:183
-#: modules/showcase-slider/widgets/showcase-slider.php:211
-#: modules/sub-category-carousel/widgets/sub-category-carousel.php:308
-#: modules/sub-category-carousel/widgets/sub-category-carousel.php:320
-#: modules/sub-category/widgets/sub-category.php:681
-#: modules/sub-category/widgets/sub-category.php:693
-msgid "Yes"
-msgstr ""
-
-#: includes/modal/modal-controls.php:159
-#: modules/mentor-slider/widgets/mentor-slider.php:262
-#: modules/mini-cart/widgets/mini-cart.php:167
-#: modules/mini-cart/widgets/mini-cart.php:179
-#: modules/mini-cart/widgets/mini-cart.php:191
-#: modules/product-list/widgets/product-list.php:184
-#: modules/showcase-slider/widgets/showcase-slider.php:212
-#: modules/sub-category-carousel/widgets/sub-category-carousel.php:309
-#: modules/sub-category-carousel/widgets/sub-category-carousel.php:321
-#: modules/sub-category/widgets/sub-category.php:682
-#: modules/sub-category/widgets/sub-category.php:694
-msgid "No"
 msgstr ""
 
 #: includes/modal/modal-controls.php:182
@@ -6456,35 +6537,35 @@ msgstr ""
 msgid "% off"
 msgstr ""
 
-#: ultimate-store-kit.php:141
+#: ultimate-store-kit.php:146
 msgid "Ops! Ultimate Store Kit not working because you need to activate the Elementor plugin first."
 msgstr ""
 
-#: ultimate-store-kit.php:142
+#: ultimate-store-kit.php:147
 msgid "Activate Elementor Now"
 msgstr ""
 
-#: ultimate-store-kit.php:148
+#: ultimate-store-kit.php:153
 msgid "Ops! Ultimate Store Kit not working because you need to install the Elementor plugin"
 msgstr ""
 
-#: ultimate-store-kit.php:149
+#: ultimate-store-kit.php:154
 msgid "Install Elementor Now"
 msgstr ""
 
-#: ultimate-store-kit.php:171
+#: ultimate-store-kit.php:176
 msgid "Ops! Ultimate Store Kit not working because you need to activate a eCommerce plugin like WooCommerce or Easy Digital Downloads first."
 msgstr ""
 
-#: ultimate-store-kit.php:172
+#: ultimate-store-kit.php:177
 msgid "Activate WooCommerce Now"
 msgstr ""
 
-#: ultimate-store-kit.php:178
+#: ultimate-store-kit.php:183
 msgid "Ops! Ultimate Store Kit not working because you need to install a eCommerce plugin like WooCommerce or Easy Digital Download first."
 msgstr ""
 
-#: ultimate-store-kit.php:179
+#: ultimate-store-kit.php:184
 msgid "Install WooCommerce Now"
 msgstr ""
 
@@ -6525,11 +6606,71 @@ msgid "Display live visitor count on product pages to create urgency."
 msgstr ""
 
 #: assets/admin/admin.js:1
+msgid "Sales Notification"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Show recent purchases as a floating popup to build social proof."
+msgstr ""
+
+#: assets/admin/admin.js:1
 msgid "Upsell & Cross-Sell"
 msgstr ""
 
 #: assets/admin/admin.js:1
 msgid "Display upsell and cross-sell products on product pages to increase sales."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Multistep Checkout"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Split checkout into clear, guided steps to reduce abandoned carts."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Vacation Mode"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Pause orders and show a store notice while you are away."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Additional Checkout Fields"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Add custom fields to the checkout and show them in orders and emails."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Buy One Get One"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Run BOGO deals, free gifts and quantity discounts."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "PDF Invoice"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Attach PDF invoices, packing slips and credit notes to order emails."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Show a countdown timer on products with a scheduled sale to create urgency."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Show backorder status, custom messages and a restock countdown on product pages."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Take orders for products before they are released, with a release date countdown."
 msgstr ""
 
 #: assets/admin/admin.js:1

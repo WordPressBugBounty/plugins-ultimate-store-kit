@@ -2,14 +2,14 @@
 Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, muhammadasik, sohanurrahman, saifullahnakiih, shaikatazim, mohan00, shmusuf, arafatakashakku, shamim496
 Donate link: https://bdthemes.com/
 Tags: elementor addons, woocommerce builder, woocommerce store builder, edd store builder, woocommerce widget
-Stable tag: 3.1.4
-Requires PHP: 7.0
+Stable tag: 4.0.0
+Requires PHP: 7.4
 Requires at least: 6.8
 Tested up to: 7.1
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Elementor requires at least: 4.0.0
-Elementor tested up to: 4.2.4
+Elementor tested up to: 4.3.5
 
 WooCommerce store builder and EDD store builder for Elementor with product grids, widgets, cart, checkout, account pages, filters and sliders.
 
@@ -385,6 +385,25 @@ The following libraries are shipped under `/src/vendor` and `/assets/vendor`. Wh
 
 == Changelog ==
 
+= 4.0.0 [20th October 2026] =
+
+* Added: Flash Sale countdown module added (Pro)
+* Added: Back Order and Pre Order Modules added (Pro)
+* Added: Multistep checkout module added (Pro)
+* Added: Product Discount Marquee added (Pro)
+* Added: Vacation Mode module added (Pro)
+* Added: Additional checkout field module added (Pro)
+* Added: Buy One Get One module added - 2x1 / 3x2 deals, free gifts (automatic or customer's choice), buy-one-get-the-same and quantity discounts (Pro)
+* Added: PDF Invoice module added - invoices, packing slips and credit notes, attached to emails and downloadable by customers (Pro)
+* Added: Variation Swatches - Colour controls for background, text, border, selected / hover, selected background, out of stock and tooltips, plus gap between swatches and font size (Pro)
+* Added: Multistep Checkout - An Additional Information step, shown when the Additional Checkout Fields module places fields in that section (Pro)
+* Added: Back Order / Pre-Order - Per-variation support for variable products: messages, countdowns and button text follow the selected variation (Pro)
+* Added: BdThemes deals notice on the Dashboard, Plugins screen and plugin dashboard; “Don’t Show Again” hides it in every BdThemes plugin
+* Fixed: Fixed an issue with the currency switcher width (Pro)
+* Fixed: The plugin no longer overrides the theme’s WooCommerce Cart Page by default. The Template Builder cart is now used only when a cart template is explicitly assigned; otherwise, the theme’s default cart page is displayed.
+* Fixed: Search icon position
+* Changed: The single product quantity buttons no longer use wc_enqueue_js(), deprecated since WooCommerce 10.4
+
 = 3.1.4 [17th September 2026] =
 
 * Fixed: String translation issue fixed
@@ -397,6 +416,7 @@ The following libraries are shipped under `/src/vendor` and `/assets/vendor`. Wh
 
 * Fixed: Template Builder could not create a template. Saving failed because the template type value was having its separator stripped, so no type was ever recognised as valid
 * Fixed: Filtering the Template Items list by template type returned no results, and the selected type was not kept in the filter dropdown
+* Fixed: The search icon in the admin widgets toolbar sat below the centre of the search field
 
 * Security: Removed a template-preview bypass that accepted a fixed token in place of a nonce on hosts whose name matched a demo list, which could let a visitor render the Elementor content of an unpublished post. Preview now requires a valid nonce and edit permission for that template
 * Security: Removed an unused public AJAX endpoint for variation images that was reachable without authentication
