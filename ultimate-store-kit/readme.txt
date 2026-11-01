@@ -2,7 +2,7 @@
 Contributors: bdthemes, selimmw, mohammaadfarid, abutalib, maudud, muhammadasik, sohanurrahman, saifullahnakiih, shaikatazim, mohan00, shmusuf, arafatakashakku, shamim496
 Donate link: https://bdthemes.com/
 Tags: elementor addons, woocommerce builder, woocommerce store builder, edd store builder, woocommerce widget
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 Requires PHP: 7.4
 Requires at least: 6.8
 Tested up to: 7.1
@@ -384,6 +384,11 @@ The following libraries are shipped under `/src/vendor` and `/assets/vendor`. Wh
 * Slick Modal 5.0 — https://codecanyon.net/item/slick-modal-css3-powered-popups/12335988
 
 == Changelog ==
+
+= 4.0.2 [1st November 2026] =
+
+* Fixed: Order Received template and Page Order widget now require the order key, like WooCommerce, before showing an order
+* Updated: System improved
 
 = 4.0.1 [26th October 2026] =
 
