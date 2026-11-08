@@ -2,14 +2,14 @@
 # This file is distributed under the GPL3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Store Kit 4.0.2\n"
+"Project-Id-Version: Ultimate Store Kit 4.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-store-kit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-01T11:20:01+00:00\n"
+"POT-Creation-Date: 2026-11-08T11:09:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ultimate-store-kit\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: includes/Admin/Dashboard.php:47
 #: includes/Admin/Dashboard.php:79
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Ultimate Store Kit"
 msgstr ""
 
@@ -30,7 +31,7 @@ msgstr ""
 
 #. Description of the plugin
 #: ultimate-store-kit.php
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Build online stores in WordPress with the powerful store builder addon for Elementor. Enjoy a wide range of customizations and easily build product grids, carousels, single product/page elements, checkouts and more."
 msgstr ""
 
@@ -61,27 +62,59 @@ msgstr ""
 msgid "Up To 86% Off"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:255
+#: includes/Admin/Dashboard.php:265
 msgid "Install Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:256
+#: includes/Admin/Dashboard.php:266
 msgid "Install the required plugin first, then you can activate this feature."
 msgstr ""
 
-#: includes/Admin/Dashboard.php:260
+#: includes/Admin/Dashboard.php:270
 msgid "Download Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:266
+#: includes/Admin/Dashboard.php:276
 msgid "Activate Plugin"
 msgstr ""
 
-#: includes/Admin/Dashboard.php:267
+#: includes/Admin/Dashboard.php:277
 msgid "Activate the required plugin first, then you can activate this feature."
 msgstr ""
 
-#: includes/Admin/Dashboard.php:294
+#: includes/Admin/Dashboard.php:340
+msgid "PHP version"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:345
+msgid "Memory limit"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:346
+#: includes/Admin/Dashboard.php:351
+msgid "Unlimited"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:350
+msgid "Max execution time"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:355
+#: assets/admin/admin.js:1
+#: assets/admin/admin.js:6
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:356
+#: includes/Admin/Dashboard.php:361
+msgid "Not active"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:360
+msgid "Elementor"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:442
 #: modules/mini-cart/widgets/mini-cart.php:84
 #: modules/sub-category/widgets/sub-category.php:671
 #: traits/global-widget-controls.php:210
@@ -103,6 +136,7 @@ msgstr ""
 #: traits/global-widget-controls.php:411
 #: traits/global-widget-controls.php:2744
 #: traits/global-widget-template.php:253
+#: assets/admin/admin.js:6
 msgid "New"
 msgstr ""
 
@@ -311,88 +345,92 @@ msgid "Product Filters"
 msgstr ""
 
 #: includes/Admin/ModuleService.php:541
-msgid "Product Image (Single)"
+msgid "Ajax Product Search"
 msgstr ""
 
 #: includes/Admin/ModuleService.php:553
+msgid "Product Image (Single)"
+msgstr ""
+
+#: includes/Admin/ModuleService.php:565
 #: modules/product-image-accordion/module.info.php:5
 #: modules/product-image-accordion/widgets/product-image-accordion.php:37
 msgid "Product Image Accordion"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:565
+#: includes/Admin/ModuleService.php:577
 #: modules/mini-cart/widgets/mini-cart.php:455
 #: modules/product-list/module.info.php:8
 #: modules/product-list/widgets/product-list.php:43
 msgid "Product List"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:577
+#: includes/Admin/ModuleService.php:589
 msgid "Product Meta (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:589
+#: includes/Admin/ModuleService.php:601
 msgid "Product Price (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:601
+#: includes/Admin/ModuleService.php:613
 msgid "Product Rating (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:613
+#: includes/Admin/ModuleService.php:625
 msgid "Product Related (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:625
+#: includes/Admin/ModuleService.php:637
 #: modules/product-reviews/module.info.php:8
 #: modules/product-reviews/widgets/product-reviews.php:36
 msgid "Product Reviews"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:637
+#: includes/Admin/ModuleService.php:649
 #: modules/product-review-carousel/module.info.php:8
 #: modules/product-review-carousel/widgets/product-review-carousel.php:34
 msgid "Product Review Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:649
+#: includes/Admin/ModuleService.php:661
 msgid "Product Stock (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:661
+#: includes/Admin/ModuleService.php:673
 #: modules/product-table/module.info.php:8
 #: modules/product-table/widgets/product-table.php:40
 msgid "Product Table"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:673
+#: includes/Admin/ModuleService.php:685
 msgid "Product Tabs (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:685
+#: includes/Admin/ModuleService.php:697
 msgid "Product Title (Single)"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:697
+#: includes/Admin/ModuleService.php:709
 #: modules/shiny-grid/module.info.php:8
 #: modules/shiny-grid/widgets/shiny-grid.php:33
 msgid "Shiny Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:709
+#: includes/Admin/ModuleService.php:721
 #: modules/florence-carousel/module.info.php:8
 #: modules/shiny-carousel/module.info.php:8
 #: modules/shiny-carousel/widgets/shiny-carousel.php:35
 msgid "Shiny Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:721
+#: includes/Admin/ModuleService.php:733
 #: modules/showcase-slider/module.info.php:8
 #: modules/showcase-slider/widgets/showcase-slider.php:41
 msgid "Showcase Slider"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:734
+#: includes/Admin/ModuleService.php:746
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:687
 #: modules/sub-category/module.info.php:8
 #: modules/sub-category/widgets/sub-category.php:33
@@ -400,186 +438,186 @@ msgstr ""
 msgid "Sub Category"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:746
+#: includes/Admin/ModuleService.php:758
 #: modules/sub-category-carousel/module.info.php:8
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:36
 msgid "Sub Category Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:759
+#: includes/Admin/ModuleService.php:771
 msgid "Thank You Order"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:771
+#: includes/Admin/ModuleService.php:783
 msgid "Thank You Order Details"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:783
+#: includes/Admin/ModuleService.php:795
 msgid "Thank You Order Customer Address"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:795
+#: includes/Admin/ModuleService.php:807
 msgid "Thank You Order Confirmation"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:807
+#: includes/Admin/ModuleService.php:819
 msgid "Wishlist Button"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:819
+#: includes/Admin/ModuleService.php:831
 msgid "Wishlist Products"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:831
+#: includes/Admin/ModuleService.php:843
 #: modules/up-sells/module.info.php:5
 #: modules/up-sells/widgets/up-sells.php:26
 #: modules/up-sells/widgets/up-sells.php:70
 msgid "Upsells"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:845
+#: includes/Admin/ModuleService.php:857
 #: modules/edd-category-grid/module.info.php:5
 #: modules/edd-category-grid/widgets/edd-category-grid.php:31
 msgid "EDD Category Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:857
+#: includes/Admin/ModuleService.php:869
 #: modules/edd-category-carousel/module.info.php:5
 #: modules/edd-category-carousel/widgets/edd-category-carousel.php:33
 msgid "EDD Category Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:869
+#: includes/Admin/ModuleService.php:881
 #: modules/edd-beauty-grid/module.info.php:8
 #: modules/edd-beauty-grid/widgets/edd-beauty-grid.php:32
 msgid "EDD Beauty Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:881
+#: includes/Admin/ModuleService.php:893
 #: modules/edd-beauty-carousel/module.info.php:8
 #: modules/edd-beauty-carousel/widgets/edd-beauty-carousel.php:33
 msgid "EDD Beauty Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:893
+#: includes/Admin/ModuleService.php:905
 #: modules/edd-classic-grid/module.info.php:8
 #: modules/edd-classic-grid/widgets/edd-classic-grid.php:33
 msgid "EDD Classic Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:905
+#: includes/Admin/ModuleService.php:917
 #: modules/edd-classic-carousel/module.info.php:8
 #: modules/edd-classic-carousel/widgets/edd-classic-carousel.php:33
 msgid "EDD Classic Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:917
+#: includes/Admin/ModuleService.php:929
 msgid "EDD Product Review"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:929
+#: includes/Admin/ModuleService.php:941
 msgid "EDD Product Review Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:941
+#: includes/Admin/ModuleService.php:953
 #: modules/edd-standard-grid/module.info.php:8
 #: modules/edd-standard-grid/widgets/edd-standard-grid.php:31
 msgid "EDD Standard Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:953
+#: includes/Admin/ModuleService.php:965
 #: modules/edd-standard-carousel/module.info.php:8
 #: modules/edd-standard-carousel/widgets/edd-standard-carousel.php:33
 msgid "EDD Standard Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:965
+#: includes/Admin/ModuleService.php:977
 #: modules/edd-trendy-grid/module.info.php:8
 #: modules/edd-trendy-grid/widgets/edd-trendy-grid.php:31
 msgid "EDD Trendy Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:977
+#: includes/Admin/ModuleService.php:989
 #: modules/edd-trendy-carousel/module.info.php:8
 #: modules/edd-trendy-carousel/widgets/edd-trendy-carousel.php:33
 msgid "EDD Trendy Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:991
+#: includes/Admin/ModuleService.php:1003
 #: modules/brand-grid/module.info.php:5
 #: modules/brand-grid/widgets/brand-grid.php:28
 msgid "Brand Grid"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1001
+#: includes/Admin/ModuleService.php:1013
 #: modules/brand-carousel/module.info.php:5
 #: modules/brand-carousel/widgets/brand-carousel.php:35
 msgid "Brand Carousel"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1011
+#: includes/Admin/ModuleService.php:1023
 #: modules/featured-box/module.info.php:5
 #: modules/featured-box/widgets/featured-box.php:27
 #: modules/featured-box/widgets/featured-box.php:585
 msgid "Featured Box"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1021
+#: includes/Admin/ModuleService.php:1033
 #: modules/qr-code/module.info.php:8
 #: modules/qr-code/widgets/qr-code.php:26
-#: modules/qr-code/widgets/qr-code.php:66
+#: modules/qr-code/widgets/qr-code.php:67
 msgid "QR Code"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1031
+#: includes/Admin/ModuleService.php:1043
 msgid "Marquee"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1041
+#: includes/Admin/ModuleService.php:1053
 #: modules/mobile-menu/module.info.php:5
 #: modules/mobile-menu/widgets/mobile-menu.php:34
 msgid "Mobile Menu"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1054
+#: includes/Admin/ModuleService.php:1066
 msgid "Flash Sale Countdown"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1060
-#: includes/Admin/ModuleService.php:1119
-#: includes/Admin/ModuleService.php:1144
+#: includes/Admin/ModuleService.php:1072
+#: includes/Admin/ModuleService.php:1131
+#: includes/Admin/ModuleService.php:1156
 msgid "Enable"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1073
+#: includes/Admin/ModuleService.php:1085
 msgid "Single Product Position"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1077
-#: includes/Admin/ModuleService.php:1099
+#: includes/Admin/ModuleService.php:1089
+#: includes/Admin/ModuleService.php:1111
 msgid "Before Price"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1078
-#: includes/Admin/ModuleService.php:1100
+#: includes/Admin/ModuleService.php:1090
+#: includes/Admin/ModuleService.php:1112
 msgid "After Price"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1079
-#: includes/Admin/ModuleService.php:1101
+#: includes/Admin/ModuleService.php:1091
+#: includes/Admin/ModuleService.php:1113
 msgid "Before Add to Cart"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1080
-#: includes/Admin/ModuleService.php:1102
+#: includes/Admin/ModuleService.php:1092
+#: includes/Admin/ModuleService.php:1114
 msgid "After Add to Cart"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1085
+#: includes/Admin/ModuleService.php:1097
 msgid "Show on Shop / Archive"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1089
+#: includes/Admin/ModuleService.php:1101
 #: includes/modal/modal-controls.php:158
 #: modules/mentor-slider/widgets/mentor-slider.php:261
 #: modules/mini-cart/widgets/mini-cart.php:166
@@ -594,7 +632,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1090
+#: includes/Admin/ModuleService.php:1102
 #: includes/modal/modal-controls.php:159
 #: modules/mentor-slider/widgets/mentor-slider.php:262
 #: modules/mini-cart/widgets/mini-cart.php:167
@@ -609,21 +647,43 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1095
+#: includes/Admin/ModuleService.php:1107
 msgid "Archive Position"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1113
+#: includes/Admin/ModuleService.php:1125
 msgid "Back Order"
 msgstr ""
 
-#: includes/Admin/ModuleService.php:1138
+#: includes/Admin/ModuleService.php:1150
 msgid "Pre-Order"
 msgstr ""
 
-#: includes/API/Settings.php:64
-#: assets/admin/admin.js:1
+#: includes/API/OtherPlugins.php:116
+msgid "This plugin cannot be installed from here."
+msgstr ""
+
+#: includes/API/OtherPlugins.php:120
+msgid "The plugin is already installed."
+msgstr ""
+
+#: includes/API/OtherPlugins.php:147
+msgid "The plugin could not be installed. Check that WordPress can write to the plugins folder."
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/API/OtherPlugins.php:155
+#, php-format
+msgid "%s installed."
+msgstr ""
+
+#: includes/API/Settings.php:79
+#: assets/admin/admin.js:9
 msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/API/Settings.php:91
+msgid "Combined files cleared. Pages rebuild them on their next visit."
 msgstr ""
 
 #: includes/bdthemes-deals-biggopti.php:119
@@ -650,32 +710,34 @@ msgstr ""
 msgid "Up To 86% OFF, 60 Days Money Back Guarantee"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:103
+#: includes/builder/builder-cpt.php:105
 msgid "Edit with Gutenberg"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:118
-#: includes/builder/builder-cpt.php:132
+#: includes/builder/builder-cpt.php:120
+#: includes/builder/builder-cpt.php:134
 msgid "Edit with Elementor"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:140
+#: includes/builder/builder-cpt.php:142
 msgid "Edit"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:152
+#: includes/builder/builder-cpt.php:154
 #: traits/global-terms-query-controls.php:22
 msgid "Type"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:153
+#: includes/builder/builder-cpt.php:155
 #: modules/product-review-carousel/widgets/product-review-carousel.php:202
 #: modules/product-reviews/widgets/product-reviews.php:188
+#: assets/admin/admin.js:5
 msgid "Status"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:174
-#: includes/builder/modal/modal.php:91
+#: includes/builder/builder-cpt.php:177
+#: includes/builder/builder-cpt.php:184
+#: includes/builder/modal/modal.php:125
 #: includes/modal/modal-controls.php:400
 #: modules/heaven-slider/widgets/heaven-slider.php:1024
 #: modules/image-hotspot/widgets/image-hotspot.php:655
@@ -693,103 +755,108 @@ msgstr ""
 #: traits/global-widget-controls.php:1946
 #: traits/global-widget-controls.php:2383
 #: traits/global-widget-controls.php:4525
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:5
+#: assets/admin/admin.js:6
 #: assets/admin/others/js/ultimate-builder.js:1
 msgid "Active"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:175
+#: includes/builder/builder-cpt.php:178
+#: includes/builder/builder-cpt.php:185
 #: assets/admin/others/js/ultimate-builder.js:1
 msgid "Inactive"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:193
+#: includes/builder/builder-cpt.php:203
 msgid "Template Type "
 msgstr ""
 
-#: includes/builder/builder-cpt.php:444
-#: includes/builder/builder-cpt.php:445
+#: includes/builder/builder-cpt.php:476
+#: includes/builder/builder-cpt.php:477
+#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Template Builder"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:453
+#: includes/builder/builder-cpt.php:485
 msgctxt "post type general name"
 msgid "Template Items"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:454
+#: includes/builder/builder-cpt.php:486
 msgctxt "post type singular name"
 msgid "Template Item"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:455
+#: includes/builder/builder-cpt.php:487
 msgctxt "admin menu"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:456
+#: includes/builder/builder-cpt.php:488
 msgctxt "add new on admin bar"
 msgid "Template Manager"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:457
+#: includes/builder/builder-cpt.php:489
 msgctxt "template_manager"
 msgid "Add New"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:458
+#: includes/builder/builder-cpt.php:490
 msgid "Add New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:459
+#: includes/builder/builder-cpt.php:491
 #: includes/builder/modal/modal.php:8
 msgid "New Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:460
+#: includes/builder/builder-cpt.php:492
 #: includes/helper.php:476
 msgid "Edit Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:461
+#: includes/builder/builder-cpt.php:493
 msgid "View Template"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:462
-#: assets/admin/admin.js:1
+#: includes/builder/builder-cpt.php:494
 msgid "All Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:463
+#: includes/builder/builder-cpt.php:495
 msgid "Search Templates"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:464
+#: includes/builder/builder-cpt.php:496
 msgid "Parent Template:"
 msgstr ""
 
-#: includes/builder/builder-cpt.php:465
+#: includes/builder/builder-cpt.php:497
 msgid "No Template found."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:466
+#: includes/builder/builder-cpt.php:498
 msgid "No Template found in Trash."
 msgstr ""
 
-#: includes/builder/builder-cpt.php:471
+#: includes/builder/builder-cpt.php:503
 msgid "Description."
 msgstr ""
 
-#: includes/builder/builder-integration.php:200
+#: includes/builder/builder-integration.php:214
 msgid "Builder Settings"
 msgstr ""
 
-#: includes/builder/builder-integration.php:208
+#: includes/builder/builder-integration.php:222
 msgid "Builder Post"
 msgstr ""
 
-#: includes/builder/builder-integration.php:222
-#: includes/builder/builder-integration.php:225
+#: includes/builder/builder-integration.php:236
+#: includes/builder/builder-integration.php:239
 msgid "Apply & Preview"
 msgstr ""
 
@@ -823,9 +890,55 @@ msgstr ""
 msgid "Enter template name"
 msgstr ""
 
+#: includes/builder/modal/modal.php:90
+msgid "Display Conditions (optional)"
+msgstr ""
+
+#: includes/builder/modal/modal.php:91
+msgid "Leave empty to use this template everywhere. Choose products, categories or tags to use it only there; it then takes priority over the default template of this type."
+msgstr ""
+
 #: includes/builder/modal/modal.php:93
+#: modules/product-category-carousel/widgets/product-category-carousel.php:1059
+#: modules/product-category/widgets/product-category.php:1089
+msgid "Products"
+msgstr ""
+
+#: includes/builder/modal/modal.php:94
+msgid "Search for a product…"
+msgstr ""
+
+#: includes/builder/modal/modal.php:98
+msgid "Product Categories"
+msgstr ""
+
+#: includes/builder/modal/modal.php:99
+msgid "Product Tags"
+msgstr ""
+
+#: includes/builder/modal/modal.php:110
+msgid "Any"
+msgstr ""
+
+#: includes/builder/modal/modal.php:127
 #: assets/admin/others/js/ultimate-builder.js:1
 msgid "Create Template"
+msgstr ""
+
+#. translators: %s: Comma-separated product names.
+#: includes/builder/template-conditions.php:345
+#, php-format
+msgid "Products: %s"
+msgstr ""
+
+#: includes/builder/template-conditions.php:350
+#, php-format
+msgid "Categories: %s"
+msgstr ""
+
+#: includes/builder/template-conditions.php:350
+#, php-format
+msgid "Tags: %s"
 msgstr ""
 
 #: includes/class-pro-widget-map.php:32
@@ -970,7 +1083,8 @@ msgstr ""
 #: modules/product-review-carousel/widgets/product-review-carousel.php:208
 #: modules/product-reviews/widgets/product-reviews.php:194
 #: traits/global-terms-query-controls.php:26
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:6
 msgid "All"
 msgstr ""
 
@@ -1042,7 +1156,7 @@ msgstr ""
 #: modules/mobile-menu/widgets/mobile-menu.php:90
 #: modules/mobile-menu/widgets/mobile-menu.php:309
 #: modules/product-table/widgets/product-table.php:203
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Default"
 msgstr ""
 
@@ -1178,7 +1292,7 @@ msgstr ""
 #: modules/product-reviews/widgets/product-reviews.php:165
 #: modules/product-reviews/widgets/product-reviews.php:226
 #: modules/product-reviews/widgets/product-reviews.php:512
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Author"
 msgstr ""
 
@@ -1738,7 +1852,7 @@ msgstr ""
 #: modules/product-category/widgets/product-category.php:240
 #: modules/product-table/widgets/product-table.php:96
 #: modules/product-table/widgets/product-table.php:121
-#: modules/qr-code/widgets/qr-code.php:120
+#: modules/qr-code/widgets/qr-code.php:121
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:187
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:580
 #: modules/sub-category/widgets/sub-category.php:172
@@ -3873,7 +3987,7 @@ msgstr ""
 #: modules/product-category/widgets/product-category.php:236
 #: modules/product-table/widgets/product-table.php:92
 #: modules/product-table/widgets/product-table.php:117
-#: modules/qr-code/widgets/qr-code.php:116
+#: modules/qr-code/widgets/qr-code.php:117
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:183
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:576
 #: modules/sub-category/widgets/sub-category.php:168
@@ -3908,7 +4022,7 @@ msgstr ""
 #: modules/product-category/widgets/product-category.php:244
 #: modules/product-table/widgets/product-table.php:100
 #: modules/product-table/widgets/product-table.php:125
-#: modules/qr-code/widgets/qr-code.php:124
+#: modules/qr-code/widgets/qr-code.php:125
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:191
 #: modules/sub-category-carousel/widgets/sub-category-carousel.php:584
 #: modules/sub-category/widgets/sub-category.php:176
@@ -4306,7 +4420,6 @@ msgstr ""
 #: traits/global-widget-controls.php:2798
 #: traits/global-widget-controls.php:2805
 #: traits/global-widget-controls.php:2965
-#: assets/admin/admin.js:1
 msgid "Navigation"
 msgstr ""
 
@@ -5291,7 +5404,7 @@ msgstr ""
 #: modules/product-table/widgets/product-table.php:331
 #: modules/product-table/widgets/product-table.php:1520
 #: modules/product-table/widgets/product-table.php:2061
-#: modules/qr-code/widgets/qr-code.php:96
+#: modules/qr-code/widgets/qr-code.php:97
 msgid "Quantity"
 msgstr ""
 
@@ -5602,7 +5715,6 @@ msgid "Order status"
 msgstr ""
 
 #: modules/page-order/widgets/page-order.php:1166
-#: assets/admin/admin.js:1
 msgid "Total:"
 msgstr ""
 
@@ -5760,11 +5872,6 @@ msgstr ""
 msgid "Count / Icon"
 msgstr ""
 
-#: modules/product-category-carousel/widgets/product-category-carousel.php:1059
-#: modules/product-category/widgets/product-category.php:1089
-msgid "Products"
-msgstr ""
-
 #: modules/product-image-accordion/widgets/product-image-accordion.php:110
 msgid "Item Hover Expand(em)"
 msgstr ""
@@ -5883,6 +5990,7 @@ msgid "Data Alignment"
 msgstr ""
 
 #: modules/product-table/widgets/product-table.php:138
+#: assets/admin/admin.js:1
 msgid "Search"
 msgstr ""
 
@@ -6047,15 +6155,15 @@ msgstr ""
 msgid "Ops! There is no product"
 msgstr ""
 
-#: modules/qr-code/widgets/qr-code.php:74
+#: modules/qr-code/widgets/qr-code.php:75
 msgid "Dimension Size"
 msgstr ""
 
-#: modules/qr-code/widgets/qr-code.php:86
+#: modules/qr-code/widgets/qr-code.php:87
 msgid "Enable Add to Cart URL"
 msgstr ""
 
-#: modules/qr-code/widgets/qr-code.php:112
+#: modules/qr-code/widgets/qr-code.php:113
 msgid "Alignement"
 msgstr ""
 
@@ -6533,7 +6641,7 @@ msgstr ""
 msgid "Add to Compare"
 msgstr ""
 
-#: traits/global-widget-template.php:516
+#: traits/global-widget-template.php:526
 msgid "% off"
 msgstr ""
 
@@ -6570,19 +6678,44 @@ msgid "Install WooCommerce Now"
 msgstr ""
 
 #: assets/admin/admin.js:1
-msgid "Build high-converting WooCommerce stores with Elementor widgets & presets."
+msgid "License active"
 msgstr ""
 
 #: assets/admin/admin.js:1
-msgid "Open menu"
+msgid "License inactive"
 msgstr ""
 
 #: assets/admin/admin.js:1
+msgid "Free version"
+msgstr ""
+
+#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:6
+#: assets/admin/admin.js:9
+msgid "Widgets"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Search widgets, modules and pages…"
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Nothing found."
+msgstr ""
+
+#: assets/admin/admin.js:1
+msgid "Docs"
+msgstr ""
+
+#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Get Pro"
 msgstr ""
 
 #: assets/admin/admin.js:1
-msgid "Help & Support"
+msgid "More"
 msgstr ""
 
 #: assets/admin/admin.js:1
@@ -6666,538 +6799,905 @@ msgid "Take orders for products before they are released, with a release date co
 msgstr ""
 
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Dashboard"
 msgstr ""
 
 #: assets/admin/admin.js:1
-msgid "Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "WooCommerce"
-msgstr ""
-
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:6
 msgid "EDD"
 msgstr ""
 
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:6
 msgid "Others"
 msgstr ""
 
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Modules"
 msgstr ""
 
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Support"
 msgstr ""
 
 #: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "About & Info"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Coming soon"
+#. translators: 1: enabled widgets, 2: all widgets.
+#: assets/admin/admin.js:2
+#, js-format
+msgid "%1$d of %2$d enabled"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "New items planned for upcoming updates:"
+#: assets/admin/admin.js:2
+msgid "Current"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "7+ WooCommerce widgets"
+#. translators: %d: count.
+#: assets/admin/admin.js:2
+#, js-format
+msgid "%d added"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Template-based presets"
+#. translators: %d: count.
+#: assets/admin/admin.js:2
+#, js-format
+msgid "%d fixed"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Performance-focused improvements"
+#. translators: %d: count.
+#: assets/admin/admin.js:2
+#, js-format
+msgid "%d updated"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "See roadmap"
+#: assets/admin/admin.js:2
+msgid "Optimize asset loading"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Close menu"
+#: assets/admin/admin.js:2
+msgid "Turn on Asset Optimization so pages only load the CSS/JS they use."
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Active:"
+#: assets/admin/admin.js:2
+msgid "Open performance"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Inactive:"
+#: assets/admin/admin.js:2
+msgid "Design your shop pages"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "All Widgets"
+#: assets/admin/admin.js:2
+msgid "Build shop, product, cart and checkout templates with Elementor."
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Other"
+#: assets/admin/admin.js:2
+msgid "Open Template Builder"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Support And Feedback"
+#: assets/admin/admin.js:2
+msgid "Switch on a store module"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Feeling like to consult with an expert? Take live Chat support immediately from"
+#: assets/admin/admin.js:2
+msgid "Size charts, badges, free shipping bar, quick checkout and more."
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "We are always ready to help you 24/7."
+#: assets/admin/admin.js:2
+msgid "Browse modules"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Or if you're facing technical issues with our plugin, then please create a support ticket"
+#. translators: %s: user display name.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "Welcome back, %s"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Knowledge Base"
+#: assets/admin/admin.js:3
+msgid "Welcome back"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Get Support"
+#: assets/admin/admin.js:3
+msgid "Here's what's happening across your store."
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "System Requirement"
+#: assets/admin/admin.js:3
+msgid "Total widgets"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Make sure your server meets the minimum requirements for optimal performance."
+#: assets/admin/admin.js:3
+msgid "Widgets enabled"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "PHP Version"
+#: assets/admin/admin.js:3
+msgid "live"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "OK"
+#: assets/admin/admin.js:3
+msgid "Modules active"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Memory Limit"
+#. translators: %d: number of modules.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "of %d"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Max Execution Time"
+#: assets/admin/admin.js:3
+msgid "Builder templates"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Feedback"
+#. translators: %d: active templates.
+#. translators: %d: number of active modules.
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:5
+#, js-format
+msgid "%d active"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "We are always looking for feedback from our users. If you have any suggestions or feedback, please let us know."
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
+msgid "WooCommerce widgets"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Request Feature"
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
+msgid "EDD widgets"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Try Our Other Plugins"
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
+msgid "Other widgets"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Element Pack, Prime Slider, Ultimate Post Kit, Pixel Gallery & Live Copy Paste addons for Elementor."
+#: assets/admin/admin.js:3
+msgid "Quick actions"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Element Pack"
+#. translators: %d: number of widgets.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "Toggle %d elements"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Prime Slider"
+#. translators: %d: number of modules.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "%d store features"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Ultimate Post Kit"
+#: assets/admin/admin.js:3
+msgid "Shop, product & cart pages"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Pixel Gallery"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "ZoloBlocks"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "WooCommerce Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Easy Digital Downloads Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Other Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Search widgets..."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Status:"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Free"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Pro"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Template:"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Activate All"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Deactivate All"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "No widgets found."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Install"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Demo"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Video"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Saving..."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Save Changes"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Sales Notifications"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Configure flash sale banners, countdown timers, and promotional badges for your store."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Enable Flash Sale Banner"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Display a site-wide flash sale banner on product pages."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Flash Sale Text"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "🔥 Flash Sale — Up to 50% OFF!"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Sale Badge Style"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Ribbon"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Circle"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Starburst"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Sale Badge Color"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Enable Sale Countdown Timer"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Show a countdown timer on products that have a sale end date."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Countdown Position"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Above Price"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Below Price"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Above Add to Cart"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Minimum Discount % to Show Badge"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Only show the sale badge when the discount is at least this percentage."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Unlock these premium settings with Ultimate Store Kit Pro"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "General"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Core Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Theme Compatibility"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Dynamic Content & Custom Fields"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Proper Documentation"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Updates & Support"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Ready Made Blocks"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Ready Made Pages"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Rooten Theme Pro Features"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Priority Support"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Incredibly Advanced"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Refund or Cancel Anytime"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Dynamic Content"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Super-Flexible Widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "24/7 Premium Support"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Third Party Plugins"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Special Discount!"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Custom Field Integration"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "With Live Chat Support"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Trusted Payment Methods"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Interactive Effects"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Video Tutorial"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "You already have Pro!"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Thank you for being a Pro user. You have access to all features."
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Features"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "What's included with Pro"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Ready to unlock all Pro features?"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Upgrade to Pro — View Pricing"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "30-day money-back"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Cancel anytime"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Instant access"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Elementor widgets"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "WooCommerce ready"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Store-focused UI"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Current version"
-msgstr ""
-
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "License"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Pro (active)"
+#: assets/admin/admin.js:3
+msgid "Pro is active"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Built for"
+#: assets/admin/admin.js:3
+msgid "Activate Pro"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "WordPress + WooCommerce"
+#: assets/admin/admin.js:3
+msgid "Unlock every module"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Product & support"
-msgstr ""
-
-#: assets/admin/admin.js:1
-msgid "Website"
-msgstr ""
-
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Documentation"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Useful links"
+#: assets/admin/admin.js:3
+msgid "Guides & tutorials"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Video tutorials"
+#: assets/admin/admin.js:3
+msgid "Get help from the team"
 msgstr ""
 
-#: assets/admin/admin.js:1
-msgid "Step-by-step YouTube tutorials for setup, widgets, and customization."
+#: assets/admin/admin.js:3
+msgid "Recent activity"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+msgid "View all"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Suggestions"
+msgstr ""
+
+#. translators: %d: number of suggestions.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "%d new"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "What's new"
+msgstr ""
+
+#. translators: %s: version.
+#: assets/admin/admin.js:3
+#, js-format
+msgid "Ultimate Store Kit %s"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "See everything added, fixed and improved in this update."
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Explore modules"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Go Pro"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Sell more with Pro modules"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Partial payments, cart recovery, size charts, badges, upsells, currency switcher and every Pro widget."
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "System status"
+msgstr ""
+
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:6
+msgid "Details"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Resources & help"
+msgstr ""
+
+#: assets/admin/admin.js:3
+msgid "Release notes"
+msgstr ""
+
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:9
 msgid "Request a feature"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:3
+msgid "Tell us what to build next"
+msgstr ""
+
+#: assets/admin/admin.js:3
+#: assets/admin/admin.js:5
+msgid "Off"
+msgstr ""
+
+#. translators: 1: active modules, 2: all modules.
+#: assets/admin/admin.js:4
+#, js-format
+msgid "%1$d of %2$d active - store features that work across your whole shop."
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Search modules"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Search modules…"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Filter modules"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "No modules match your search."
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "See what it does"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Configure"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Asset Optimization"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Load Ultimate Store Kit files only where they are used, and combine widget CSS and JS into files stored in your uploads folder."
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Asset Manager"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Joins the CSS and JS of the widgets each page uses into combined files, and skips the store-wide files on pages without an Ultimate Store Kit widget."
+msgstr ""
+
+#: assets/admin/admin.js:5
+#: assets/admin/admin.js:9
+msgid "Saving…"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Enabled"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Disabled"
+msgstr ""
+
+#: assets/admin/admin.js:5
+msgid "Combined files"
+msgstr ""
+
+#. translators: 1: CSS files, 2: JS files, 3: total size.
+#: assets/admin/admin.js:6
+#, js-format
+msgid "%1$d CSS · %2$d JS · %3$s"
+msgstr ""
+
+#. translators: %s: short fingerprint of the current file set.
+#: assets/admin/admin.js:6
+#, js-format
+msgid "Set %s"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Auto-regenerate"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Combined files rebuild by themselves after a plugin update or when Elementor's files are cleared."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Combined files cleared."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "The combined files could not be cleared."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Clearing…"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Regenerate files"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "What changes when it is on"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Store-wide files only where needed"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "The site stylesheet and script, the quick-view modal and the slide-in panel load only on pages with an Ultimate Store Kit widget."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Fewer files per page"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "The CSS and JS of the widgets on a page are joined into one stylesheet and one script, shared by every page with the same widgets."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Editor unchanged"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "The Elementor editor and preview keep loading the separate files, so editing works as before. Switch it off at any time to go back."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Something went wrong. Reload the page and try again."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Installed"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Not installed"
+msgstr ""
+
+#: assets/admin/admin.js:6
+#: assets/admin/admin.js:9
+msgid "Other Plugins"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Install companion plugins from BdThemes to extend your store."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Retry"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Loading plugins…"
+msgstr ""
+
+#. translators: %s: number of millions.
+#: assets/admin/admin.js:6
+#, js-format
+msgid "%s M+ installs"
+msgstr ""
+
+#. translators: %s: number of thousands.
+#: assets/admin/admin.js:6
+#, js-format
+msgid "%s K+ installs"
+msgstr ""
+
+#. translators: %d: number of installs.
+#: assets/admin/admin.js:6
+#, js-format
+msgid "%d+ installs"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Plugin installed."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Installing…"
+msgstr ""
+
+#: assets/admin/admin.js:6
+#: assets/admin/admin.js:8
+msgid "Install"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "The plugin could not be activated."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Plugin activated."
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Activating…"
+msgstr ""
+
+#: assets/admin/admin.js:6
+msgid "Activate"
+msgstr ""
+
+#: assets/admin/admin.js:6
+#: assets/admin/admin.js:9
+msgid "Free"
+msgstr ""
+
+#: assets/admin/admin.js:6
+#: assets/admin/admin.js:9
+msgid "Pro"
+msgstr ""
+
+#. translators: 1: enabled widgets, 2: all widgets in this category.
+#: assets/admin/admin.js:7
+#, js-format
+msgid "%1$d of %2$d enabled - disable unused widgets for faster pages."
+msgstr ""
+
+#. translators: 1: enabled, 2: total.
+#: assets/admin/admin.js:8
+#, js-format
+msgid "%1$d of %2$d active"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Enable all"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Disable all"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Search widgets"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Search widgets…"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Widget category"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Template type"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "All templates"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Filter widgets"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "No widgets found."
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Demo"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Video"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "NEW"
+msgstr ""
+
+#: assets/admin/admin.js:8
+msgid "Available in Pro"
+msgstr ""
+
+#. translators: %d: number of changed widgets.
+#: assets/admin/admin.js:9
+#, js-format
+msgid "%d unsaved change(s)"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Discard"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Save changes"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Sales Notifications"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Configure flash sale banners, countdown timers, and promotional badges for your store."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Enable Flash Sale Banner"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Display a site-wide flash sale banner on product pages."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Flash Sale Text"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "🔥 Flash Sale — Up to 50% OFF!"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Sale Badge Style"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Ribbon"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Circle"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Starburst"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Sale Badge Color"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Enable Sale Countdown Timer"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Show a countdown timer on products that have a sale end date."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Countdown Position"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Above Price"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Below Price"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Above Add to Cart"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Minimum Discount % to Show Badge"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Only show the sale badge when the discount is at least this percentage."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Unlock these premium settings with Ultimate Store Kit Pro"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "General"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Saving..."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Save Changes"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Core Widgets"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Theme Compatibility"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Dynamic Content & Custom Fields"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Proper Documentation"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Updates & Support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Ready Made Blocks"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Ready Made Pages"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Rooten Theme Pro Features"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Priority Support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Incredibly Advanced"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Refund or Cancel Anytime"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Dynamic Content"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Super-Flexible Widgets"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "24/7 Premium Support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Third Party Plugins"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Special Discount!"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Custom Field Integration"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "With Live Chat Support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Trusted Payment Methods"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Interactive Effects"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Video Tutorial"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "You already have Pro!"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Thank you for being a Pro user. You have access to all features."
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Features"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "What's included with Pro"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Ready to unlock all Pro features?"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Upgrade to Pro — View Pricing"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "30-day money-back"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Cancel anytime"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Instant access"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Elementor widgets"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "WooCommerce ready"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Store-focused UI"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Current version"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Pro (active)"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Built for"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "WordPress + WooCommerce"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Product & support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Website"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Knowledge Base"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Get Support"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Useful links"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Video tutorials"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Step-by-step YouTube tutorials for setup, widgets, and customization."
+msgstr ""
+
+#: assets/admin/admin.js:9
 msgid "Share ideas and vote on what we build next."
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Rate us on WordPress.org"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Help others discover the plugin with a review."
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Facebook community"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Join our Facebook community to connect with other users and the team."
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Requires Pro license"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "Module is currently disabled"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "This is a Pro feature. Upgrade to Ultimate Store Kit Pro to unlock this module and configure its settings."
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "An error occurred while saving."
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
+msgid "Performance"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "Pages"
+msgstr ""
+
+#: assets/admin/admin.js:9
+msgid "All modules"
+msgstr ""
+
+#: assets/admin/admin.js:9
 msgid "Ultimate Store Kit Addon made with love by"
 msgstr ""
 
-#: assets/admin/admin.js:1
+#: assets/admin/admin.js:9
 msgid "All rights reserved."
 msgstr ""
 

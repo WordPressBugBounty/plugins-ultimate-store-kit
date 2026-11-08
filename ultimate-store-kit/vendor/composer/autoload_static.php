@@ -23,6 +23,7 @@ class ComposerStaticInit494c130bf6c13bd4cc1a277360f4c457
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'UltimateStoreKit\\API\\Base' => __DIR__ . '/../..' . '/includes/API/Base.php',
+        'UltimateStoreKit\\API\\OtherPlugins' => __DIR__ . '/../..' . '/includes/API/OtherPlugins.php',
         'UltimateStoreKit\\API\\Settings' => __DIR__ . '/../..' . '/includes/API/Settings.php',
         'UltimateStoreKit\\Admin\\Biggopties' => __DIR__ . '/../..' . '/includes/Admin/Biggopties.php',
         'UltimateStoreKit\\Admin\\Dashboard' => __DIR__ . '/../..' . '/includes/Admin/Dashboard.php',

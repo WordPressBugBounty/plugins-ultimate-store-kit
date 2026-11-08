@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'UltimateStoreKit\\API\\Base' => $baseDir . '/includes/API/Base.php',
+    'UltimateStoreKit\\API\\OtherPlugins' => $baseDir . '/includes/API/OtherPlugins.php',
     'UltimateStoreKit\\API\\Settings' => $baseDir . '/includes/API/Settings.php',
     'UltimateStoreKit\\Admin\\Biggopties' => $baseDir . '/includes/Admin/Biggopties.php',
     'UltimateStoreKit\\Admin\\Dashboard' => $baseDir . '/includes/Admin/Dashboard.php',

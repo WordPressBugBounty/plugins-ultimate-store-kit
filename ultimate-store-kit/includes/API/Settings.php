@@ -37,6 +37,11 @@ class Settings extends Base {
                 'methods'  => 'POST',
                 'callback' => [$this, 'save_settings'],
             ],
+            [
+                'path'     => '/optimization/regenerate',
+                'methods'  => 'POST',
+                'callback' => [$this, 'regenerate_combined_assets'],
+            ],
         ];
     }
 
@@ -59,8 +64,32 @@ class Settings extends Base {
         }
 
         $sanitized = $this->sanitize_settings($settings);
+
+        // ultimate_store_kit_other_settings is shared: every module page keeps its
+        // switch there, and Pro switches modules through its own route. A page
+        // posts only what it knows, so merge instead of replacing, or saving one
+        // page would switch off modules turned on elsewhere since it loaded.
+        if ('ultimate_store_kit_other_settings' === $section) {
+            $stored    = get_option($section, []);
+            $sanitized = array_merge(is_array($stored) ? $stored : [], $sanitized);
+        }
+
         update_option($section, $sanitized);
 
         return $this->success(['message' => __('Settings saved successfully.', 'ultimate-store-kit')]);
+    }
+
+    /**
+     * Delete the combined asset files; pages rebuild them on their next view.
+     */
+    public function regenerate_combined_assets(\WP_REST_Request $request) {
+        if (class_exists('\UltimateStoreKit\Includes\Asset_Combiner')) {
+            \UltimateStoreKit\Includes\Asset_Combiner::flush();
+        }
+
+        return $this->success([
+            'message' => __('Combined files cleared. Pages rebuild them on their next visit.', 'ultimate-store-kit'),
+            'stats'   => class_exists('\UltimateStoreKit\Includes\Asset_Combiner') ? \UltimateStoreKit\Includes\Asset_Combiner::stats() : null,
+        ]);
     }
 }
